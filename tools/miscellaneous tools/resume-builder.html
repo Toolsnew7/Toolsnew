@@ -1,0 +1,3829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume Builder - Create ATS-Friendly Resumes Online | Free Tool</title>
+    <meta name="description" content="Create professional, ATS-friendly resumes in minutes with our free online Resume Builder. Choose from 50+ templates, export to PDF/Word, and get expert tips. No signup required!">
+    <meta name="keywords" content="resume builder, CV maker, professional resume, ATS resume, free resume builder, online resume maker, resume templates, job application, career tools">
+    <meta name="author" content="Toolsnew">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Professional Resume Builder - Create ATS-Friendly Resumes Online">
+    <meta property="og:description" content="Create professional, ATS-friendly resumes in minutes with our free online Resume Builder. Choose from 50+ templates, export to PDF/Word, and get expert tips.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolsnew.com/resume-builder">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Professional Resume Builder - Create ATS-Friendly Resumes Online">
+    <meta name="twitter:description" content="Create professional, ATS-friendly resumes in minutes with our free online Resume Builder. Choose from 50+ templates, export to PDF/Word, and get expert tips.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- html2pdf.js for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        /* Base color scheme */
+        :root {
+            --primary-color: #e67e22;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --background-color: #ffffff;
+            --text-color: #333333;
+            --navbar-bg: #ffffff;
+            --navbar-text-color: #444;
+            --navbar-icon-color: #6f42c1;
+            --trust-banner-gradient-start: #e67e22;
+            --trust-banner-gradient-end: #f39c12;
+            --banner-bg: #e67e22;
+            --banner-text: #ffffff;
+            --primary-color-rgb: 230, 126, 34;
+        }
+        
+        .color-scheme-1 {
+            --primary-color: #007bff;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --background-color: #ffffff;
+            --text-color: #f32b2b;
+            --navbar-bg: #ffffff;
+            --navbar-text-color: #444;
+            --navbar-icon-color: #6f42c1;
+            --trust-banner-gradient-start: #6f42c1;
+            --trust-banner-gradient-end: #8a5fcf;
+            --footer-bg: #f8f9fa;
+            --footer-text: #333333;
+            --footer-link: #007bff;
+        }
+        
+        .color-scheme-2 {
+            --primary-color: #0dcaf0;
+            --brand-purple: #0d6efd;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e3f2fd;
+            --text-color: #0d6efd;
+            --navbar-bg: #bbdefb;
+            --navbar-text-color: #0d6efd;
+            --navbar-icon-color: #0d6efd;
+            --trust-banner-gradient-start: #0d6efd;
+            --trust-banner-gradient-end: #0dcaf0;
+            --footer-bg: #bbdefb;
+            --footer-text: #0d6efd;
+            --footer-link: #0dcaf0;
+        }
+
+        /* Color Scheme 3 - Forest */
+        .color-scheme-3 {
+            --primary-color: #198754;
+            --brand-purple: #20c997;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e8f5e9;
+            --text-color: #2e7d32;
+            --navbar-bg: #c8e6c9;
+            --navbar-text-color: #2e7d32;
+            --navbar-icon-color: #2e7d32;
+            --trust-banner-gradient-start: #198754;
+            --trust-banner-gradient-end: #20c997;
+            --footer-bg: #c8e6c9;
+            --footer-text: #2e7d32;
+            --footer-link: #198754;
+        }
+        
+        /* Color Scheme 4 - Sunset */
+        .color-scheme-4 {
+            --primary-color: #fd7e14;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #fff3e0;
+            --text-color: #e65100;
+            --navbar-bg: #ffe0b2;
+            --navbar-text-color: #e65100;
+            --navbar-icon-color: #e65100;
+            --trust-banner-gradient-start: #fd7e14;
+            --trust-banner-gradient-end: #dc3545;
+            --footer-bg: #ffe0b2;
+            --footer-text: #e65100;
+            --footer-link: #fd7e14;
+        }
+        
+        /* Color Scheme 5 - Royal */
+        .color-scheme-5 {
+            --primary-color: #6f42c1;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f3e5f5;
+            --text-color: #4a148c;
+            --navbar-bg: #e1bee7;
+            --navbar-text-color: #4a148c;
+            --navbar-icon-color: #5e1caf;
+            --trust-banner-gradient-start: #6f42c1;
+            --trust-banner-gradient-end: #9370DB;
+            --footer-bg: #e1bee7;
+            --footer-text: #4a148c;
+            --footer-link: #6f42c1;
+        }
+
+        /* Color Scheme 6 - Midnight */
+        .color-scheme-6 {
+            --primary-color: #0d6efd;
+            --brand-purple: #6610f2;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e3f2fd;
+            --text-color: #0d6efd;
+            --navbar-bg: #bbdefb;
+            --navbar-text-color: #0d6efd;
+            --navbar-icon-color: #0d6efd;
+            --trust-banner-gradient-start: #0d6efd;
+            --trust-banner-gradient-end: #6610f2;
+            --footer-bg: #bbdefb;
+            --footer-text: #0d6efd;
+            --footer-link: #0d6efd;
+        }
+
+        /* Color Scheme 7 - Spring */
+        .color-scheme-7 {
+            --primary-color: #20c997;
+            --brand-purple: #198754;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e8f5e9;
+            --text-color: #2e7d32;
+            --navbar-bg: #c8e6c9;
+            --navbar-text-color: #2e7d32;
+            --navbar-icon-color: #2e7d32;
+            --trust-banner-gradient-start: #20c997;
+            --trust-banner-gradient-end: #198754;
+            --footer-bg: #c8e6c9;
+            --footer-text: #2e7d32;
+            --footer-link: #20c997;
+        }
+
+        /* Color Scheme 8 - Coral */
+        .color-scheme-8 {
+            --primary-color: #fd7e14;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #fff3e0;
+            --text-color: #e65100;
+            --navbar-bg: #ffe0b2;
+            --navbar-text-color: #e65100;
+            --navbar-icon-color: #e65100;
+            --trust-banner-gradient-start: #fd7e14;
+            --trust-banner-gradient-end: #dc3545;
+            --footer-bg: #ffe0b2;
+            --footer-text: #e65100;
+            --footer-link: #fd7e14;
+        }
+
+        /* Color Scheme 9 - Lavender */
+        .color-scheme-9 {
+            --primary-color: #6f42c1;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f3e5f5;
+            --text-color: #4a148c;
+            --navbar-bg: #e1bee7;
+            --navbar-text-color: #4a148c;
+            --navbar-icon-color: #4a148c;
+            --trust-banner-gradient-start: #6f42c1;
+            --trust-banner-gradient-end: #9370DB;
+            --footer-bg: #e1bee7;
+            --footer-text: #4a148c;
+            --footer-link: #6f42c1;
+        }
+
+        /* Color Scheme 10 - Mint */
+        .color-scheme-10 {
+            --primary-color: #20c997;
+            --brand-purple: #198754;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e8f5e9;
+            --text-color: #2e7d32;
+            --navbar-bg: #c8e6c9;
+            --navbar-text-color: #2e7d32;
+            --navbar-icon-color: #2e7d32;
+            --trust-banner-gradient-start: #20c997;
+            --trust-banner-gradient-end: #198754;
+            --footer-bg: #c8e6c9;
+            --footer-text: #2e7d32;
+            --footer-link: #20c997;
+        }
+
+        /* Color Scheme 11 - Sunset Orange */
+        .color-scheme-11 {
+            --primary-color: #fd7e14;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #fff3e0;
+            --text-color: #e65100;
+            --navbar-bg: #ffe0b2;
+            --navbar-text-color: #e65100;
+            --navbar-icon-color: #e65100;
+            --trust-banner-gradient-start: #fd7e14;
+            --trust-banner-gradient-end: #dc3545;
+            --footer-bg: #ffe0b2;
+            --footer-text: #e65100;
+            --footer-link: #fd7e14;
+        }
+
+        /* Color Scheme 12 - Deep Blue */
+        .color-scheme-12 {
+            --primary-color: #0d6efd;
+            --brand-purple: #6610f2;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e3f2fd;
+            --text-color: #0d6efd;
+            --navbar-bg: #bbdefb;
+            --navbar-text-color: #0d6efd;
+            --navbar-icon-color: #0d6efd;
+            --trust-banner-gradient-start: #0d6efd;
+            --trust-banner-gradient-end: #6610f2;
+            --footer-bg: #bbdefb;
+            --footer-text: #0d6efd;
+            --footer-link: #0d6efd;
+        }
+
+        /* Color Scheme 13 - Emerald */
+        .color-scheme-13 {
+            --primary-color: #20c997;
+            --brand-purple: #198754;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e8f5e9;
+            --text-color: #2e7d32;
+            --navbar-bg: #c8e6c9;
+            --navbar-text-color: #2e7d32;
+            --navbar-icon-color: #2e7d32;
+            --trust-banner-gradient-start: #20c997;
+            --trust-banner-gradient-end: #198754;
+            --footer-bg: #c8e6c9;
+            --footer-text: #2e7d32;
+            --footer-link: #20c997;
+        }
+
+        /* Color Scheme 14 - Rose */
+        .color-scheme-14 {
+            --primary-color: #dc3545;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f8d7da;
+            --text-color: #721c24;
+            --navbar-bg: #f5c6cb;
+            --navbar-text-color: #721c24;
+            --navbar-icon-color: #721c24;
+            --trust-banner-gradient-start: #dc3545;
+            --trust-banner-gradient-end: #f8d7da;
+            --footer-bg: #f5c6cb;
+            --footer-text: #721c24;
+            --footer-link: #dc3545;
+        }
+
+        /* Color Scheme 15 - Sky */
+        .color-scheme-15 {
+            --primary-color: #0dcaf0;
+            --brand-purple: #0d6efd;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e3f2fd;
+            --text-color: #0d6efd;
+            --navbar-bg: #bbdefb;
+            --navbar-text-color: #0d6efd;
+            --navbar-icon-color: #0d6efd;
+            --trust-banner-gradient-start: #0dcaf0;
+            --trust-banner-gradient-end: #0d6efd;
+            --footer-bg: #bbdefb;
+            --footer-text: #0d6efd;
+            --footer-link: #0dcaf0;
+        }
+
+        /* Color Scheme 16 - Gold */
+        .color-scheme-16 {
+            --primary-color: #ffc107;
+            --brand-purple: #ffc107;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #fff3cd;
+            --text-color: #856404;
+            --navbar-bg: #ffeeba;
+            --navbar-text-color: #856404;
+            --navbar-icon-color: #856404;
+            --trust-banner-gradient-start: #ffc107;
+            --trust-banner-gradient-end: #ffc107;
+            --footer-bg: #ffeeba;
+            --footer-text: #856404;
+            --footer-link: #ffc107;
+        }
+
+        /* Color Scheme 17 - Teal */
+        .color-scheme-17 {
+            --primary-color: #20c997;
+            --brand-purple: #20c997;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #d1f2eb;
+            --text-color: #0c5460;
+            --navbar-bg: #bee5eb;
+            --navbar-text-color: #0c5460;
+            --navbar-icon-color: #0c5460;
+            --trust-banner-gradient-start: #20c997;
+            --trust-banner-gradient-end: #20c997;
+            --footer-bg: #bee5eb;
+            --footer-text: #0c5460;
+            --footer-link: #20c997;
+        }
+
+        /* Color Scheme 18 - Indigo */
+        .color-scheme-18 {
+            --primary-color: #6610f2;
+            --brand-purple: #6610f2;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e2d9f3;
+            --text-color: #4a148c;
+            --navbar-bg: #d1c4e9;
+            --navbar-text-color: #4a148c;
+            --navbar-icon-color: #4a148c;
+            --trust-banner-gradient-start: #6610f2;
+            --trust-banner-gradient-end: #6610f2;
+            --footer-bg: #d1c4e9;
+            --footer-text: #4a148c;
+            --footer-link: #6610f2;
+        }
+
+        /* Color Scheme 19 - Purple */
+        .color-scheme-19 {
+            --primary-color: #6f42c1;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f3e5f5;
+            --text-color: #4a148c;
+            --navbar-bg: #e1bee7;
+            --navbar-text-color: #4a148c;
+            --navbar-icon-color: #4a148c;
+            --trust-banner-gradient-start: #6f42c1;
+            --trust-banner-gradient-end: #6f42c1;
+            --footer-bg: #e1bee7;
+            --footer-text: #4a148c;
+            --footer-link: #6f42c1;
+        }
+
+        /* Color Scheme 20 - Pink */
+        .color-scheme-20 {
+            --primary-color: #d63384;
+            --brand-purple: #d63384;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f8d7da;
+            --text-color: #721c24;
+            --navbar-bg: #f5c6cb;
+            --navbar-text-color: #721c24;
+            --navbar-icon-color: #721c24;
+            --trust-banner-gradient-start: #d63384;
+            --trust-banner-gradient-end: #d63384;
+            --footer-bg: #f5c6cb;
+            --footer-text: #721c24;
+            --footer-link: #d63384;
+        }
+
+        /* Color Scheme 21 - Red */
+        .color-scheme-21 {
+            --primary-color: #dc3545;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f8d7da;
+            --text-color: #721c24;
+            --navbar-bg: #f5c6cb;
+            --navbar-text-color: #721c24;
+            --navbar-icon-color: #721c24;
+            --trust-banner-gradient-start: #dc3545;
+            --trust-banner-gradient-end: #dc3545;
+            --footer-bg: #f5c6cb;
+            --footer-text: #721c24;
+            --footer-link: #dc3545;
+        }
+
+        /* Color Scheme 22 - Neon */
+        .color-scheme-22 {
+            --primary-color: #00ff00;
+            --brand-purple: #ff00ff;
+            --secondary-color: #00ffff;
+            --success-color: #ffff00;
+            --background-color: #111111;
+            --text-color: #ffffff;
+            --navbar-bg: #222222;
+            --navbar-text-color: #00ff00;
+            --navbar-icon-color: #00ff00;
+            --trust-banner-gradient-start: #00ff00;
+            --trust-banner-gradient-end: #ff00ff;
+            --footer-bg: #222222;
+            --footer-text: #ffffff;
+            --footer-link: #00ff00;
+        }
+
+        /* Color Scheme 23 - Pastel */
+        .color-scheme-23 {
+            --primary-color: #FFB5E8;
+            --brand-purple: #B5B9FF;
+            --secondary-color: #97E1D4;
+            --success-color: #F0F0AA;
+            --background-color: #FFFFFF;
+            --text-color: #707070;
+            --navbar-bg: #FFF0F5;
+            --navbar-text-color: #707070;
+            --navbar-icon-color: #FFB5E8;
+            --trust-banner-gradient-start: #FFB5E8;
+            --trust-banner-gradient-end: #B5B9FF;
+            --footer-bg: #FFF0F5;
+            --footer-text: #707070;
+            --footer-link: #FFB5E8;
+        }
+
+        /* Color Scheme 24 - Dark Ocean */
+        .color-scheme-24 {
+            --primary-color: #006994;
+            --brand-purple: #6da4c9;
+            --secondary-color: #2E86C1;
+            --success-color: #48C9B0;
+            --background-color: #0A2239;
+            --text-color: #FFFFFF;
+            --navbar-bg: #1B4F72;
+            --navbar-text-color: #FFFFFF;
+            --navbar-icon-color: #48C9B0;
+            --trust-banner-gradient-start: #006994;
+            --trust-banner-gradient-end: #48C9B0;
+            --footer-bg: #1B4F72;
+            --footer-text: #FFFFFF;
+            --footer-link: #48C9B0;
+        }
+
+        /* Color Scheme 25 - Autumn */
+        .color-scheme-25 {
+            --primary-color: #D35400;
+            --brand-purple: #BA4A00;
+            --secondary-color: #E67E22;
+            --success-color: #F39C12;
+            --background-color: #FDF2E9;
+            --text-color: #6E2C00;
+            --navbar-bg: #FBEEE6;
+            --navbar-text-color: #6E2C00;
+            --navbar-icon-color: #D35400;
+            --trust-banner-gradient-start: #D35400;
+            --trust-banner-gradient-end: #F39C12;
+            --footer-bg: #FBEEE6;
+            --footer-text: #6E2C00;
+            --footer-link: #D35400;
+        }
+
+        /* Color Scheme 26 - Forest Night */
+        .color-scheme-26 {
+            --primary-color: #2ECC71;
+            --brand-purple: #27AE60;
+            --secondary-color: #52BE80;
+            --success-color: #82E0AA;
+            --background-color: #1A5028;
+            --text-color: #FFFFFF;
+            --navbar-bg: #196F3D;
+            --navbar-text-color: #FFFFFF;
+            --navbar-icon-color: #2ECC71;
+            --trust-banner-gradient-start: #2ECC71;
+            --trust-banner-gradient-end: #82E0AA;
+            --footer-bg: #196F3D;
+            --footer-text: #FFFFFF;
+            --footer-link: #2ECC71;
+        }
+
+        /* Color Scheme 27 - Cherry Blossom */
+        .color-scheme-27 {
+            --primary-color: #FF69B4;
+            --brand-purple: #FF1493;
+            --secondary-color: #FFB6C1;
+            --success-color: #FFC0CB;
+            --background-color: #FFF0F5;
+            --text-color: #C71585;
+            --navbar-bg: #FFE4E1;
+            --navbar-text-color: #C71585;
+            --navbar-icon-color: #FF69B4;
+            --trust-banner-gradient-start: #FF69B4;
+            --trust-banner-gradient-end: #FFC0CB;
+            --footer-bg: #FFE4E1;
+            --footer-text: #C71585;
+            --footer-link: #FF69B4;
+        }
+
+        /* Color Scheme 28 - Desert */
+        .color-scheme-28 {
+            --primary-color: #DAA520;
+            --brand-purple: #B8860B;
+            --secondary-color: #F4A460;
+            --success-color: #DEB887;
+            --background-color: #FDF5E6;
+            --text-color: #8B4513;
+            --navbar-bg: #FAEBD7;
+            --navbar-text-color: #8B4513;
+            --navbar-icon-color: #DAA520;
+            --trust-banner-gradient-start: #DAA520;
+            --trust-banner-gradient-end: #DEB887;
+            --footer-bg: #FAEBD7;
+            --footer-text: #8B4513;
+            --footer-link: #DAA520;
+        }
+
+        /* Color Scheme 29 - Electric */
+        .color-scheme-29 {
+            --primary-color: #4B0082;
+            --brand-purple: #8A2BE2;
+            --secondary-color: #9400D3;
+            --success-color: #9932CC;
+            --background-color: #000000;
+            --text-color: #FFFFFF;
+            --navbar-bg: #9c58db;
+            --navbar-text-color: #FFFFFF;
+            --navbar-icon-color: #8A2BE2;
+            --trust-banner-gradient-start: #4B0082;
+            --trust-banner-gradient-end: #9932CC;
+            --footer-bg: #1A0033;
+            --footer-text: #FFFFFF;
+            --footer-link: #8A2BE2;
+        }
+
+        /* Color Scheme 30 - Ice */
+        .color-scheme-30 {
+            --primary-color: #00CED1;
+            --brand-purple: #40E0D0;
+            --secondary-color: #48D1CC;
+            --success-color: #AFEEEE;
+            --background-color: #F0FFFF;
+            --text-color: #008B8B;
+            --navbar-bg: #E0FFFF;
+            --navbar-text-color: #008B8B;
+            --navbar-icon-color: #00CED1;
+            --trust-banner-gradient-start: #00CED1;
+            --trust-banner-gradient-end: #AFEEEE;
+            --footer-bg: #E0FFFF;
+            --footer-text: #008B8B;
+            --footer-link: #00CED1;
+        }
+
+        /* Color Scheme 31 - Sunset Gold */
+        .color-scheme-31 {
+            --primary-color: #FFD700;
+            --brand-purple: #FFA500;
+            --secondary-color: #FF8C00;
+            --success-color: #DAA520;
+            --background-color: #FFFAF0;
+            --text-color: #B8860B;
+            --navbar-bg: #FFF8DC;
+            --navbar-text-color: #B8860B;
+            --navbar-icon-color: #FFD700;
+            --trust-banner-gradient-start: #FFD700;
+            --trust-banner-gradient-end: #FFA500;
+            --footer-bg: #FFF8DC;
+            --footer-text: #B8860B;
+            --footer-link: #FFD700;
+        }
+
+        /* Color Scheme 32 - Deep Space */
+        .color-scheme-32 {
+            --primary-color: #4B0082;
+            --brand-purple: #483D8B;
+            --secondary-color: #6A5ACD;
+            --success-color: #7B68EE;
+            --background-color: #191970;
+            --text-color: #E6E6FA;
+            --navbar-bg: #000080;
+            --navbar-text-color: #E6E6FA;
+            --navbar-icon-color: #7B68EE;
+            --trust-banner-gradient-start: #4B0082;
+            --trust-banner-gradient-end: #7B68EE;
+            --footer-bg: #000080;
+            --footer-text: #E6E6FA;
+            --footer-link: #7B68EE;
+        }
+
+        /* Color Scheme 33 - Rainbow */
+        .color-scheme-33 {
+            --primary-color: #FF0000;
+            --brand-purple: #FF7F00;
+            --secondary-color: #FFFF00;
+            --success-color: #00FF00;
+            --background-color: #FFFFFF;
+            --text-color: #4B0082;
+            --navbar-bg: #E6E6FA;
+            --navbar-text-color: #4B0082;
+            --navbar-icon-color: #8B00FF;
+            --trust-banner-gradient-start: #FF0000;
+            --trust-banner-gradient-end: #8B00FF;
+            --footer-bg: #E6E6FA;
+            --footer-text: #4B0082;
+            --footer-link: #8B00FF;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        /* Announcement Bar Styles */
+        .announcement-bar {
+            background: linear-gradient(to right, var(--trust-banner-gradient-start), var(--trust-banner-gradient-end));
+            color: white;
+            padding: 6px 0;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 0.9em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1001;
+            margin: 0;
+            border: none;
+        }
+        
+        .announcement-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 25s linear infinite;
+            color: white;
+        }
+
+        @keyframes marquee {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: var(--navbar-bg);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1000;
+        }
+        
+        .header .navbar {
+            background-color: var(--navbar-bg) !important;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand .brand-icon {
+            color: var(--brand-purple);
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+
+        .navbar-brand .brand-text {
+            color: var(--brand-purple);
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--navbar-text-color);
+        }
+
+        .navbar-nav .nav-link .fas,
+        .navbar-nav .nav-link svg {
+            color: var(--navbar-icon-color);
+            margin-right: 5px;
+        }
+        
+        .navbar-nav .nav-link.active,
+        .navbar-nav .nav-link:hover {
+            color: var(--brand-purple);
+        }
+        
+        .trust-indicators .trust-item {
+            color: var(--navbar-text-color);
+            font-size: 0.9em;
+        }
+        
+        .trust-indicators .trust-item .fas,
+        .trust-indicators .trust-item svg {
+            color: var(--navbar-icon-color);
+            margin-right: 5px;
+        }
+
+        .theme-switcher {
+            background-color: var(--brand-purple) !important;
+            border-color: var(--brand-purple) !important;
+            color: white !important;
+            border-radius: 20px !important;
+            padding: 0.3rem 0.8rem !important;
+        }
+
+        .theme-switcher:hover {
+            opacity: 0.9;
+        }
+        
+        .theme-switcher .fas,
+        .theme-switcher svg {
+            margin-right: 5px;
+            color: white !important;
+        }
+
+        /* Trust Banner Styles */
+        .trust-banner {
+            background: linear-gradient(45deg, var(--trust-banner-gradient-start), var(--trust-banner-gradient-end));
+            color: white;
+            padding: 12px 0;
+            margin: 8px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .trust-banner .stat-item {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px;
+            border-radius: 6px;
+            margin: 2px;
+            flex: 1;
+            min-width: 90px;
+            transition: transform 0.3s ease;
+        }
+
+        .trust-banner .stat-item:hover {
+            transform: translateY(-2px);
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .trust-banner .stat-number {
+            font-size: 1.3em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .trust-banner .stat-label {
+            font-size: 0.75em;
+            color: rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--footer-bg);
+            padding: 40px 0;
+            margin-top: 50px;
+            color: var(--footer-text);
+        }
+
+        .footer h4 {
+            color: var(--footer-text);
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            color: var(--footer-text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: inline-block;
+            font-size: 1.1em;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--footer-link);
+            transform: translateX(5px);
+        }
+
+        .footer-social .social-links a {
+            color: var(--footer-text);
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .footer-social .social-links a:hover {
+            color: var(--footer-link);
+            transform: translateX(5px);
+        }
+
+        .footer-social .social-links a span {
+            font-size: 1.1em;
+            vertical-align: middle;
+        }
+
+        .footer-copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Additional styles */
+        .tool-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Banner Section Styles */
+        .banner-section {
+            background-color: var(--banner-bg);
+            background: linear-gradient(to right, var(--trust-banner-gradient-start), var(--trust-banner-gradient-end));
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .banner-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner-item {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .banner-item:last-child {
+            border-right: none;
+        }
+
+        .banner-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .banner-number {
+            display: block;
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--banner-text);
+            margin-bottom: 5px;
+        }
+
+        .banner-label {
+            display: block;
+            font-size: 14px;
+            color: var(--banner-text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Loading Overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--primary-color);
+            border-top: 5px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: transform 0.2s ease;
+            z-index: 1002;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(to right, var(--primary-color), var(--brand-purple));
+            color: #fff;
+            padding: 3rem 0;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section h1 {
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .hero-section p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+        }
+
+        /* Feature Cards */
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .feature-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .feature-card h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .feature-card p {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: rgba(var(--primary-color-rgb), 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .faq-section .section-title {
+            color: #17a2b8;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .faq-section .accordion-item {
+            border: none;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-section .accordion-button {
+            background-color: #20c997;
+            color: #fff;
+            padding: 15px 20px;
+            font-weight: 600;
+            border-radius: 8px;
+        }
+
+        .faq-section .accordion-button:not(.collapsed) {
+            background-color: #20c997;
+            color: #fff;
+            box-shadow: none;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .faq-section .accordion-button:focus {
+            box-shadow: none;
+            border-color: #20c997;
+        }
+
+        .faq-section .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+
+        .faq-section .accordion-body {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background-color: #f8f9fa;
+        }
+
+        .testimonial-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            height: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-rating {
+            color: #ffc107;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(to right, var(--trust-banner-gradient-start), var(--trust-banner-gradient-end));
+            color: #fff;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .cta-section .btn-primary {
+            background-color: #fff;
+            color: var(--primary-color);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-section .btn-primary:hover {
+            background-color: rgba(255,255,255,0.9);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Advertisement Spaces */
+        .ad-space {
+            background-color: #f8f9fa;
+            border: 1px dashed var(--primary-color);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                        linear-gradient(to right, var(--primary-color), var(--brand-purple));
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ad-space:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                        rgba(var(--primary-color-rgb), 0.05) 25%, 
+                        transparent 25%, 
+                        transparent 50%, 
+                        rgba(var(--primary-color-rgb), 0.05) 50%, 
+                        rgba(var(--primary-color-rgb), 0.05) 75%, 
+                        transparent 75%, 
+                        transparent);
+            background-size: 20px 20px;
+            z-index: 0;
+        }
+
+        .ad-space > div {
+            position: relative;
+            z-index: 1;
+            color: var(--primary-color);
+            font-weight: 500;
+            text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+            font-size: 1.1rem;
+        }
+
+        .ad-space.horizontal {
+            height: 100px;
+            margin-bottom: 25px;
+        }
+
+        .ad-space.vertical {
+            height: 300px;
+        }
+
+        .ad-space.square {
+            height: 250px;
+        }
+
+        .ad-space:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: var(--brand-purple);
+        }
+
+        /* Tool Title */
+        .tool-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .tool-title + .lead {
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        /* Info Buttons Styling */
+        .tool-info-buttons {
+            background: none;
+            border: none;
+            padding: 0;
+            margin-bottom: 25px;
+            box-shadow: none;
+            overflow: visible;
+        }
+
+        .tool-info-buttons-container {
+            display: flex;
+            border-bottom: 2px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .info-button {
+            background-color: transparent !important;
+            border: none !important;
+            border-bottom: 3px solid transparent !important;
+            border-radius: 0 !important;
+            padding: 10px 20px !important;
+            margin: 0 5px -2px 0 !important; /* Overlap border-bottom */
+            font-weight: 600 !important;
+            color: var(--secondary-color) !important;
+            box-shadow: none !important;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            flex-grow: 1;
+            text-align: center !important;
+        }
+
+        .info-button:hover {
+            color: var(--primary-color) !important;
+            transform: none !important;
+            box-shadow: none !important;
+        }
+
+        .info-button.active-info-button {
+            color: var(--primary-color) !important;
+            border-bottom-color: var(--primary-color) !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+
+        .info-button i {
+            color: var(--secondary-color) !important;
+            margin-right: 8px !important;
+            transition: color 0.3s ease;
+        }
+
+        .info-button:hover i,
+        .info-button.active-info-button i {
+            color: var(--primary-color) !important;
+            transform: none !important; /* Reset previous icon transform */
+        }
+
+        /* Remove hover shimmer effect */
+        .info-button::after {
+            display: none;
+        }
+
+        /* Remove top border accent */
+        .tool-info-buttons::before {
+            display: none;
+        }
+
+        /* Style content areas */
+        .tool-description-box,
+        .steps-container,
+        .tool-info-content {
+            background-color: #fff !important;
+            border: 1px solid #eee !important;
+            border-radius: 8px !important;
+            padding: 20px !important;
+            margin-top: 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tool-info-content p {
+            margin-bottom: 0;
+            color: #5d4037;
+        }
+
+        .steps-container .list-group-item {
+            border: none !important;
+            background: transparent !important;
+            color: #5d4037;
+            padding: 10px 5px;
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .steps-container .list-group-item::before {
+            content: counter(item);
+            counter-increment: item;
+            background-color: #daa520;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .active-info-button {
+            background-color: #fff8e1 !important;
+            border-color: #daa520 !important;
+            box-shadow: 0 3px 8px rgba(218, 165, 32, 0.15) !important;
+        }
+
+        /* Review and Rating Section */
+        .review-rating-section .review-section-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            position: relative;
+        }
+        
+        .most-recent-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .overall-rating-summary {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .overall-rating-summary:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        
+        .large-rating {
+            line-height: 1;
+        }
+        
+        .large-rating .rating-value {
+            color: var(--primary-color);
+        }
+        
+        .stars i,
+        .stars-small i {
+            font-size: 1.3em;
+            margin-right: 2px;
+        }
+        
+        .stars-small i {
+            font-size: 0.9em;
+            margin-right: 1px;
+        }
+        
+        .review-item {
+            transition: all 0.3s ease;
+            padding: 12px 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        
+        .review-item:hover {
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .review-text {
+            color: #555;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        
+        .reviewer-name {
+            color: var(--primary-color);
+        }
+
+        /* Rating Input in Modal */
+        .rating-input {
+            font-size: 1.8em; /* Larger stars for input */
+            cursor: pointer;
+        }
+        .rating-input i {
+            color: #ccc; /* Default empty star color */
+            margin-right: 5px;
+            transition: color 0.2s ease;
+        }
+        .rating-input i.selected,
+        .rating-input i:hover,
+        .rating-input i:hover ~ i {
+            color: #ffc107; /* Filled star color */
+        }
+        /* Keep previous stars selected on hover */
+        .rating-input:hover i:not(:hover) {
+           color: #ccc;
+        }
+        .rating-input.rated i:not(.selected) {
+            color: #ccc;
+        }
+
+        /* Resume Builder Styles */
+        .resume-builder-container {
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Template Selection */
+        .template-selection {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .template-card {
+            background: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .template-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .template-card.selected {
+            border: 2px solid #0d6efd;
+        }
+
+        .template-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .template-info {
+            padding: 10px;
+        }
+
+        .template-info h5 {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Resume Editor */
+        .resume-editor {
+            background: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .editor-tabs {
+            padding: 15px;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .editor-content {
+            padding: 20px;
+        }
+
+        .editor-section {
+            display: none;
+        }
+
+        .editor-section.active {
+            display: block;
+        }
+
+        /* Form Elements */
+        .form-label {
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .form-control:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.2rem rgba(13,110,253,0.25);
+        }
+
+        /* Skills List */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: #e9ecef;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+
+        /* Preview and Export */
+        .preview-export {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        /* Resume Preview */
+        .resume {
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .resume-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .resume-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #212529;
+        }
+
+        .resume-header .title {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info p {
+            margin: 0;
+            color: #495057;
+        }
+
+        .resume-section {
+            margin-bottom: 30px;
+        }
+
+        .resume-section h2 {
+            font-size: 1.5rem;
+            color: #212529;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .experience-item,
+        .education-item,
+        .project-item {
+            margin-bottom: 20px;
+        }
+
+        .experience-item h3,
+        .education-item h3,
+        .project-item h3 {
+            font-size: 1.2rem;
+            color: #212529;
+            margin-bottom: 5px;
+        }
+
+        .experience-item h4,
+        .education-item h4 {
+            font-size: 1rem;
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        /* Animations */
+        .template-card,
+        .btn,
+        .form-control {
+            transition: all 0.3s ease;
+        }
+
+        .template-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .form-control:focus {
+            transform: translateY(-1px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .resume-builder-container {
+                padding: 10px;
+            }
+
+            .editor-tabs {
+                flex-direction: column;
+            }
+
+            .editor-tabs button {
+                width: 100%;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .preview-export {
+                flex-direction: column;
+            }
+
+            .preview-export button {
+                width: 100%;
+            }
+        }
+
+        /* Loading States */
+        .loading {
+            position: relative;
+            pointer-events: none;
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Error States */
+        .error-message {
+            color: #dc3545;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .form-control.is-invalid {
+            border-color: #dc3545;
+        }
+
+        /* Success States */
+        .success-message {
+            color: #198754;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .form-control.is-valid {
+            border-color: #198754;
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0;">
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-content">
+            <span class="announcement-text">🚀 Your Trust Our Aim! 💖 | 🌟 100% Free Tools Collection 🛠️ | 🎉 Premium Quality Results 💎</span>
+        </div>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">
+                    <div class="brand-container">
+                        <span class="brand-icon">🛠️</span>
+                        <span class="brand-text">Toolsnew</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">🏠 Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../about.html">ℹ️ About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../contact.html">📧 Contact</a>
+                        </li>
+                    </ul>
+                    <div class="trust-indicators">
+                        <span class="trust-item"><i class="fas fa-shield-alt"></i> 100% Secure</span>
+                        <span class="trust-item"><i class="fas fa-bolt"></i> Fast & Reliable</span>
+                        <span class="trust-item"><i class="fas fa-clock"></i> 24/7 Available</span>
+                    </div>
+                    <button class="theme-switcher" id="themeSwitcher">
+                        <i class="fas fa-palette"></i> Change Colors
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Stats Banner Section -->
+    <section class="banner-section">
+        <div class="banner-container">
+            <div class="banner-item">
+                <span class="banner-number">1M+</span>
+                <span class="banner-label">HAPPY USERS</span>
+                </div>
+            <div class="banner-item">
+                <span class="banner-number">100+</span>
+                <span class="banner-label">FREE TOOLS</span>
+                </div>
+            <div class="banner-item">
+                <span class="banner-number">99.9%</span>
+                <span class="banner-label">UPTIME</span>
+                </div>
+            <div class="banner-item">
+                <span class="banner-number">24/7</span>
+                <span class="banner-label">SUPPORT</span>
+                </div>
+            </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="floating-element floating-element-1"></div>
+        <div class="floating-element floating-element-2"></div>
+        
+        <!-- Top Ad Space -->
+        <div class="ad-space horizontal" data-aos="fade-up">
+            <div>Advertisement Space</div>
+        </div>
+
+        <!-- Tool Title -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h1 class="tool-title" data-aos="fade-up">Resume Builder</h1>
+                <p class="lead" data-aos="fade-up">Free online Resume Builder tool</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Tool Content -->
+            <div class="col-lg-8">
+                <!-- Tool Interface Section -->
+                <section class="tool-interface mb-4">
+                    <div class="card" data-aos="fade-up">
+                        <div class="card-body">
+                            <div class="tool-container">
+                                <!-- Tool specific content -->
+                                <div id="toolContent" class="bg-light p-4 rounded">
+                                    <!-- This will be replaced with specific tool content -->
+                            </div>
+                                <!-- End tool specific content -->
+                            </div>
+                        </div>
+                                </div>
+                </section>
+
+                <!-- Tool Info Buttons -->
+                <div class="tool-info-buttons mb-4" data-aos="fade-up">
+                    <div class="tool-info-buttons-container">
+                        <a href="javascript:void(0);" class="btn info-button active-info-button">
+                            <i class="fas fa-info-circle"></i> About This Tool
+                        </a>
+                        <a href="javascript:void(0);" class="btn info-button">
+                            <i class="fas fa-book"></i> How to Use
+                        </a>
+                        <a href="javascript:void(0);" class="btn info-button">
+                            <i class="fas fa-align-left"></i> Description
+                        </a>
+                    </div>
+
+                    <div class="tool-description-box p-3">
+                        <h4>🎯 About Resume Builder</h4>
+                        <p>Our Professional Resume Builder is a powerful, free online tool designed to help you create stunning, ATS-friendly resumes in minutes. Whether you're a fresh graduate, career changer, or experienced professional, our tool provides everything you need to craft the perfect resume.</p>
+                        <p>🌟 Key Features:</p>
+                        <ul>
+                            <li>📝 50+ Professional Templates</li>
+                            <li>🎯 ATS-Optimized Formatting</li>
+                            <li>📊 Smart Content Suggestions</li>
+                            <li>🎨 Customizable Design Options</li>
+                            <li>📱 Mobile-Friendly Interface</li>
+                            <li>💾 Multiple Export Formats (PDF, Word)</li>
+                            <li>🔒 100% Secure - No Data Storage</li>
+                            <li>⚡ Real-time Preview</li>
+                            <li>📋 Industry-Specific Templates</li>
+                            <li>🎓 Academic & Professional Sections</li>
+                        </ul>
+                    </div>
+
+                    <div class="steps-container mt-3" style="display: none;">
+                        <ol class="list-group list-group-numbered" style="counter-reset: item;">
+                            <li class="list-group-item">
+                                <span>Choose a professional template from our collection of 50+ ATS-friendly designs</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span>Fill in your personal information, work experience, education, and skills</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span>Customize colors, fonts, and layout to match your personal brand</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span>Use our smart content suggestions to enhance your resume</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span>Preview your resume in real-time and make adjustments</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span>Download your resume in PDF or Word format</span>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="tool-info-content mt-3" style="display: none;">
+                        <p>Our Resume Builder is designed to help you create professional resumes that stand out to employers and pass through Applicant Tracking Systems (ATS). The tool offers:</p>
+                        <ul>
+                            <li>✨ Professional templates optimized for ATS scanning</li>
+                            <li>📊 Smart content suggestions based on your industry</li>
+                            <li>🎨 Customizable design options for personal branding</li>
+                            <li>📱 Mobile-friendly interface for on-the-go editing</li>
+                            <li>💾 Multiple export formats for flexibility</li>
+                            <li>🔒 Complete privacy - no data storage</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Review and Rating Section -->
+                <section class="review-rating-section mb-4" data-aos="fade-up">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body">
+                            <div class="row mb-4">
+                                <div class="col-md-5">
+                                    <h3 class="review-section-title">Reviews & Ratings</h3>
+                                    <div class="overall-rating-summary mb-3 p-3 rounded">
+                                        <div class="large-rating text-center mb-2">
+                                            <span class="rating-value display-4 fw-bold">4.5</span>
+                                            <span class="text-muted">/5</span>
+                                </div>
+                                        <div class="stars text-center mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                                        <div class="review-count text-center mb-3">
+                                            <span class="text-muted">Based on 123 reviews</span>
+                        </div>
+                                        <div class="text-center">
+                                            <button class="btn btn-primary btn-sm px-4 rounded-pill" data-bs-toggle="modal" data-bs-target="#reviewModal">
+                                                <i class="fas fa-edit me-1"></i> Write a Review
+                                            </button>
+                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <h4 class="most-recent-title mb-3">Rating Details</h4>
+                                    <div class="mb-3">
+                                        <p class="text-muted small mb-2">Rating breakdown:</p>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">5 stars</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 75%"></div>
+                                            </div>
+                                            <div class="small ms-2">75%</div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">4 stars</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 15%"></div>
+                                            </div>
+                                            <div class="small ms-2">15%</div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">3 stars</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 5%"></div>
+                                            </div>
+                                            <div class="small ms-2">5%</div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">2 stars</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 3%"></div>
+                                            </div>
+                                            <div class="small ms-2">3%</div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">1 star</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 2%"></div>
+                                            </div>
+                                            <div class="small ms-2">2%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tool Features Section -->
+                <section class="tool-features mb-4" data-aos="fade-up">
+                    <h3 class="section-title">Features</h3>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">⚡</div>
+                                <h4>Fast Processing</h4>
+                                <p>Process your data quickly with our optimized algorithms</p>
+                                </div>
+                            </div>
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">🔒</div>
+                                <h4>Secure</h4>
+                                <p>Your data is processed locally, never sent to any server</p>
+                        </div>
+                    </div>
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">🎯</div>
+                                <h4>Accurate</h4>
+                                <p>Get precise and reliable results every time</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- FAQ Section -->
+                <section class="faq-section mb-4" data-aos="fade-up">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                                    What makes a good resume template?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    A good resume template should be clean, professional, and ATS-friendly. It should have clear section headings, consistent formatting, and enough white space for readability. Our templates are designed with these principles in mind and are optimized for both human readers and ATS systems.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                                    How do I make my resume ATS-friendly?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    To make your resume ATS-friendly, use standard section headings, avoid complex formatting, include relevant keywords from the job description, and use a simple, clean layout. Our Resume Builder automatically formats your resume to be ATS-friendly and provides keyword suggestions based on your industry.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                                    Can I edit my resume after downloading it?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Answer to FAQ question 3. Provide detailed information here.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                    <!-- Bottom Ad Space -->
+                    <div class="ad-space horizontal" data-aos="fade-up">
+                        <div>Advertisement Space</div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4 tool-sidebar">
+                <!-- Sidebar Ad Space -->
+                <div class="ad-space vertical" data-aos="fade-left">
+                    <div>Advertisement Space</div>
+                </div>
+
+                <!-- Related Tools -->
+                <div class="card mb-4" data-aos="fade-left">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-tools"></i>
+                            Related Tools
+                        </h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="../miscellaneous tools/random-number-generator.html">Random Number Generator</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="../business tools/business-name-generator.html">Business Name Generator</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="../invoice tools/invoice-generator.html">Invoice Generator</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Popular Tools -->
+                <div class="card mb-4" data-aos="fade-left">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-star"></i>
+                            Popular Tools
+                        </h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="../security tools/password-generator.html">Password Generator</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="../qr tools/qr-code-generator.html">QR Code Generator</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="../document tools/resume-builder.html">Resume Builder</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom Sidebar Ad Space -->
+                <div class="ad-space square" data-aos="fade-left">
+                    <div>Advertisement Space</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-4" data-aos="fade-up">Most Recent Reviews</h2>
+            <div id="allRecentReviews" class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Created a professional resume in minutes! The templates are modern and eye-catching."</p>
+                        <div class="testimonial-author">- Jennifer Adams, Job Seeker</div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"The ATS-friendly formats helped me get more interviews. Excellent customization options!"</p>
+                        <div class="testimonial-author">- Carlos Rodriguez, IT Professional</div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Perfect for creating multiple versions of my resume. The skill suggestion feature is great!"</p>
+                        <div class="testimonial-author">- Sarah Chen, Career Changer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 text-center">
+                    <h2 class="cta-title">Ready to Try Our Other Tools?</h2>
+                    <p class="cta-text">Explore our collection of 100+ free online tools designed to make your life easier.</p>
+                    <a href="../../index.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-toolbox"></i> Browse All Tools
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- About Us -->
+                <div class="col-md-4">
+                    <div class="footer-about">
+                        <h4>About Us</h4>
+                        <p>Your trusted source for free online tools. We provide high-quality, easy-to-use tools for all your needs.</p>
+                </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-4">
+                    <div class="footer-links">
+                        <h4>🔗 Quick Links</h4>
+                    <ul class="list-unstyled">
+                            <li><a href="../../index.html">🏠 Home</a></li>
+                            <li><a href="../../about.html">ℹ️ About</a></li>
+                            <li><a href="../../contact.html">📧 Contact</a></li>
+                            <li><a href="../../privacy-policy.html">🔒 Privacy Policy</a></li>
+                            <li><a href="../../terms.html">📜 Terms of Service</a></li>
+                            <li><a href="../../disclaimer.html">⚠️ Disclaimer</a></li>
+                            <li><a href="../../cookie-policy.html">🍪 Cookie Policy</a></li>
+                    </ul>
+                </div>
+                    </div>
+
+                <!-- Connect With Us -->
+                <div class="col-md-4">
+                    <div class="footer-social">
+                        <h4>🤝 Connect With Us</h4>
+                        <div class="social-links mt-3">
+                            <a href="https://www.youtube.com/@toolsnew7" target="_blank" class="me-3 text-decoration-none">
+                                <i class="fab fa-youtube fa-2x"></i>
+                                <span class="ms-2">YouTube</span>
+                            </a>
+                            <br>
+                            <a href="https://www.facebook.com/profile.php?id=61574866457908" target="_blank" class="me-3 text-decoration-none mt-2 d-inline-block">
+                                <i class="fab fa-facebook fa-2x"></i>
+                                <span class="ms-2">Facebook</span>
+                            </a>
+                            <br>
+                            <a href="https://www.tiktok.com/@toolsnew7?lang=en" target="_blank" class="me-3 text-decoration-none mt-2 d-inline-block">
+                                <i class="fab fa-tiktok fa-2x"></i>
+                                <span class="ms-2">TikTok</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="footer-copyright text-center">
+                        <p>&copy; 2025 Toolsnew. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Review Modal -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="reviewModalLabel">
+                        <i class="fas fa-star text-warning me-2"></i>Rate this Tool
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reviewForm">
+                        <div class="mb-3">
+                            <label for="reviewerName" class="form-label fw-bold">Your Name</label>
+                            <input type="text" class="form-control" id="reviewerName" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Your Rating</label>
+                            <div class="rating-input text-center mb-2">
+                                <i class="far fa-star" data-value="1"></i>
+                                <i class="far fa-star" data-value="2"></i>
+                                <i class="far fa-star" data-value="3"></i>
+                                <i class="far fa-star" data-value="4"></i>
+                                <i class="far fa-star" data-value="5"></i>
+                            </div>
+                            <input type="hidden" id="ratingValue" name="ratingValue" required>
+                            <div id="ratingHelp" class="form-text text-center">Click on a star to rate</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reviewText" class="form-label fw-bold">Your Review</label>
+                            <textarea class="form-control" id="reviewText" rows="4" placeholder="Share your experience with this tool..." required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary rounded-pill px-4" form="reviewForm">Submit Review</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../js/common.js"></script>
+    <!-- Tool specific JS -->
+    <script src="../js/resume-builder.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeSwitcher = document.getElementById('themeSwitcher');
+            const body = document.body;
+            const header = document.querySelector('.header');
+            const announcementBar = document.querySelector('.announcement-bar');
+            const scrollProgress = document.querySelector('.scroll-progress');
+            let currentScheme = 1;
+            const totalSchemes = 33;
+            let lastScrollTop = 0;
+            let scrollTimeout;
+
+            // Add announcement bar class to body
+            body.classList.add('with-announcement');
+            header.classList.add('with-announcement');
+
+            // Color scheme switcher
+            themeSwitcher.addEventListener('click', function() {
+                currentScheme = (currentScheme % totalSchemes) + 1;
+                body.className = body.className.replace(/color-scheme-\d+/g, '').trim();
+                body.classList.add(`color-scheme-${currentScheme}`);
+                localStorage.setItem('colorScheme', currentScheme);
+            });
+
+            // Load saved color scheme
+            const savedScheme = localStorage.getItem('colorScheme');
+            if (savedScheme) {
+                currentScheme = parseInt(savedScheme);
+                body.classList.add(`color-scheme-${currentScheme}`);
+            }
+
+            // Scroll handler
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                
+                // Update scroll progress
+                const progress = (scrollTop / scrollHeight) * 100;
+                scrollProgress.style.transform = `scaleX(${progress / 100})`;
+            });
+
+            // Info buttons functionality
+            const infoButtons = document.querySelectorAll('.info-button');
+            const aboutButton = infoButtons[0];
+            const howToButton = infoButtons[1];
+            const descButton = infoButtons[2];
+            const descriptionBox = document.querySelector('.tool-description-box');
+            const stepsContainer = document.querySelector('.steps-container');
+            const toolInfoContent = document.querySelector('.tool-info-content');
+            
+            // Initially hide steps and info content
+            stepsContainer.style.display = 'none';
+            toolInfoContent.style.display = 'none';
+            
+            // Apply initial active state
+            aboutButton.classList.add('active-info-button');
+            
+            // Animate description box entrance
+            descriptionBox.style.opacity = '0';
+            setTimeout(() => {
+                descriptionBox.style.opacity = '1';
+                descriptionBox.style.transform = 'translateY(0)';
+            }, 300);
+            
+            // Helper function to hide all content
+            function hideAllContent() {
+                descriptionBox.style.opacity = '0';
+                stepsContainer.style.opacity = '0';
+                toolInfoContent.style.opacity = '0';
+                
+                setTimeout(() => {
+                    descriptionBox.style.display = 'none';
+                    stepsContainer.style.display = 'none';
+                    toolInfoContent.style.display = 'none';
+                }, 200);
+                
+                // Remove active state from all buttons
+                infoButtons.forEach(btn => btn.classList.remove('active-info-button'));
+            }
+            
+            // About button click
+            aboutButton.addEventListener('click', function() {
+                hideAllContent();
+                
+                // Show description box with animation
+                aboutButton.classList.add('active-info-button');
+                setTimeout(() => {
+                    descriptionBox.style.display = 'block';
+                    setTimeout(() => {
+                        descriptionBox.style.opacity = '1';
+                        descriptionBox.style.transform = 'translateY(0)';
+                    }, 50);
+                }, 200);
+            });
+            
+            // How to use button click
+            howToButton.addEventListener('click', function() {
+                hideAllContent();
+                
+                // Show steps container with animation
+                howToButton.classList.add('active-info-button');
+                setTimeout(() => {
+                    stepsContainer.style.display = 'block';
+                    setTimeout(() => {
+                        stepsContainer.style.opacity = '1';
+                        stepsContainer.style.transform = 'translateY(0)';
+                    }, 50);
+                }, 200);
+            });
+            
+            // Description button click
+            descButton.addEventListener('click', function() {
+                hideAllContent();
+                
+                // Show tool info content with animation
+                descButton.classList.add('active-info-button');
+                setTimeout(() => {
+                    toolInfoContent.style.display = 'block';
+                    setTimeout(() => {
+                        toolInfoContent.style.opacity = '1';
+                        toolInfoContent.style.transform = 'translateY(0)';
+                    }, 50);
+                }, 200);
+            });
+
+            // Remove loading overlay
+            const loadingOverlay = document.querySelector('.loading-overlay');
+            setTimeout(() => {
+                loadingOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                }, 500);
+            }, 1000);
+
+            // Add active class to nav links based on current page
+            try {
+                const currentPath = window.location.pathname;
+                const navLinks = document.querySelectorAll('#navbarNav .nav-link');
+
+                navLinks.forEach(link => {
+                    const linkPath = new URL(link.href).pathname;
+                    
+                    // Remove trailing slashes for comparison
+                    const normalizedLinkPath = linkPath.replace(/\/$/, '');
+                    const normalizedCurrentPath = currentPath.replace(/\/$/, '');
+
+                    if (normalizedLinkPath === normalizedCurrentPath) {
+                        link.classList.add('active');
+                        link.setAttribute('aria-current', 'page');
+                    } else {
+                        link.classList.remove('active');
+                        link.removeAttribute('aria-current');
+                    }
+                });
+            } catch (e) {
+                console.error("Error setting active nav link:", e);
+            }
+
+            // Review Modal Star Rating Functionality
+            const ratingStars = document.querySelectorAll('.rating-input i');
+            const ratingValueInput = document.getElementById('ratingValue');
+            const ratingInputContainer = document.querySelector('.rating-input');
+
+            ratingStars.forEach(star => {
+                star.addEventListener('mouseover', function() {
+                    if (ratingInputContainer.classList.contains('rated')) return; // Don't change on hover if already rated
+                    resetStars();
+                    const currentValue = this.getAttribute('data-value');
+                    highlightStars(currentValue);
+                });
+
+                star.addEventListener('mouseout', function() {
+                    if (ratingInputContainer.classList.contains('rated')) return;
+                    resetStars(); // Reset on mouse out if not rated
+                });
+
+                star.addEventListener('click', function() {
+                    const currentValue = this.getAttribute('data-value');
+                    ratingValueInput.value = currentValue;
+                    resetStars(); // Clear first
+                    highlightStars(currentValue); // Highlight up to clicked
+                    // Mark as rated to freeze hover effect
+                    ratingInputContainer.classList.add('rated'); 
+                    ratingStars.forEach((s, index) => { // Mark individual stars as selected
+                       if (index < currentValue) {
+                           s.classList.add('selected');
+                       } else {
+                           s.classList.remove('selected');
+                       }
+                    });
+                });
+            });
+
+            function resetStars() {
+                ratingStars.forEach(star => {
+                    star.classList.remove('fas', 'selected');
+                    star.classList.add('far');
+                    star.style.color = '#ccc'; // Explicitly reset color
+                });
+            }
+
+            function highlightStars(value) {
+                for (let i = 0; i < value; i++) {
+                    ratingStars[i].classList.remove('far');
+                    ratingStars[i].classList.add('fas');
+                    ratingStars[i].style.color = '#ffc107'; // Ensure highlight color
+                }
+            }
+            
+            // Handle rating reset if modal is closed without submitting
+            const reviewModal = document.getElementById('reviewModal');
+            reviewModal.addEventListener('hidden.bs.modal', function () {
+                 ratingInputContainer.classList.remove('rated');
+                 resetStars();
+                 ratingValueInput.value = '';
+                 // Optionally clear other form fields
+                 // document.getElementById('reviewForm').reset();
+            });
+
+            // Review Form Submission (Placeholder)
+            const reviewForm = document.getElementById('reviewForm');
+            const recentReviewsContainer = document.getElementById('recentReviews');
+            
+            reviewForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const name = document.getElementById('reviewerName').value;
+                const rating = document.getElementById('ratingValue').value;
+                const reviewText = document.getElementById('reviewText').value;
+
+                if (!rating) {
+                    alert('Please select a rating.');
+                    return;
+                }
+
+                // Generate star HTML based on rating
+                let starsHtml = '';
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= rating) {
+                        starsHtml += '<i class="fas fa-star text-warning"></i>';
+                    } else if (i - 0.5 === parseFloat(rating)) {
+                        starsHtml += '<i class="fas fa-star-half-alt text-warning"></i>';
+                    } else {
+                        starsHtml += '<i class="far fa-star text-warning"></i>';
+                    }
+                }
+                
+                // Current date for "just now" display
+                const today = new Date();
+                
+                // Create new review HTML element for the reviews panel
+                const newReview = document.createElement('div');
+                newReview.className = 'review-item border-bottom pb-3 mb-3';
+                
+                // Build the review HTML
+                newReview.innerHTML = `
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <div class="reviewer-info">
+                            <span class="reviewer-name fw-bold">${name}</span>
+                            <span class="review-date text-muted ms-2">just now</span>
+                        </div>
+                        <div class="review-rating stars-small">
+                            ${starsHtml}
+                        </div>
+                    </div>
+                    <p class="review-text mb-0">"${reviewText}"</p>
+                `;
+                
+                // Add animation class
+                newReview.classList.add('animate__animated', 'animate__fadeIn');
+
+                // Create new review for the testimonials section
+                const newTestimonial = document.createElement('div');
+                newTestimonial.className = 'col-md-4 animate__animated animate__fadeIn';
+                newTestimonial.innerHTML = `
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">${'★'.repeat(rating)}</div>
+                        <p class="testimonial-text">"${reviewText}"</p>
+                        <div class="testimonial-author">- ${name}</div>
+                    </div>
+                `;
+                
+                // Add to the beginning of the testimonials container
+                const allRecentReviewsContainer = document.getElementById('allRecentReviews');
+                if (allRecentReviewsContainer.firstChild) {
+                    allRecentReviewsContainer.insertBefore(newTestimonial, allRecentReviewsContainer.firstChild);
+                } else {
+                    allRecentReviewsContainer.appendChild(newTestimonial);
+                }
+                
+                // Remove oldest testimonial if more than 3
+                const allTestimonials = allRecentReviewsContainer.querySelectorAll('.col-md-4');
+                if (allTestimonials.length > 3) {
+                    allRecentReviewsContainer.removeChild(allTestimonials[allTestimonials.length - 1]);
+                }
+                
+                // Update the average rating and count
+                const reviewCountElement = document.querySelector('.review-count .text-muted');
+                const countMatch = reviewCountElement.textContent.match(/\d+/);
+                if (countMatch) {
+                    const newCount = parseInt(countMatch[0]) + 1;
+                    reviewCountElement.textContent = `Based on ${newCount} reviews`;
+                }
+                
+                // Close the modal
+                const modalInstance = bootstrap.Modal.getInstance(reviewModal);
+                modalInstance.hide();
+                
+                // Clear the form
+                reviewForm.reset();
+                resetStars();
+                ratingInputContainer.classList.remove('rated');
+                
+                // Show success message
+                const successToast = document.createElement('div');
+                successToast.className = 'position-fixed bottom-0 end-0 p-3 animate__animated animate__fadeInUp';
+                successToast.style.zIndex = "1100";
+                successToast.innerHTML = `
+                    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header bg-success text-white">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <strong class="me-auto">Success</strong>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            Thank you for your review! It has been added.
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(successToast);
+                
+                // Remove the toast after 3 seconds
+                setTimeout(() => {
+                    successToast.classList.remove('animate__fadeInUp');
+                    successToast.classList.add('animate__fadeOutDown');
+                    setTimeout(() => {
+                        document.body.removeChild(successToast);
+                    }, 500);
+                }, 3000);
+            });
+
+            // Remove loading overlay
+        });
+    </script>
+    <!-- Tool specific JS -->
+    <script>
+        // Resume Builder Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize tool info buttons
+            const infoButtons = document.querySelectorAll('.info-button');
+            const aboutButton = infoButtons[0];
+            const howToButton = infoButtons[1];
+            const descButton = infoButtons[2];
+            const descriptionBox = document.querySelector('.tool-description-box');
+            const stepsContainer = document.querySelector('.steps-container');
+            const toolInfoContent = document.querySelector('.tool-info-content');
+
+            // Resume Builder State
+            let currentTemplate = 0; // Default template index
+            let resumeData = {
+                personalInfo: {},
+                experience: [],
+                education: [],
+                skills: [],
+                projects: [],
+                certifications: [],
+                hobbies: [],
+                profilePic: '', // base64 image
+                template: 0 // selected template index
+            };
+
+            // Initialize Resume Builder Interface
+            function initResumeBuilder() {
+                const toolContent = document.getElementById('toolContent');
+                toolContent.innerHTML = `
+                    <div class="resume-builder-container">
+                        <div class="row">
+                            <!-- Resume Editor -->
+                            <div class="col-12">
+                                <div class="resume-editor">
+                                    <div class="editor-tabs">
+                                        <button class="btn btn-primary active" data-section="personal">Personal Info</button>
+                                        <button class="btn btn-outline-primary" data-section="experience">Experience</button>
+                                        <button class="btn btn-outline-primary" data-section="education">Education</button>
+                                        <button class="btn btn-outline-primary" data-section="skills">Skills</button>
+                                        <button class="btn btn-outline-primary" data-section="projects">Projects</button>
+                                        <button class="btn btn-outline-primary" data-section="hobbies">Hobbies</button>
+                                    </div>
+                                    <div class="editor-content">
+                                        <!-- Personal Info Form -->
+                                        <div class="editor-section active" id="personal-section">
+                                            <form id="personalInfoForm">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Full Name</label>
+                                                    <input type="text" class="form-control" name="fullName" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Professional Title</label>
+                                                    <input type="text" class="form-control" name="title">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Email</label>
+                                                    <input type="email" class="form-control" name="email" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Phone</label>
+                                                    <input type="tel" class="form-control" name="phone">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Location</label>
+                                                    <input type="text" class="form-control" name="location">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">LinkedIn</label>
+                                                    <input type="url" class="form-control" name="linkedin">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Profile Picture</label>
+                                                    <input type="file" class="form-control" id="profilePicInput" accept="image/*">
+                                                    <img id="profilePicPreview" src="" alt="Profile Picture Preview" style="display:none;width:80px;height:80px;border-radius:50%;margin-top:10px;object-fit:cover;"/>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- Experience Form -->
+                                        <div class="editor-section" id="experience-section">
+                                            <div id="experienceList"></div>
+                                            <button class="btn btn-success" id="addExperience">
+                                                <i class="fas fa-plus"></i> Add Experience
+                                            </button>
+                                        </div>
+                                        <!-- Education Form -->
+                                        <div class="editor-section" id="education-section">
+                                            <div id="educationList"></div>
+                                            <button class="btn btn-success" id="addEducation">
+                                                <i class="fas fa-plus"></i> Add Education
+                                            </button>
+                                        </div>
+                                        <!-- Skills Form -->
+                                        <div class="editor-section" id="skills-section">
+                                            <div class="mb-3">
+                                                <label class="form-label">Skills</label>
+                                                <input type="text" class="form-control" id="skillInput" 
+                                                       placeholder="Type a skill and press Enter">
+                                                <div id="skillsList" class="mt-2"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Projects Form -->
+                                        <div class="editor-section" id="projects-section">
+                                            <div id="projectsList"></div>
+                                            <button class="btn btn-success" id="addProject">
+                                                <i class="fas fa-plus"></i> Add Project
+                                            </button>
+                                        </div>
+                                        <!-- Hobbies Form -->
+                                        <div class="editor-section" id="hobbies-section">
+                                            <div class="mb-3">
+                                                <label class="form-label">Hobbies</label>
+                                                <input type="text" class="form-control" id="hobbyInput" placeholder="Type a hobby and press Enter">
+                                                <div id="hobbiesList" class="mt-2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Preview and Export -->
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="preview-export">
+                                    <a href="#" class="btn btn-primary" id="previewResume">
+                                        <i class="fas fa-eye"></i> Preview
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Template Selection Section -->
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="template-selection">
+                                    <h5>Select Resume Template</h5>
+                                    <div class="mb-2">
+                                        <select id="templateCategory" class="form-select w-auto d-inline-block">
+                                            <option value="all">All Categories</option>
+                                            <option value="modern">Modern</option>
+                                            <option value="classic">Classic</option>
+                                            <option value="creative">Creative</option>
+                                            <option value="minimal">Minimal</option>
+                                            <option value="professional">Professional</option>
+                                        </select>
+                                    </div>
+                                    <div class="template-grid" id="templateGrid">
+                                        <!-- Thumbnails will be injected here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                // Initialize event listeners
+                initializeEventListeners();
+                // Initialize template selection
+                initializeTemplateSelection();
+            }
+
+            // Initialize Event Listeners
+            function initializeEventListeners() {
+                // Form submissions
+                const personalInfoForm = document.getElementById('personalInfoForm');
+                if (personalInfoForm) {
+                    personalInfoForm.addEventListener('input', function() {
+                        savePersonalInfo();
+                    });
+                }
+
+                // Add experience
+                const addExperienceBtn = document.getElementById('addExperience');
+                if (addExperienceBtn) {
+                    addExperienceBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        addExperienceEntry();
+                    });
+                }
+
+                // Add education
+                const addEducationBtn = document.getElementById('addEducation');
+                if (addEducationBtn) {
+                    addEducationBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        addEducationEntry();
+                    });
+                }
+
+                // Skills input
+                const skillInput = document.getElementById('skillInput');
+                if (skillInput) {
+                    skillInput.addEventListener('keypress', function(e) {
+                        if (e.key === 'Enter') {
+                            e.preventDefault();
+                            addSkill(this.value);
+                            this.value = '';
+                        }
+                    });
+                }
+
+                // Add project
+                const addProjectBtn = document.getElementById('addProject');
+                if (addProjectBtn) {
+                    addProjectBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        addProjectEntry();
+                    });
+                }
+
+                // Hobbies input
+                const hobbyInput = document.getElementById('hobbyInput');
+                if (hobbyInput) {
+                    hobbyInput.addEventListener('keypress', function(e) {
+                        if (e.key === 'Enter') {
+                            e.preventDefault();
+                            addHobby(this.value);
+                            this.value = '';
+                        }
+                    });
+                }
+
+                // Preview button
+                const previewResumeBtn = document.getElementById('previewResume');
+                if (previewResumeBtn) {
+                    previewResumeBtn.addEventListener('click', function(e) {
+                        if (e) e.preventDefault();
+                        try {
+                            console.log('Preview button clicked');
+                            previewResume();
+                        } catch (error) {
+                            console.error('Error showing preview:', error);
+                            alert('There was an error showing the preview. Please try again.');
+                        }
+                    });
+                } else {
+                    console.error('Preview button not found');
+                }
+
+                // Profile picture input
+                const profilePicInput = document.getElementById('profilePicInput');
+                const profilePicPreview = document.getElementById('profilePicPreview');
+                if (profilePicInput && profilePicPreview) {
+                    profilePicInput.addEventListener('change', function(e) {
+                        const file = e.target.files[0];
+                        if (file) {
+                            const reader = new FileReader();
+                            reader.onload = function(evt) {
+                                resumeData.profilePic = evt.target.result;
+                                profilePicPreview.src = evt.target.result;
+                                profilePicPreview.style.display = 'block';
+                                updatePreview();
+                            };
+                            reader.readAsDataURL(file);
+                        }
+                    });
+                }
+
+                // Tab switching for editor-tabs
+                const tabButtons = document.querySelectorAll('.editor-tabs button');
+                const sections = document.querySelectorAll('.editor-section');
+                if (tabButtons.length > 0 && sections.length > 0) {
+                    tabButtons.forEach(btn => {
+                        btn.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            // Remove active class from all buttons
+                            tabButtons.forEach(b => b.classList.remove('btn-primary', 'active'));
+                            tabButtons.forEach(b => b.classList.add('btn-outline-primary'));
+                            // Add active class to clicked button
+                            this.classList.remove('btn-outline-primary');
+                            this.classList.add('btn-primary', 'active');
+                            // Show the corresponding section
+                            const section = this.getAttribute('data-section');
+                            if (section) {
+                                sections.forEach(sec => {
+                                    if (sec.id === section + '-section') {
+                                        sec.classList.add('active');
+                                    } else {
+                                        sec.classList.remove('active');
+                                    }
+                                });
+                            }
+                        });
+                    });
+                }
+            }
+
+            // Save Personal Info
+            function savePersonalInfo() {
+                const form = document.getElementById('personalInfoForm');
+                const formData = new FormData(form);
+                resumeData.personalInfo = Object.fromEntries(formData);
+                updatePreview();
+            }
+
+            // Add Experience Entry
+            function addExperienceEntry() {
+                try {
+                    const experienceList = document.getElementById('experienceList');
+                    if (!experienceList) {
+                        console.error('Experience list element not found');
+                        return;
+                    }
+                    
+                    const entry = document.createElement('div');
+                    entry.className = 'experience-entry mb-3 p-3 border rounded';
+                    entry.innerHTML = `
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Company</label>
+                                    <input type="text" class="form-control" name="company">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Position</label>
+                                    <input type="text" class="form-control" name="position">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Start Date</label>
+                                    <input type="date" class="form-control" name="startDate">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">End Date</label>
+                                    <input type="date" class="form-control" name="endDate">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Description</label>
+                            <textarea class="form-control" name="description" rows="3"></textarea>
+                        </div>
+                        <button class="btn btn-danger btn-sm remove-entry">
+                            <i class="fas fa-trash"></i> Remove
+                        </button>
+                    `;
+                    
+                    experienceList.appendChild(entry);
+                    
+                    // Add remove functionality
+                    const removeButton = entry.querySelector('.remove-entry');
+                    if (removeButton) {
+                        removeButton.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            entry.remove();
+                            saveExperience();
+                        });
+                    }
+                    
+                    // Add change listeners
+                    entry.querySelectorAll('input, textarea').forEach(input => {
+                        input.addEventListener('input', function() {
+                            saveExperience();
+                        });
+                    });
+
+                    // Update preview immediately
+                    saveExperience();
+                } catch (error) {
+                    console.error('Error adding experience entry:', error);
+                    alert('There was an error adding the experience entry. Please try again.');
+                }
+            }
+
+            // Save Experience
+            function saveExperience() {
+                try {
+                    const entries = document.querySelectorAll('.experience-entry');
+                    resumeData.experience = Array.from(entries).map(entry => {
+                        const company = entry.querySelector('[name="company"]')?.value || '';
+                        const position = entry.querySelector('[name="position"]')?.value || '';
+                        const startDate = entry.querySelector('[name="startDate"]')?.value || '';
+                        const endDate = entry.querySelector('[name="endDate"]')?.value || '';
+                        const description = entry.querySelector('[name="description"]')?.value || '';
+                        
+                        return {
+                            company,
+                            position,
+                            startDate,
+                            endDate,
+                            description
+                        };
+                    });
+                } catch (error) {
+                    console.error('Error saving experience data:', error);
+                    resumeData.experience = [];
+                }
+            }
+
+            // Add Education Entry
+            function addEducationEntry() {
+                try {
+                    const educationList = document.getElementById('educationList');
+                    if (!educationList) {
+                        console.error('Education list element not found');
+                        return;
+                    }
+                    
+                    const entry = document.createElement('div');
+                    entry.className = 'education-entry mb-3 p-3 border rounded';
+                    entry.innerHTML = `
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Institution</label>
+                                    <input type="text" class="form-control" name="institution">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Degree</label>
+                                    <input type="text" class="form-control" name="degree">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Start Date</label>
+                                    <input type="date" class="form-control" name="startDate">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">End Date</label>
+                                    <input type="date" class="form-control" name="endDate">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Description</label>
+                            <textarea class="form-control" name="description" rows="2"></textarea>
+                        </div>
+                        <button class="btn btn-danger btn-sm remove-entry">
+                            <i class="fas fa-trash"></i> Remove
+                        </button>
+                    `;
+                    
+                    educationList.appendChild(entry);
+                    
+                    // Add remove functionality
+                    const removeButton = entry.querySelector('.remove-entry');
+                    if (removeButton) {
+                        removeButton.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            entry.remove();
+                            saveEducation();
+                        });
+                    }
+                    
+                    // Add change listeners
+                    entry.querySelectorAll('input, textarea').forEach(input => {
+                        input.addEventListener('input', function() {
+                            saveEducation();
+                        });
+                    });
+
+                    // Update preview immediately
+                    saveEducation();
+                } catch (error) {
+                    console.error('Error adding education entry:', error);
+                    alert('There was an error adding the education entry. Please try again.');
+                }
+            }
+
+            // Save Education
+            function saveEducation() {
+                try {
+                    const entries = document.querySelectorAll('.education-entry');
+                    resumeData.education = Array.from(entries).map(entry => {
+                        const institution = entry.querySelector('[name="institution"]')?.value || '';
+                        const degree = entry.querySelector('[name="degree"]')?.value || '';
+                        const startDate = entry.querySelector('[name="startDate"]')?.value || '';
+                        const endDate = entry.querySelector('[name="endDate"]')?.value || '';
+                        const description = entry.querySelector('[name="description"]')?.value || '';
+                        
+                        return {
+                            institution,
+                            degree,
+                            startDate,
+                            endDate,
+                            description
+                        };
+                    });
+                } catch (error) {
+                    console.error('Error saving education data:', error);
+                    resumeData.education = [];
+                }
+            }
+
+            // Add Skill
+            function addSkill(skill) {
+                if (!skill.trim()) return;
+                
+                const skillsList = document.getElementById('skillsList');
+                const skillTag = document.createElement('span');
+                skillTag.className = 'badge bg-primary me-2 mb-2';
+                skillTag.innerHTML = `
+                    ${skill}
+                    <button type="button" class="btn-close btn-close-white ms-2" aria-label="Remove"></button>
+                `;
+                
+                skillsList.appendChild(skillTag);
+                
+                // Add remove functionality
+                skillTag.querySelector('.btn-close').addEventListener('click', function() {
+                    skillTag.remove();
+                    saveSkills();
+                });
+                
+                saveSkills();
+            }
+
+            // Save Skills
+            function saveSkills() {
+                const skills = Array.from(document.querySelectorAll('#skillsList .badge'))
+                    .map(skill => skill.textContent.trim());
+                resumeData.skills = skills;
+                updatePreview();
+            }
+
+            // Add Project Entry
+            function addProjectEntry() {
+                try {
+                    const projectsList = document.getElementById('projectsList');
+                    if (!projectsList) {
+                        console.error('Projects list element not found');
+                        return;
+                    }
+                    
+                    const entry = document.createElement('div');
+                    entry.className = 'project-entry mb-3 p-3 border rounded';
+                    entry.innerHTML = `
+                        <div class="mb-3">
+                            <label class="form-label">Project Name</label>
+                            <input type="text" class="form-control" name="name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Description</label>
+                            <textarea class="form-control" name="description" rows="2"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Technologies Used</label>
+                            <input type="text" class="form-control" name="technologies" 
+                                   placeholder="Separate technologies with commas">
+                        </div>
+                        <button class="btn btn-danger btn-sm remove-entry">
+                            <i class="fas fa-trash"></i> Remove
+                        </button>
+                    `;
+                    
+                    projectsList.appendChild(entry);
+                    
+                    // Add remove functionality
+                    const removeButton = entry.querySelector('.remove-entry');
+                    if (removeButton) {
+                        removeButton.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            entry.remove();
+                            saveProjects();
+                        });
+                    }
+                    
+                    // Add change listeners
+                    entry.querySelectorAll('input, textarea').forEach(input => {
+                        input.addEventListener('input', function() {
+                            saveProjects();
+                        });
+                    });
+
+                    // Update preview immediately
+                    saveProjects();
+                } catch (error) {
+                    console.error('Error adding project entry:', error);
+                    alert('There was an error adding the project entry. Please try again.');
+                }
+            }
+
+            // Save Projects
+            function saveProjects() {
+                try {
+                    const entries = document.querySelectorAll('.project-entry');
+                    resumeData.projects = Array.from(entries).map(entry => {
+                        const name = entry.querySelector('[name="name"]')?.value || '';
+                        const description = entry.querySelector('[name="description"]')?.value || '';
+                        const technologies = entry.querySelector('[name="technologies"]')?.value || '';
+                        
+                        return {
+                            name,
+                            description,
+                            technologies
+                        };
+                    });
+                } catch (error) {
+                    console.error('Error saving project data:', error);
+                    resumeData.projects = [];
+                }
+            }
+
+            // Add Hobby
+            function addHobby(hobby) {
+                if (!hobby.trim()) return;
+                const hobbiesList = document.getElementById('hobbiesList');
+                const hobbyTag = document.createElement('span');
+                hobbyTag.className = 'badge bg-secondary me-2 mb-2';
+                hobbyTag.innerHTML = `
+                    ${hobby}
+                    <button type="button" class="btn-close btn-close-white ms-2" aria-label="Remove"></button>
+                `;
+                hobbiesList.appendChild(hobbyTag);
+                hobbyTag.querySelector('.btn-close').addEventListener('click', function() {
+                    hobbyTag.remove();
+                    saveHobbies();
+                });
+                saveHobbies();
+            }
+
+            // Save Hobbies
+            function saveHobbies() {
+                const hobbies = Array.from(document.querySelectorAll('#hobbiesList .badge'))
+                    .map(hobby => hobby.textContent.trim());
+                resumeData.hobbies = hobbies;
+                console.log('Saved hobbies:', resumeData.hobbies);
+                updatePreview();
+            }
+
+            // Preview Resume
+            function previewResume() {
+                try {
+                    console.log('Starting preview generation', resumeData);
+                    
+                    // Save all current form data
+                    savePersonalInfo();
+                    saveExperience();
+                    saveEducation();
+                    saveSkills();
+                    saveProjects();
+                    saveHobbies();
+                    
+                    console.log('All data saved', resumeData);
+                    
+                    // Create preview modal
+                    const modalId = 'previewModal';
+                    let modal = document.getElementById(modalId);
+                    
+                    // Remove existing modal if it exists
+                    if (modal) {
+                        document.body.removeChild(modal);
+                        console.log('Removed existing modal');
+                    }
+                    
+                    modal = document.createElement('div');
+                    modal.className = 'modal fade';
+                    modal.id = modalId;
+                    modal.setAttribute('tabindex', '-1');
+                    modal.setAttribute('role', 'dialog');
+                    modal.setAttribute('aria-labelledby', 'previewModalLabel');
+                    modal.setAttribute('aria-hidden', 'true');
+                    
+                    modal.innerHTML = `
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="previewModalLabel">Resume Preview</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="resumePreview" class="p-3"></div>
+                                </div>
+                                <div class="modal-footer justify-content-between">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" id="downloadPreview">
+                                        <i class="fas fa-download"></i> Download PDF
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    document.body.appendChild(modal);
+                    console.log('Modal created and appended to body');
+                    
+                    // Show the modal first, then update content
+                    try {
+                        console.log('Showing modal with Bootstrap');
+                        const modalInstance = new bootstrap.Modal(modal);
+                        modalInstance.show();
+                        console.log('Modal shown successfully');
+                        
+                        // Update preview with latest data after modal is shown
+                        setTimeout(() => {
+                            try {
+                                updatePreview();
+                                console.log('Preview content updated after modal shown');
+                            } catch (updateError) {
+                                console.error('Error updating preview after modal shown:', updateError);
+                            }
+                        }, 100);
+                    } catch (error) {
+                        console.error('Error showing modal with Bootstrap:', error);
+                        alert('Could not display preview. Please try again.');
+                        return;
+                    }
+                    
+                    // Add download functionality to the button in modal
+                    const downloadBtn = document.getElementById('downloadPreview');
+                    if (downloadBtn) {
+                        downloadBtn.addEventListener('click', function(e) {
+                            if (e) e.preventDefault();
+                            console.log('Download button clicked');
+                            exportToPDF();
+                        });
+                        console.log('Download button event listener added');
+                    } else {
+                        console.error('Download button not found in modal');
+                    }
+                    
+                    // Clean up on close
+                    modal.addEventListener('hidden.bs.modal', function() {
+                        try {
+                            document.body.removeChild(modal);
+                            console.log('Modal removed after closing');
+                        } catch (e) {
+                            console.error('Error removing modal:', e);
+                        }
+                    });
+                } catch (error) {
+                    console.error('Error in previewResume function:', error);
+                    alert('There was an error showing the preview. Please try again.');
+                }
+            }
+
+            // Update Preview
+            function updatePreview() {
+                try {
+                    const preview = document.getElementById('resumePreview');
+                    if (!preview) {
+                        console.error('Resume preview element not found');
+                        return;
+                    }
+                    
+                    // Generate HTML based on template and data
+                    const html = generateResumeHTML();
+                    preview.innerHTML = html;
+                    
+                    // Apply styles to the preview
+                    preview.style.backgroundColor = '#fff';
+                    preview.style.padding = '30px';
+                    preview.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                    preview.style.borderRadius = '5px';
+                    
+                    console.log('Preview updated successfully');
+                } catch (error) {
+                    console.error('Error updating preview:', error);
+                    const preview = document.getElementById('resumePreview');
+                    if (preview) {
+                        preview.innerHTML = `
+                            <div class="alert alert-danger">
+                                <p>There was an error generating your resume preview. Please try again.</p>
+                            </div>
+                        `;
+                    }
+                }
+            }
+
+            // Generate Resume HTML
+            function generateResumeHTML() {
+                try {
+                    // Create a default "Your Name" if no name is provided
+                    const fullName = resumeData.personalInfo?.fullName || 'Your Name';
+                    const title = resumeData.personalInfo?.title || 'Professional Title';
+                    const email = resumeData.personalInfo?.email || '';
+                    const phone = resumeData.personalInfo?.phone || '';
+                    const location = resumeData.personalInfo?.location || '';
+                    const linkedin = resumeData.personalInfo?.linkedin || '';
+                    
+                    // Ensure arrays exist to prevent errors
+                    const experience = resumeData.experience || [];
+                    const education = resumeData.education || [];
+                    const skills = resumeData.skills || [];
+                    const projects = resumeData.projects || [];
+                    const hobbies = resumeData.hobbies || [];
+                    
+                    // Generate the HTML with safe checks
+                    return `
+                        <div class="resume">
+                            <!-- Personal Info -->
+                            <div class="resume-header">
+                                ${resumeData.profilePic ? `<img src="${resumeData.profilePic}" alt="Profile Picture" style="width:80px;height:80px;border-radius:50%;object-fit:cover;margin-bottom:10px;">` : ''}
+                                <h1>${fullName}</h1>
+                                <p class="title">${title}</p>
+                                <div class="contact-info">
+                                    ${email ? `<p><i class="fas fa-envelope"></i> ${email}</p>` : ''}
+                                    ${phone ? `<p><i class="fas fa-phone"></i> ${phone}</p>` : ''}
+                                    ${location ? `<p><i class="fas fa-map-marker-alt"></i> ${location}</p>` : ''}
+                                    ${linkedin ? `<p><i class="fab fa-linkedin"></i> ${linkedin}</p>` : ''}
+                                </div>
+                            </div>
+                            
+                            <!-- Experience -->
+                            <div class="resume-section">
+                                <h2>Experience</h2>
+                                ${experience.length ? experience.map(exp => `
+                                    <div class="experience-item">
+                                        <h3>${exp.position || ''}</h3>
+                                        <h4>${exp.company || ''}</h4>
+                                        <p class="date">${exp.startDate || ''} - ${exp.endDate || ''}</p>
+                                        <p>${exp.description || ''}</p>
+                                    </div>
+                                `).join('') : `<p class='text-muted'>No entries.</p>`}
+                            </div>
+                            
+                            <!-- Education -->
+                            <div class="resume-section">
+                                <h2>Education</h2>
+                                ${education.length ? education.map(edu => `
+                                    <div class="education-item">
+                                        <h3>${edu.degree || ''}</h3>
+                                        <h4>${edu.institution || ''}</h4>
+                                        <p class="date">${edu.startDate || ''} - ${edu.endDate || ''}</p>
+                                        <p>${edu.description || ''}</p>
+                                    </div>
+                                `).join('') : `<p class='text-muted'>No entries.</p>`}
+                            </div>
+                            
+                            <!-- Skills -->
+                            <div class="resume-section">
+                                <h2>Skills</h2>
+                                <div class="skills-list">
+                                    ${skills.length ? skills.map(skill => `
+                                        <span class="skill-tag">${skill || ''}</span>
+                                    `).join('') : `<p class='text-muted'>No entries.</p>`}
+                                </div>
+                            </div>
+                            
+                            <!-- Projects -->
+                            <div class="resume-section">
+                                <h2>Projects</h2>
+                                ${projects.length ? projects.map(project => `
+                                    <div class="project-item">
+                                        <h3>${project.name || ''}</h3>
+                                        <p>${project.description || ''}</p>
+                                        <p class="technologies">${project.technologies || ''}</p>
+                                    </div>
+                                `).join('') : `<p class='text-muted'>No entries.</p>`}
+                            </div>
+                            
+                            <!-- Hobbies -->
+                            <div class="resume-section">
+                                <h2>Hobbies</h2>
+                                <div class="skills-list">
+                                    ${hobbies && hobbies.length ? hobbies.map(hobby => `
+                                        <span class="skill-tag">${hobby || ''}</span>
+                                    `).join('') : `<p class='text-muted'>No entries.</p>`}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                } catch (error) {
+                    console.error('Error generating resume HTML:', error);
+                    return `
+                        <div class="alert alert-danger">
+                            <p>There was an error generating your resume preview. Please try again.</p>
+                        </div>
+                    `;
+                }
+            }
+
+            // Export to PDF
+            function exportToPDF() {
+                try {
+                    // Create a success notification
+                    function showSuccessToast() {
+                        const successToast = document.createElement('div');
+                        successToast.className = 'position-fixed bottom-0 end-0 p-3 animate__animated animate__fadeInUp';
+                        successToast.style.zIndex = "1100";
+                        successToast.innerHTML = `
+                            <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                                <div class="toast-header bg-success text-white">
+                                    <i class="fas fa-check-circle me-2"></i>
+                                    <strong class="me-auto">Success</strong>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                                </div>
+                                <div class="toast-body">
+                                    Your resume has been downloaded successfully!
+                                </div>
+                            </div>
+                        `;
+                        document.body.appendChild(successToast);
+                        setTimeout(() => {
+                            successToast.classList.remove('animate__fadeInUp');
+                            successToast.classList.add('animate__fadeOutDown');
+                            setTimeout(() => {
+                                try {
+                                    document.body.removeChild(successToast);
+                                } catch (e) {
+                                    console.log('Toast already removed');
+                                }
+                            }, 500);
+                        }, 3000);
+                    }
+                    
+                    // Create loading notification
+                    const loadingToast = document.createElement('div');
+                    loadingToast.className = 'position-fixed bottom-0 end-0 p-3';
+                    loadingToast.style.zIndex = "1100";
+                    loadingToast.innerHTML = `
+                        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header bg-primary text-white">
+                                <i class="fas fa-spinner fa-spin me-2"></i>
+                                <strong class="me-auto">Generating PDF</strong>
+                            </div>
+                            <div class="toast-body">
+                                Please wait while your resume is being generated...
+                            </div>
+                        </div>
+                    `;
+                    document.body.appendChild(loadingToast);
+
+                    // Make sure all form data is saved before generating PDF
+                    savePersonalInfo();
+                    saveExperience();
+                    saveEducation();
+                    saveSkills();
+                    saveProjects();
+                    saveHobbies();
+
+                    // Get or create a preview area
+                    let resumePreview = document.getElementById('resumePreview');
+                    if (!resumePreview) {
+                        // If we're not in preview mode, create a hidden element
+                        resumePreview = document.createElement('div');
+                        resumePreview.id = 'resumeExportContainer';
+                        resumePreview.style.display = 'block';
+                        resumePreview.style.position = 'absolute';
+                        resumePreview.style.top = '0';
+                        resumePreview.style.left = '0';
+                        resumePreview.style.width = '100%';
+                        resumePreview.innerHTML = generateResumeHTML();
+                        document.body.appendChild(resumePreview);
+                    }
+
+                    // Configure PDF options
+                    const opt = {
+                        margin: 10,
+                        filename: `resume_${resumeData.personalInfo.fullName?.toLowerCase().replace(/\s+/g, '_') || 'untitled'}.pdf`,
+                        image: { type: 'jpeg', quality: 0.98 },
+                        html2canvas: { 
+                            scale: 2, 
+                            useCORS: true,
+                            logging: false,
+                            scrollY: 0,
+                            scrollX: 0,
+                            windowWidth: document.documentElement.offsetWidth,
+                            windowHeight: document.documentElement.offsetHeight
+                        },
+                        jsPDF: { 
+                            unit: 'mm', 
+                            format: 'a4', 
+                            orientation: 'portrait'
+                        }
+                    };
+
+                    // Generate PDF
+                    // Force a small delay to ensure the content is fully rendered
+                    setTimeout(() => {
+                        html2pdf().from(resumePreview).set(opt).save()
+                            .then(() => {
+                                // Cleanup
+                                try {
+                                    document.body.removeChild(loadingToast);
+                                    if (resumePreview.id === 'resumeExportContainer') {
+                                        document.body.removeChild(resumePreview);
+                                    }
+                                    showSuccessToast();
+                                } catch (e) {
+                                    console.error('Cleanup error:', e);
+                                }
+                            })
+                            .catch(error => {
+                                // Handle errors
+                                try {
+                                    document.body.removeChild(loadingToast);
+                                    if (resumePreview.id === 'resumeExportContainer') {
+                                        document.body.removeChild(resumePreview);
+                                    }
+                                } catch (e) {
+                                    console.error('Cleanup error:', e);
+                                }
+                                
+                                console.error('PDF generation error:', error);
+                                
+                                const errorToast = document.createElement('div');
+                                errorToast.className = 'position-fixed bottom-0 end-0 p-3';
+                                errorToast.style.zIndex = "1100";
+                                errorToast.innerHTML = `
+                                    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                                        <div class="toast-header bg-danger text-white">
+                                            <i class="fas fa-exclamation-circle me-2"></i>
+                                            <strong class="me-auto">Error</strong>
+                                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                                        </div>
+                                        <div class="toast-body">
+                                            There was an error generating your PDF. Please try again.
+                                        </div>
+                                    </div>
+                                `;
+                                document.body.appendChild(errorToast);
+                                setTimeout(() => {
+                                    try {
+                                        document.body.removeChild(errorToast);
+                                    } catch (e) {
+                                        console.error('Error toast removal error:', e);
+                                    }
+                                }, 5000);
+                            });
+                    }, 100);
+                } catch (error) {
+                    console.error('PDF export error:', error);
+                    
+                    try {
+                        document.body.removeChild(loadingToast);
+                    } catch (e) {
+                        console.error('Cleanup error:', e);
+                    }
+                    
+                    const errorToast = document.createElement('div');
+                    errorToast.className = 'position-fixed bottom-0 end-0 p-3';
+                    errorToast.style.zIndex = "1100";
+                    errorToast.innerHTML = `
+                        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header bg-danger text-white">
+                                <i class="fas fa-exclamation-circle me-2"></i>
+                                <strong class="me-auto">Error</strong>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                There was an error generating your resume. Please try again.
+                            </div>
+                        </div>
+                    `;
+                    document.body.appendChild(errorToast);
+                    setTimeout(() => {
+                        try {
+                            document.body.removeChild(errorToast);
+                        } catch (e) {
+                            console.error('Error removing toast:', e);
+                        }
+                    }, 5000);
+                }
+            }
+
+            // Initialize Template Selection
+            function initializeTemplateSelection() {
+                const templates = {
+                    modern: [
+                        { id: 'modern-1', name: 'Modern Elegance', category: 'modern', icon: '✨', default: true },
+                        { id: 'modern-2', name: 'Tech Vision', category: 'modern', icon: '👨‍💻' },
+                        { id: 'modern-3', name: 'Urban Style', category: 'modern', icon: '🌆' },
+                        { id: 'modern-4', name: 'Digital Edge', category: 'modern', icon: '💻' },
+                        { id: 'modern-5', name: 'Future Forward', category: 'modern', icon: '🚀' },
+                        { id: 'modern-6', name: 'Smart Design', category: 'modern', icon: '🎯' },
+                        { id: 'modern-7', name: 'Dynamic Flow', category: 'modern', icon: '⚡' },
+                        { id: 'modern-8', name: 'Innovative Layout', category: 'modern', icon: '💡' },
+                        { id: 'modern-9', name: 'Contemporary', category: 'modern', icon: '🎨' },
+                        { id: 'modern-10', name: 'Next Gen', category: 'modern', icon: '🌟' }
+                    ],
+                    classic: [
+                        { id: 'classic-1', name: 'Traditional', category: 'classic', icon: '📜' },
+                        { id: 'classic-2', name: 'Executive', category: 'classic', icon: '👔' },
+                        { id: 'classic-3', name: 'Professional', category: 'classic', icon: '💼' },
+                        { id: 'classic-4', name: 'Corporate', category: 'classic', icon: '🏢' },
+                        { id: 'classic-5', name: 'Business', category: 'classic', icon: '📊' },
+                        { id: 'classic-6', name: 'Formal', category: 'classic', icon: '🎩' },
+                        { id: 'classic-7', name: 'Standard', category: 'classic', icon: '📋' },
+                        { id: 'classic-8', name: 'Conventional', category: 'classic', icon: '📝' },
+                        { id: 'classic-9', name: 'Established', category: 'classic', icon: '🏛️' },
+                        { id: 'classic-10', name: 'Time-Tested', category: 'classic', icon: '⏳' }
+                    ],
+                    creative: [
+                        { id: 'creative-1', name: 'Artistic', category: 'creative', icon: '🎭' },
+                        { id: 'creative-2', name: 'Designer', category: 'creative', icon: '🎨' },
+                        { id: 'creative-3', name: 'Portfolio', category: 'creative', icon: '📚' },
+                        { id: 'creative-4', name: 'Showcase', category: 'creative', icon: '🎪' },
+                        { id: 'creative-5', name: 'Gallery', category: 'creative', icon: '🖼️' },
+                        { id: 'creative-6', name: 'Exhibition', category: 'creative', icon: '🎯' },
+                        { id: 'creative-7', name: 'Studio', category: 'creative', icon: '🎬' },
+                        { id: 'creative-8', name: 'Canvas', category: 'creative', icon: '🖌️' },
+                        { id: 'creative-9', name: 'Palette', category: 'creative', icon: '🎨' },
+                        { id: 'creative-10', name: 'Masterpiece', category: 'creative', icon: '🏆' }
+                    ],
+                    minimal: [
+                        { id: 'minimal-1', name: 'Simple', category: 'minimal', icon: '⚪' },
+                        { id: 'minimal-2', name: 'Clean', category: 'minimal', icon: '🧹' },
+                        { id: 'minimal-3', name: 'Essential', category: 'minimal', icon: '✨' },
+                        { id: 'minimal-4', name: 'Basic', category: 'minimal', icon: '📄' },
+                        { id: 'minimal-5', name: 'Stripped', category: 'minimal', icon: '📑' },
+                        { id: 'minimal-6', name: 'Bare', category: 'minimal', icon: '📝' },
+                        { id: 'minimal-7', name: 'Plain', category: 'minimal', icon: '📋' },
+                        { id: 'minimal-8', name: 'Sparse', category: 'minimal', icon: '📊' },
+                        { id: 'minimal-9', name: 'Minimalist', category: 'minimal', icon: '🎯' },
+                        { id: 'minimal-10', name: 'Essential', category: 'minimal', icon: '💫' }
+                    ],
+                    professional: [
+                        { id: 'professional-1', name: 'Executive Pro', category: 'professional', icon: '👨‍💼' },
+                        { id: 'professional-2', name: 'Business Elite', category: 'professional', icon: '💼' },
+                        { id: 'professional-3', name: 'Corporate Plus', category: 'professional', icon: '🏢' },
+                        { id: 'professional-4', name: 'Industry Expert', category: 'professional', icon: '🎯' },
+                        { id: 'professional-5', name: 'Senior Level', category: 'professional', icon: '👨‍💻' },
+                        { id: 'professional-6', name: 'Management', category: 'professional', icon: '📊' },
+                        { id: 'professional-7', name: 'Leadership', category: 'professional', icon: '👑' },
+                        { id: 'professional-8', name: 'Director', category: 'professional', icon: '🎬' },
+                        { id: 'professional-9', name: 'Executive', category: 'professional', icon: '💼' },
+                        { id: 'professional-10', name: 'Senior Pro', category: 'professional', icon: '⭐' }
+                    ]
+                };
+
+                // Function to render templates
+                function renderTemplates(category = 'all') {
+                    const templateGrid = document.getElementById('templateGrid');
+                    templateGrid.innerHTML = '';
+
+                    let templatesToShow = [];
+                    if (category === 'all') {
+                        Object.values(templates).forEach(catTemplates => {
+                            templatesToShow = templatesToShow.concat(catTemplates);
+                        });
+                    } else {
+                        templatesToShow = templates[category] || [];
+                    }
+
+                    templatesToShow.forEach(template => {
+                        const templateCard = document.createElement('div');
+                        templateCard.className = 'template-card';
+                        if (template.default) {
+                            templateCard.classList.add('selected');
+                            currentTemplate = template.id;
+                        }
+                        templateCard.innerHTML = `
+                            <div class="template-icon">${template.icon}</div>
+                            <div class="template-info">
+                                <h5>${template.name}</h5>
+                            </div>
+                        `;
+                        templateCard.addEventListener('click', () => {
+                            // Remove selected class from all cards
+                            document.querySelectorAll('.template-card').forEach(card => {
+                                card.classList.remove('selected');
+                            });
+                            // Add selected class to clicked card
+                            templateCard.classList.add('selected');
+                            // Update current template
+                            currentTemplate = template.id;
+                            // Update preview
+                            updatePreview();
+                        });
+                        templateGrid.appendChild(templateCard);
+                    });
+                }
+
+                // Add template card styles
+                const style = document.createElement('style');
+                style.textContent = `
+                    .template-card {
+                        background: #fff;
+                        border: 1px solid #dee2e6;
+                        border-radius: 8px;
+                        padding: 15px;
+                        text-align: center;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                    }
+
+                    .template-card:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                    }
+
+                    .template-card.selected {
+                        border: 2px solid var(--primary-color);
+                        background-color: rgba(var(--primary-color-rgb), 0.05);
+                    }
+
+                    .template-icon {
+                        font-size: 2.5rem;
+                        margin-bottom: 10px;
+                    }
+
+                    .template-info h5 {
+                        margin: 0;
+                        font-size: 1rem;
+                        color: var(--text-color);
+                    }
+                `;
+                document.head.appendChild(style);
+
+                // Initial render
+                renderTemplates();
+
+                // Category filter
+                const categorySelect = document.getElementById('templateCategory');
+                categorySelect.addEventListener('change', (e) => {
+                    renderTemplates(e.target.value);
+                });
+            }
+
+            // Initialize the resume builder
+            initResumeBuilder();
+        });
+    </script>
+    <!-- Add a hidden export container to the HTML body for PDF export -->
+    <div id="resumeExportContainer" style="display:none; position: absolute; top: 0; left: 0; width: 100%;"></div>
+</body>
+</html>

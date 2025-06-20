@@ -1,0 +1,2536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator - Free Online Tool</title>
+    <meta name="description" content="Calculate compound interest with our free online calculator. Get accurate results instantly with our advanced compound interest formula. Perfect for investments, loans, and savings planning.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Base color scheme */
+        :root {
+            --primary-color: #e67e22;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --background-color: #ffffff;
+            --text-color: #333333;
+            --navbar-bg: #ffffff;
+            --navbar-text-color: #444;
+            --navbar-icon-color: #6f42c1;
+            --trust-banner-gradient-start: #e67e22;
+            --trust-banner-gradient-end: #f39c12;
+            --banner-bg: #e67e22;
+            --banner-text: #ffffff;
+            --primary-color-rgb: 230, 126, 34;
+        }
+        
+        .color-scheme-1 {
+            --primary-color: #007bff;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --background-color: #ffffff;
+            --text-color: #f32b2b;
+            --navbar-bg: #ffffff;
+            --navbar-text-color: #444;
+            --navbar-icon-color: #6f42c1;
+            --trust-banner-gradient-start: #6f42c1;
+            --trust-banner-gradient-end: #8a5fcf;
+            --footer-bg: #f8f9fa;
+            --footer-text: #333333;
+            --footer-link: #007bff;
+        }
+        
+        .color-scheme-2 {
+            --primary-color: #0dcaf0;
+            --brand-purple: #0d6efd;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e3f2fd;
+            --text-color: #0d6efd;
+            --navbar-bg: #bbdefb;
+            --navbar-text-color: #0d6efd;
+            --navbar-icon-color: #0d6efd;
+            --trust-banner-gradient-start: #0d6efd;
+            --trust-banner-gradient-end: #0dcaf0;
+            --footer-bg: #bbdefb;
+            --footer-text: #0d6efd;
+            --footer-link: #0dcaf0;
+        }
+
+        /* Color Scheme 3 - Forest */
+        .color-scheme-3 {
+            --primary-color: #198754;
+            --brand-purple: #20c997;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e8f5e9;
+            --text-color: #2e7d32;
+            --navbar-bg: #c8e6c9;
+            --navbar-text-color: #2e7d32;
+            --navbar-icon-color: #2e7d32;
+            --trust-banner-gradient-start: #198754;
+            --trust-banner-gradient-end: #20c997;
+            --footer-bg: #c8e6c9;
+            --footer-text: #2e7d32;
+            --footer-link: #198754;
+        }
+        
+        /* Color Scheme 4 - Sunset */
+        .color-scheme-4 {
+            --primary-color: #fd7e14;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #fff3e0;
+            --text-color: #e65100;
+            --navbar-bg: #ffe0b2;
+            --navbar-text-color: #e65100;
+            --navbar-icon-color: #e65100;
+            --trust-banner-gradient-start: #fd7e14;
+            --trust-banner-gradient-end: #dc3545;
+            --footer-bg: #ffe0b2;
+            --footer-text: #e65100;
+            --footer-link: #fd7e14;
+        }
+        
+        /* Color Scheme 5 - Royal */
+        .color-scheme-5 {
+            --primary-color: #6f42c1;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f3e5f5;
+            --text-color: #4a148c;
+            --navbar-bg: #e1bee7;
+            --navbar-text-color: #4a148c;
+            --navbar-icon-color: #5e1caf;
+            --trust-banner-gradient-start: #6f42c1;
+            --trust-banner-gradient-end: #9370DB;
+            --footer-bg: #e1bee7;
+            --footer-text: #4a148c;
+            --footer-link: #6f42c1;
+        }
+
+        /* Color Scheme 6 - Midnight */
+        .color-scheme-6 {
+            --primary-color: #0d6efd;
+            --brand-purple: #6610f2;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e3f2fd;
+            --text-color: #0d6efd;
+            --navbar-bg: #bbdefb;
+            --navbar-text-color: #0d6efd;
+            --navbar-icon-color: #0d6efd;
+            --trust-banner-gradient-start: #0d6efd;
+            --trust-banner-gradient-end: #6610f2;
+            --footer-bg: #bbdefb;
+            --footer-text: #0d6efd;
+            --footer-link: #0d6efd;
+        }
+
+        /* Color Scheme 7 - Spring */
+        .color-scheme-7 {
+            --primary-color: #20c997;
+            --brand-purple: #198754;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e8f5e9;
+            --text-color: #2e7d32;
+            --navbar-bg: #c8e6c9;
+            --navbar-text-color: #2e7d32;
+            --navbar-icon-color: #2e7d32;
+            --trust-banner-gradient-start: #20c997;
+            --trust-banner-gradient-end: #198754;
+            --footer-bg: #c8e6c9;
+            --footer-text: #2e7d32;
+            --footer-link: #20c997;
+        }
+
+        /* Color Scheme 8 - Coral */
+        .color-scheme-8 {
+            --primary-color: #fd7e14;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #fff3e0;
+            --text-color: #e65100;
+            --navbar-bg: #ffe0b2;
+            --navbar-text-color: #e65100;
+            --navbar-icon-color: #e65100;
+            --trust-banner-gradient-start: #fd7e14;
+            --trust-banner-gradient-end: #dc3545;
+            --footer-bg: #ffe0b2;
+            --footer-text: #e65100;
+            --footer-link: #fd7e14;
+        }
+
+        /* Color Scheme 9 - Lavender */
+        .color-scheme-9 {
+            --primary-color: #6f42c1;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f3e5f5;
+            --text-color: #4a148c;
+            --navbar-bg: #e1bee7;
+            --navbar-text-color: #4a148c;
+            --navbar-icon-color: #4a148c;
+            --trust-banner-gradient-start: #6f42c1;
+            --trust-banner-gradient-end: #9370DB;
+            --footer-bg: #e1bee7;
+            --footer-text: #4a148c;
+            --footer-link: #6f42c1;
+        }
+
+        /* Color Scheme 10 - Mint */
+        .color-scheme-10 {
+            --primary-color: #20c997;
+            --brand-purple: #198754;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e8f5e9;
+            --text-color: #2e7d32;
+            --navbar-bg: #c8e6c9;
+            --navbar-text-color: #2e7d32;
+            --navbar-icon-color: #2e7d32;
+            --trust-banner-gradient-start: #20c997;
+            --trust-banner-gradient-end: #198754;
+            --footer-bg: #c8e6c9;
+            --footer-text: #2e7d32;
+            --footer-link: #20c997;
+        }
+
+        /* Color Scheme 11 - Sunset Orange */
+        .color-scheme-11 {
+            --primary-color: #fd7e14;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #fff3e0;
+            --text-color: #e65100;
+            --navbar-bg: #ffe0b2;
+            --navbar-text-color: #e65100;
+            --navbar-icon-color: #e65100;
+            --trust-banner-gradient-start: #fd7e14;
+            --trust-banner-gradient-end: #dc3545;
+            --footer-bg: #ffe0b2;
+            --footer-text: #e65100;
+            --footer-link: #fd7e14;
+        }
+
+        /* Color Scheme 12 - Deep Blue */
+        .color-scheme-12 {
+            --primary-color: #0d6efd;
+            --brand-purple: #6610f2;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e3f2fd;
+            --text-color: #0d6efd;
+            --navbar-bg: #bbdefb;
+            --navbar-text-color: #0d6efd;
+            --navbar-icon-color: #0d6efd;
+            --trust-banner-gradient-start: #0d6efd;
+            --trust-banner-gradient-end: #6610f2;
+            --footer-bg: #bbdefb;
+            --footer-text: #0d6efd;
+            --footer-link: #0d6efd;
+        }
+
+        /* Color Scheme 13 - Emerald */
+        .color-scheme-13 {
+            --primary-color: #20c997;
+            --brand-purple: #198754;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e8f5e9;
+            --text-color: #2e7d32;
+            --navbar-bg: #c8e6c9;
+            --navbar-text-color: #2e7d32;
+            --navbar-icon-color: #2e7d32;
+            --trust-banner-gradient-start: #20c997;
+            --trust-banner-gradient-end: #198754;
+            --footer-bg: #c8e6c9;
+            --footer-text: #2e7d32;
+            --footer-link: #20c997;
+        }
+
+        /* Color Scheme 14 - Rose */
+        .color-scheme-14 {
+            --primary-color: #dc3545;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f8d7da;
+            --text-color: #721c24;
+            --navbar-bg: #f5c6cb;
+            --navbar-text-color: #721c24;
+            --navbar-icon-color: #721c24;
+            --trust-banner-gradient-start: #dc3545;
+            --trust-banner-gradient-end: #f8d7da;
+            --footer-bg: #f5c6cb;
+            --footer-text: #721c24;
+            --footer-link: #dc3545;
+        }
+
+        /* Color Scheme 15 - Sky */
+        .color-scheme-15 {
+            --primary-color: #0dcaf0;
+            --brand-purple: #0d6efd;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e3f2fd;
+            --text-color: #0d6efd;
+            --navbar-bg: #bbdefb;
+            --navbar-text-color: #0d6efd;
+            --navbar-icon-color: #0d6efd;
+            --trust-banner-gradient-start: #0dcaf0;
+            --trust-banner-gradient-end: #0d6efd;
+            --footer-bg: #bbdefb;
+            --footer-text: #0d6efd;
+            --footer-link: #0dcaf0;
+        }
+
+        /* Color Scheme 16 - Gold */
+        .color-scheme-16 {
+            --primary-color: #ffc107;
+            --brand-purple: #ffc107;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #fff3cd;
+            --text-color: #856404;
+            --navbar-bg: #ffeeba;
+            --navbar-text-color: #856404;
+            --navbar-icon-color: #856404;
+            --trust-banner-gradient-start: #ffc107;
+            --trust-banner-gradient-end: #ffc107;
+            --footer-bg: #ffeeba;
+            --footer-text: #856404;
+            --footer-link: #ffc107;
+        }
+
+        /* Color Scheme 17 - Teal */
+        .color-scheme-17 {
+            --primary-color: #20c997;
+            --brand-purple: #20c997;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #d1f2eb;
+            --text-color: #0c5460;
+            --navbar-bg: #bee5eb;
+            --navbar-text-color: #0c5460;
+            --navbar-icon-color: #0c5460;
+            --trust-banner-gradient-start: #20c997;
+            --trust-banner-gradient-end: #20c997;
+            --footer-bg: #bee5eb;
+            --footer-text: #0c5460;
+            --footer-link: #20c997;
+        }
+
+        /* Color Scheme 18 - Indigo */
+        .color-scheme-18 {
+            --primary-color: #6610f2;
+            --brand-purple: #6610f2;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e2d9f3;
+            --text-color: #4a148c;
+            --navbar-bg: #d1c4e9;
+            --navbar-text-color: #4a148c;
+            --navbar-icon-color: #4a148c;
+            --trust-banner-gradient-start: #6610f2;
+            --trust-banner-gradient-end: #6610f2;
+            --footer-bg: #d1c4e9;
+            --footer-text: #4a148c;
+            --footer-link: #6610f2;
+        }
+
+        /* Color Scheme 19 - Purple */
+        .color-scheme-19 {
+            --primary-color: #6f42c1;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f3e5f5;
+            --text-color: #4a148c;
+            --navbar-bg: #e1bee7;
+            --navbar-text-color: #4a148c;
+            --navbar-icon-color: #4a148c;
+            --trust-banner-gradient-start: #6f42c1;
+            --trust-banner-gradient-end: #6f42c1;
+            --footer-bg: #e1bee7;
+            --footer-text: #4a148c;
+            --footer-link: #6f42c1;
+        }
+
+        /* Color Scheme 20 - Pink */
+        .color-scheme-20 {
+            --primary-color: #d63384;
+            --brand-purple: #d63384;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f8d7da;
+            --text-color: #721c24;
+            --navbar-bg: #f5c6cb;
+            --navbar-text-color: #721c24;
+            --navbar-icon-color: #721c24;
+            --trust-banner-gradient-start: #d63384;
+            --trust-banner-gradient-end: #d63384;
+            --footer-bg: #f5c6cb;
+            --footer-text: #721c24;
+            --footer-link: #d63384;
+        }
+
+        /* Color Scheme 21 - Red */
+        .color-scheme-21 {
+            --primary-color: #dc3545;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f8d7da;
+            --text-color: #721c24;
+            --navbar-bg: #f5c6cb;
+            --navbar-text-color: #721c24;
+            --navbar-icon-color: #721c24;
+            --trust-banner-gradient-start: #dc3545;
+            --trust-banner-gradient-end: #dc3545;
+            --footer-bg: #f5c6cb;
+            --footer-text: #721c24;
+            --footer-link: #dc3545;
+        }
+
+        /* Color Scheme 22 - Neon */
+        .color-scheme-22 {
+            --primary-color: #00ff00;
+            --brand-purple: #ff00ff;
+            --secondary-color: #00ffff;
+            --success-color: #ffff00;
+            --background-color: #111111;
+            --text-color: #ffffff;
+            --navbar-bg: #222222;
+            --navbar-text-color: #00ff00;
+            --navbar-icon-color: #00ff00;
+            --trust-banner-gradient-start: #00ff00;
+            --trust-banner-gradient-end: #ff00ff;
+            --footer-bg: #222222;
+            --footer-text: #ffffff;
+            --footer-link: #00ff00;
+        }
+
+        /* Color Scheme 23 - Pastel */
+        .color-scheme-23 {
+            --primary-color: #FFB5E8;
+            --brand-purple: #B5B9FF;
+            --secondary-color: #97E1D4;
+            --success-color: #F0F0AA;
+            --background-color: #FFFFFF;
+            --text-color: #707070;
+            --navbar-bg: #FFF0F5;
+            --navbar-text-color: #707070;
+            --navbar-icon-color: #FFB5E8;
+            --trust-banner-gradient-start: #FFB5E8;
+            --trust-banner-gradient-end: #B5B9FF;
+            --footer-bg: #FFF0F5;
+            --footer-text: #707070;
+            --footer-link: #FFB5E8;
+        }
+
+        /* Color Scheme 24 - Dark Ocean */
+        .color-scheme-24 {
+            --primary-color: #006994;
+            --brand-purple: #6da4c9;
+            --secondary-color: #2E86C1;
+            --success-color: #48C9B0;
+            --background-color: #0A2239;
+            --text-color: #FFFFFF;
+            --navbar-bg: #1B4F72;
+            --navbar-text-color: #FFFFFF;
+            --navbar-icon-color: #48C9B0;
+            --trust-banner-gradient-start: #006994;
+            --trust-banner-gradient-end: #48C9B0;
+            --footer-bg: #1B4F72;
+            --footer-text: #FFFFFF;
+            --footer-link: #48C9B0;
+        }
+
+        /* Color Scheme 25 - Autumn */
+        .color-scheme-25 {
+            --primary-color: #D35400;
+            --brand-purple: #BA4A00;
+            --secondary-color: #E67E22;
+            --success-color: #F39C12;
+            --background-color: #FDF2E9;
+            --text-color: #6E2C00;
+            --navbar-bg: #FBEEE6;
+            --navbar-text-color: #6E2C00;
+            --navbar-icon-color: #D35400;
+            --trust-banner-gradient-start: #D35400;
+            --trust-banner-gradient-end: #F39C12;
+            --footer-bg: #FBEEE6;
+            --footer-text: #6E2C00;
+            --footer-link: #D35400;
+        }
+
+        /* Color Scheme 26 - Forest Night */
+        .color-scheme-26 {
+            --primary-color: #2ECC71;
+            --brand-purple: #27AE60;
+            --secondary-color: #52BE80;
+            --success-color: #82E0AA;
+            --background-color: #1A5028;
+            --text-color: #FFFFFF;
+            --navbar-bg: #196F3D;
+            --navbar-text-color: #FFFFFF;
+            --navbar-icon-color: #2ECC71;
+            --trust-banner-gradient-start: #2ECC71;
+            --trust-banner-gradient-end: #82E0AA;
+            --footer-bg: #196F3D;
+            --footer-text: #FFFFFF;
+            --footer-link: #2ECC71;
+        }
+
+        /* Color Scheme 27 - Cherry Blossom */
+        .color-scheme-27 {
+            --primary-color: #FF69B4;
+            --brand-purple: #FF1493;
+            --secondary-color: #FFB6C1;
+            --success-color: #FFC0CB;
+            --background-color: #FFF0F5;
+            --text-color: #C71585;
+            --navbar-bg: #FFE4E1;
+            --navbar-text-color: #C71585;
+            --navbar-icon-color: #FF69B4;
+            --trust-banner-gradient-start: #FF69B4;
+            --trust-banner-gradient-end: #FFC0CB;
+            --footer-bg: #FFE4E1;
+            --footer-text: #C71585;
+            --footer-link: #FF69B4;
+        }
+
+        /* Color Scheme 28 - Desert */
+        .color-scheme-28 {
+            --primary-color: #DAA520;
+            --brand-purple: #B8860B;
+            --secondary-color: #F4A460;
+            --success-color: #DEB887;
+            --background-color: #FDF5E6;
+            --text-color: #8B4513;
+            --navbar-bg: #FAEBD7;
+            --navbar-text-color: #8B4513;
+            --navbar-icon-color: #DAA520;
+            --trust-banner-gradient-start: #DAA520;
+            --trust-banner-gradient-end: #DEB887;
+            --footer-bg: #FAEBD7;
+            --footer-text: #8B4513;
+            --footer-link: #DAA520;
+        }
+
+        /* Color Scheme 29 - Electric */
+        .color-scheme-29 {
+            --primary-color: #4B0082;
+            --brand-purple: #8A2BE2;
+            --secondary-color: #9400D3;
+            --success-color: #9932CC;
+            --background-color: #000000;
+            --text-color: #FFFFFF;
+            --navbar-bg: #9c58db;
+            --navbar-text-color: #FFFFFF;
+            --navbar-icon-color: #8A2BE2;
+            --trust-banner-gradient-start: #4B0082;
+            --trust-banner-gradient-end: #9932CC;
+            --footer-bg: #1A0033;
+            --footer-text: #FFFFFF;
+            --footer-link: #8A2BE2;
+        }
+
+        /* Color Scheme 30 - Ice */
+        .color-scheme-30 {
+            --primary-color: #00CED1;
+            --brand-purple: #40E0D0;
+            --secondary-color: #48D1CC;
+            --success-color: #AFEEEE;
+            --background-color: #F0FFFF;
+            --text-color: #008B8B;
+            --navbar-bg: #E0FFFF;
+            --navbar-text-color: #008B8B;
+            --navbar-icon-color: #00CED1;
+            --trust-banner-gradient-start: #00CED1;
+            --trust-banner-gradient-end: #AFEEEE;
+            --footer-bg: #E0FFFF;
+            --footer-text: #008B8B;
+            --footer-link: #00CED1;
+        }
+
+        /* Color Scheme 31 - Sunset Gold */
+        .color-scheme-31 {
+            --primary-color: #FFD700;
+            --brand-purple: #FFA500;
+            --secondary-color: #FF8C00;
+            --success-color: #DAA520;
+            --background-color: #FFFAF0;
+            --text-color: #B8860B;
+            --navbar-bg: #FFF8DC;
+            --navbar-text-color: #B8860B;
+            --navbar-icon-color: #FFD700;
+            --trust-banner-gradient-start: #FFD700;
+            --trust-banner-gradient-end: #FFA500;
+            --footer-bg: #FFF8DC;
+            --footer-text: #B8860B;
+            --footer-link: #FFD700;
+        }
+
+        /* Color Scheme 32 - Deep Space */
+        .color-scheme-32 {
+            --primary-color: #4B0082;
+            --brand-purple: #483D8B;
+            --secondary-color: #6A5ACD;
+            --success-color: #7B68EE;
+            --background-color: #191970;
+            --text-color: #E6E6FA;
+            --navbar-bg: #000080;
+            --navbar-text-color: #E6E6FA;
+            --navbar-icon-color: #7B68EE;
+            --trust-banner-gradient-start: #4B0082;
+            --trust-banner-gradient-end: #7B68EE;
+            --footer-bg: #000080;
+            --footer-text: #E6E6FA;
+            --footer-link: #7B68EE;
+        }
+
+        /* Color Scheme 33 - Rainbow */
+        .color-scheme-33 {
+            --primary-color: #FF0000;
+            --brand-purple: #FF7F00;
+            --secondary-color: #FFFF00;
+            --success-color: #00FF00;
+            --background-color: #FFFFFF;
+            --text-color: #4B0082;
+            --navbar-bg: #E6E6FA;
+            --navbar-text-color: #4B0082;
+            --navbar-icon-color: #8B00FF;
+            --trust-banner-gradient-start: #FF0000;
+            --trust-banner-gradient-end: #8B00FF;
+            --footer-bg: #E6E6FA;
+            --footer-text: #4B0082;
+            --footer-link: #8B00FF;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        /* Announcement Bar Styles */
+        .announcement-bar {
+            background: linear-gradient(to right, var(--trust-banner-gradient-start), var(--trust-banner-gradient-end));
+            color: white;
+            padding: 6px 0;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 0.9em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1001;
+            margin: 0;
+            border: none;
+        }
+        
+        .announcement-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 25s linear infinite;
+            color: white;
+        }
+
+        @keyframes marquee {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: var(--navbar-bg);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1000;
+        }
+        
+        .header .navbar {
+            background-color: var(--navbar-bg) !important;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand .brand-icon {
+            color: var(--brand-purple);
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+
+        .navbar-brand .brand-text {
+            color: var(--brand-purple);
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--navbar-text-color);
+        }
+
+        .navbar-nav .nav-link .fas,
+        .navbar-nav .nav-link svg {
+            color: var(--navbar-icon-color);
+            margin-right: 5px;
+        }
+        
+        .navbar-nav .nav-link.active,
+        .navbar-nav .nav-link:hover {
+            color: var(--brand-purple);
+        }
+        
+        .trust-indicators .trust-item {
+            color: var(--navbar-text-color);
+            font-size: 0.9em;
+        }
+        
+        .trust-indicators .trust-item .fas,
+        .trust-indicators .trust-item svg {
+            color: var(--navbar-icon-color);
+            margin-right: 5px;
+        }
+
+        .theme-switcher {
+            background-color: var(--brand-purple) !important;
+            border-color: var(--brand-purple) !important;
+            color: white !important;
+            border-radius: 20px !important;
+            padding: 0.3rem 0.8rem !important;
+        }
+
+        .theme-switcher:hover {
+            opacity: 0.9;
+        }
+        
+        .theme-switcher .fas,
+        .theme-switcher svg {
+            margin-right: 5px;
+            color: white !important;
+        }
+
+        /* Trust Banner Styles */
+        .trust-banner {
+            background: linear-gradient(45deg, var(--trust-banner-gradient-start), var(--trust-banner-gradient-end));
+            color: white;
+            padding: 12px 0;
+            margin: 8px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .trust-banner .stat-item {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px;
+            border-radius: 6px;
+            margin: 2px;
+            flex: 1;
+            min-width: 90px;
+            transition: transform 0.3s ease;
+        }
+
+        .trust-banner .stat-item:hover {
+            transform: translateY(-2px);
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .trust-banner .stat-number {
+            font-size: 1.3em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .trust-banner .stat-label {
+            font-size: 0.75em;
+            color: rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--footer-bg);
+            padding: 40px 0;
+            margin-top: 50px;
+            color: var(--footer-text);
+        }
+
+        .footer h4 {
+            color: var(--footer-text);
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            color: var(--footer-text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: inline-block;
+            font-size: 1.1em;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--footer-link);
+            transform: translateX(5px);
+        }
+
+        .footer-social .social-links a {
+            color: var(--footer-text);
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .footer-social .social-links a:hover {
+            color: var(--footer-link);
+            transform: translateX(5px);
+        }
+
+        .footer-social .social-links a span {
+            font-size: 1.1em;
+            vertical-align: middle;
+        }
+
+        .footer-copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Additional styles */
+        .tool-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Banner Section Styles */
+        .banner-section {
+            background-color: var(--banner-bg);
+            background: linear-gradient(to right, var(--trust-banner-gradient-start), var(--trust-banner-gradient-end));
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .banner-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner-item {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .banner-item:last-child {
+            border-right: none;
+        }
+
+        .banner-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .banner-number {
+            display: block;
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--banner-text);
+            margin-bottom: 5px;
+        }
+
+        .banner-label {
+            display: block;
+            font-size: 14px;
+            color: var(--banner-text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Loading Overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--primary-color);
+            border-top: 5px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: transform 0.2s ease;
+            z-index: 1002;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(to right, var(--primary-color), var(--brand-purple));
+            color: #fff;
+            padding: 3rem 0;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section h1 {
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .hero-section p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+        }
+
+        /* Feature Cards */
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .feature-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .feature-card h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .feature-card p {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: rgba(var(--primary-color-rgb), 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .faq-section .section-title {
+            color: #17a2b8;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .faq-section .accordion-item {
+            border: none;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-section .accordion-button {
+            background-color: #20c997;
+            color: #fff;
+            padding: 15px 20px;
+            font-weight: 600;
+            border-radius: 8px;
+        }
+
+        .faq-section .accordion-button:not(.collapsed) {
+            background-color: #20c997;
+            color: #fff;
+            box-shadow: none;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .faq-section .accordion-button:focus {
+            box-shadow: none;
+            border-color: #20c997;
+        }
+
+        .faq-section .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+
+        .faq-section .accordion-body {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background-color: #f8f9fa;
+        }
+
+        .testimonial-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            height: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-rating {
+            color: #ffc107;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(to right, var(--trust-banner-gradient-start), var(--trust-banner-gradient-end));
+            color: #fff;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .cta-section .btn-primary {
+            background-color: #fff;
+            color: var(--primary-color);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-section .btn-primary:hover {
+            background-color: rgba(255,255,255,0.9);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Advertisement Spaces */
+        .ad-space {
+            background-color: #f8f9fa;
+            border: 1px dashed var(--primary-color);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                        linear-gradient(to right, var(--primary-color), var(--brand-purple));
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ad-space:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                        rgba(var(--primary-color-rgb), 0.05) 25%, 
+                        transparent 25%, 
+                        transparent 50%, 
+                        rgba(var(--primary-color-rgb), 0.05) 50%, 
+                        rgba(var(--primary-color-rgb), 0.05) 75%, 
+                        transparent 75%, 
+                        transparent);
+            background-size: 20px 20px;
+            z-index: 0;
+        }
+
+        .ad-space > div {
+            position: relative;
+            z-index: 1;
+            color: var(--primary-color);
+            font-weight: 500;
+            text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+            font-size: 1.1rem;
+        }
+
+        .ad-space.horizontal {
+            height: 100px;
+            margin-bottom: 25px;
+        }
+
+        .ad-space.vertical {
+            height: 300px;
+        }
+
+        .ad-space.square {
+            height: 250px;
+        }
+
+        .ad-space:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: var(--brand-purple);
+        }
+
+        /* Tool Title */
+        .tool-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .tool-title + .lead {
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        /* Info Buttons Styling */
+        .tool-info-buttons {
+            background: none;
+            border: none;
+            padding: 0;
+            margin-bottom: 25px;
+            box-shadow: none;
+            overflow: visible;
+        }
+
+        .tool-info-buttons-container {
+            display: flex;
+            border-bottom: 2px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .info-button {
+            background-color: transparent !important;
+            border: none !important;
+            border-bottom: 3px solid transparent !important;
+            border-radius: 0 !important;
+            padding: 10px 20px !important;
+            margin: 0 5px -2px 0 !important; /* Overlap border-bottom */
+            font-weight: 600 !important;
+            color: var(--secondary-color) !important;
+            box-shadow: none !important;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            flex-grow: 1;
+            text-align: center !important;
+        }
+
+        .info-button:hover {
+            color: var(--primary-color) !important;
+            transform: none !important;
+            box-shadow: none !important;
+        }
+
+        .info-button.active-info-button {
+            color: var(--primary-color) !important;
+            border-bottom-color: var(--primary-color) !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+
+        .info-button i {
+            color: var(--secondary-color) !important;
+            margin-right: 8px !important;
+            transition: color 0.3s ease;
+        }
+
+        .info-button:hover i,
+        .info-button.active-info-button i {
+            color: var(--primary-color) !important;
+            transform: none !important; /* Reset previous icon transform */
+        }
+
+        /* Remove hover shimmer effect */
+        .info-button::after {
+            display: none;
+        }
+
+        /* Remove top border accent */
+        .tool-info-buttons::before {
+            display: none;
+        }
+
+        /* Style content areas */
+        .tool-description-box,
+        .steps-container,
+        .tool-info-content {
+            background-color: #fff !important;
+            border: 1px solid #eee !important;
+            border-radius: 8px !important;
+            padding: 20px !important;
+            margin-top: 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tool-info-content p {
+            margin-bottom: 0;
+            color: #5d4037;
+        }
+
+        .steps-container .list-group-item {
+            border: none !important;
+            background: transparent !important;
+            color: #5d4037;
+            padding: 10px 5px;
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .steps-container .list-group-item::before {
+            content: counter(item);
+            counter-increment: item;
+            background-color: #daa520;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .active-info-button {
+            background-color: #fff8e1 !important;
+            border-color: #daa520 !important;
+            box-shadow: 0 3px 8px rgba(218, 165, 32, 0.15) !important;
+        }
+
+        /* Review and Rating Section */
+        .review-rating-section .review-section-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            position: relative;
+        }
+        
+        .most-recent-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .overall-rating-summary {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .overall-rating-summary:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        
+        .large-rating {
+            line-height: 1;
+        }
+        
+        .large-rating .rating-value {
+            color: var(--primary-color);
+        }
+        
+        .stars i,
+        .stars-small i {
+            font-size: 1.3em;
+            margin-right: 2px;
+        }
+        
+        .stars-small i {
+            font-size: 0.9em;
+            margin-right: 1px;
+        }
+        
+        .review-item {
+            transition: all 0.3s ease;
+            padding: 12px 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        
+        .review-item:hover {
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .review-text {
+            color: #555;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        
+        .reviewer-name {
+            color: var(--primary-color);
+        }
+
+        /* Rating Input in Modal */
+        .rating-input {
+            font-size: 1.8em; /* Larger stars for input */
+            cursor: pointer;
+        }
+        .rating-input i {
+            color: #ccc; /* Default empty star color */
+            margin-right: 5px;
+            transition: color 0.2s ease;
+        }
+        .rating-input i.selected,
+        .rating-input i:hover,
+        .rating-input i:hover ~ i {
+            color: #ffc107; /* Filled star color */
+        }
+        /* Keep previous stars selected on hover */
+        .rating-input:hover i:not(:hover) {
+           color: #ccc;
+        }
+        .rating-input.rated i:not(.selected) {
+            color: #ccc;
+        }
+
+        .custom-input {
+            border: 1px solid #dee2e6;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .custom-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb), 0.25);
+        }
+
+        .form-floating > label {
+            padding-left: 1rem;
+        }
+
+        .form-text {
+            color: #6c757d;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+        }
+
+        .btn {
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+        }
+
+        .table {
+            font-size: 0.9rem;
+        }
+
+        .table th {
+            font-weight: 600;
+        }
+
+        .form-check-input:checked {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .content-section {
+            transition: all 0.3s ease-in-out;
+        }
+        .content-section.active {
+            display: block !important;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0;">
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-content">
+            <span class="announcement-text">🚀 Your Trust Our Aim! 💖 | 🌟 100% Free Tools Collection 🛠️ | 🎉 Premium Quality Results 💎</span>
+        </div>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">
+                    <div class="brand-container">
+                        <span class="brand-icon">🛠️</span>
+                        <span class="brand-text">Toolsnew</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">🏠 Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../about.html">ℹ️ About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../contact.html">📧 Contact</a>
+                        </li>
+                    </ul>
+                    <div class="trust-indicators">
+                        <span class="trust-item"><i class="fas fa-shield-alt"></i> 100% Secure</span>
+                        <span class="trust-item"><i class="fas fa-bolt"></i> Fast & Reliable</span>
+                        <span class="trust-item"><i class="fas fa-clock"></i> 24/7 Available</span>
+                    </div>
+                    <button class="theme-switcher" id="themeSwitcher">
+                        <i class="fas fa-palette"></i> Change Colors
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Stats Banner Section -->
+    <section class="banner-section">
+        <div class="banner-container">
+            <div class="banner-item">
+                <span class="banner-number">1M+</span>
+                <span class="banner-label">HAPPY USERS</span>
+                </div>
+            <div class="banner-item">
+                <span class="banner-number">100+</span>
+                <span class="banner-label">FREE TOOLS</span>
+                </div>
+            <div class="banner-item">
+                <span class="banner-number">99.9%</span>
+                <span class="banner-label">UPTIME</span>
+                </div>
+            <div class="banner-item">
+                <span class="banner-number">24/7</span>
+                <span class="banner-label">SUPPORT</span>
+                </div>
+            </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="floating-element floating-element-1"></div>
+        <div class="floating-element floating-element-2"></div>
+        
+        <!-- Top Ad Space -->
+        <div class="ad-space horizontal" data-aos="fade-up">
+            <div>Advertisement Space</div>
+        </div>
+
+        <!-- Tool Title -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h1 class="tool-title" data-aos="fade-up">Compound Interest Calculator 💰</h1>
+                <p class="lead" data-aos="fade-up">Calculate compound interest with our advanced calculator. Get instant, accurate results for your investments, loans, and savings planning. 🚀</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Tool Content -->
+            <div class="col-lg-8">
+                <!-- Tool Interface Section -->
+                <section class="tool-interface mb-4">
+                    <div class="card" data-aos="fade-up">
+                        <div class="card-body">
+                            <div class="tool-container">
+                                <!-- Tool specific content -->
+                                <div id="toolContent" class="bg-light p-4 rounded shadow-sm">
+                                    <form id="compoundInterestForm" class="needs-validation" novalidate>
+                                        <div class="row g-4">
+                                            <!-- Input Section with Card Design -->
+                                            <div class="col-12">
+                                                <div class="card border-0 shadow-sm">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title mb-4">
+                                                            <i class="fas fa-calculator text-primary me-2"></i>
+                                                            Investment Details
+                                                        </h5>
+                                                        <div class="row g-4">
+                                                            <!-- Principal Amount -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-floating">
+                                                                    <input type="number" class="form-control custom-input" id="principal" placeholder="Enter principal amount" required min="0" step="0.01">
+                                                                    <label for="principal">
+                                                                        <i class="fas fa-dollar-sign text-primary me-2"></i>
+                                                                        Principal Amount
+                                                                    </label>
+                                                                    <div class="form-text">Initial investment amount</div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <!-- Interest Rate -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-floating">
+                                                                    <input type="number" class="form-control custom-input" id="rate" placeholder="Enter interest rate" required min="0" max="100" step="0.01">
+                                                                    <label for="rate">
+                                                                        <i class="fas fa-percent text-primary me-2"></i>
+                                                                        Annual Interest Rate
+                                                                    </label>
+                                                                    <div class="form-text">Annual interest rate percentage</div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Time Period -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-floating">
+                                                                    <input type="number" class="form-control custom-input" id="time" placeholder="Enter time period" required min="0" step="0.5">
+                                                                    <label for="time">
+                                                                        <i class="fas fa-clock text-primary me-2"></i>
+                                                                        Time Period
+                                                                    </label>
+                                                                    <div class="form-text">Investment duration in years</div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Compounding Frequency -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-floating">
+                                                                    <select class="form-select custom-input" id="frequency" required>
+                                                                        <option value="1">Annually</option>
+                                                                        <option value="2">Semi-annually</option>
+                                                                        <option value="4">Quarterly</option>
+                                                                        <option value="12">Monthly</option>
+                                                                        <option value="26">Bi-weekly</option>
+                                                                        <option value="52">Weekly</option>
+                                                                        <option value="365">Daily</option>
+                                                                    </select>
+                                                                    <label for="frequency">
+                                                                        <i class="fas fa-sync text-primary me-2"></i>
+                                                                        Compounding Frequency
+                                                                    </label>
+                                                                    <div class="form-text">How often interest is compounded</div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Additional Options -->
+                                                            <div class="col-12">
+                                                                <div class="card bg-light border-0">
+                                                                    <div class="card-body">
+                                                                        <h6 class="card-title mb-3">
+                                                                            <i class="fas fa-cog text-primary me-2"></i>
+                                                                            Additional Options
+                                                                        </h6>
+                                                                        <div class="row g-3">
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-check form-switch">
+                                                                                    <input class="form-check-input" type="checkbox" id="monthlyDeposit">
+                                                                                    <label class="form-check-label" for="monthlyDeposit">Include Monthly Deposits</label>
+                                                                                </div>
+                                                                                <div id="monthlyDepositInput" class="mt-2" style="display: none;">
+                                                                                    <div class="input-group">
+                                                                                        <span class="input-group-text">$</span>
+                                                                                        <input type="number" class="form-control" id="monthlyDepositAmount" placeholder="Amount" min="0" step="0.01">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-check form-switch">
+                                                                                    <input class="form-check-input" type="checkbox" id="inflationAdjusted">
+                                                                                    <label class="form-check-label" for="inflationAdjusted">Adjust for Inflation</label>
+                                                                                </div>
+                                                                                <div id="inflationInput" class="mt-2" style="display: none;">
+                                                                                    <div class="input-group">
+                                                                                        <input type="number" class="form-control" id="inflationRate" placeholder="Inflation Rate" value="2.5" min="0" max="20" step="0.1">
+                                                                                        <span class="input-group-text">%</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Calculate, Reset and Download Buttons -->
+                                                            <div class="col-12 text-center">
+                                                                <button type="submit" class="btn btn-primary btn-lg px-5 me-2">
+                                                                    <i class="fas fa-calculator me-2"></i>Calculate
+                                                                </button>
+                                                                <button type="reset" class="btn btn-outline-secondary btn-lg px-5 me-2">
+                                                                    <i class="fas fa-redo me-2"></i>Reset
+                                                                </button>
+                                                                <button type="button" class="btn btn-success btn-lg px-5" id="downloadResults">
+                                                                    <i class="fas fa-download me-2"></i>Download
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <!-- Results Section -->
+                                    <div id="results" class="mt-4" style="display: none;">
+                                        <div class="card border-0 shadow-sm">
+                                            <div class="card-body">
+                                                <h4 class="card-title mb-4">
+                                                    <i class="fas fa-chart-line text-primary me-2"></i>
+                                                    Investment Summary
+                                                </h4>
+                                                
+                                                <!-- Results Grid -->
+                                                <div class="row g-4 mb-4">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="card h-100 bg-primary text-white">
+                                                            <div class="card-body">
+                                                                <h6 class="card-subtitle mb-2">Final Amount</h6>
+                                                                <h4 class="card-title mb-0" id="finalAmount">$0.00</h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="card h-100 bg-success text-white">
+                                                            <div class="card-body">
+                                                                <h6 class="card-subtitle mb-2">Total Interest</h6>
+                                                                <h4 class="card-title mb-0" id="totalInterest">$0.00</h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="card h-100 bg-info text-white">
+                                                            <div class="card-body">
+                                                                <h6 class="card-subtitle mb-2">Total Deposits</h6>
+                                                                <h4 class="card-title mb-0" id="totalDeposits">$0.00</h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="card h-100 bg-warning text-white">
+                                                            <div class="card-body">
+                                                                <h6 class="card-subtitle mb-2">Interest Rate</h6>
+                                                                <h4 class="card-title mb-0" id="effectiveRate">0.00%</h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Charts Section -->
+                                                <div class="row g-4">
+                                                    <div class="col-md-8">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Growth Over Time</h5>
+                                                                <canvas id="growthChart"></canvas>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Breakdown</h5>
+                                                                <canvas id="pieChart"></canvas>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Detailed Results Table -->
+                                                <div class="table-responsive mt-4">
+                                                    <table class="table table-hover" id="detailedResults">
+                                                        <thead class="table-light">
+                                                            <tr>
+                                                                <th>Year</th>
+                                                                <th>Starting Balance</th>
+                                                                <th>Interest Earned</th>
+                                                                <th>Deposits</th>
+                                                                <th>Ending Balance</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <!-- Will be populated by JavaScript -->
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                                <!-- End tool specific content -->
+                            </div>
+                        </div>
+                                </div>
+                </section>
+
+                <!-- Tool Info Buttons -->
+                <div class="tool-info-buttons mb-4" data-aos="fade-up">
+                    <div class="tool-info-buttons-container">
+                        <a href="javascript:void(0);" class="btn info-button active-info-button" onclick="showContent('about')">
+                            <i class="fas fa-info-circle"></i> About This Tool
+                        </a>
+                        <a href="javascript:void(0);" class="btn info-button" onclick="showContent('howto')">
+                            <i class="fas fa-book"></i> How to Use
+                        </a>
+                        <a href="javascript:void(0);" class="btn info-button" onclick="showContent('description')">
+                            <i class="fas fa-align-left"></i> Description
+                        </a>
+                    </div>
+
+                    <div id="aboutContent" class="tool-description-box p-3 content-section">
+                        <!-- Content for About This Tool -->
+                        <p>Our Compound Interest Calculator is a powerful financial tool that helps you understand how your money grows over time. 💹 It uses the compound interest formula to calculate the future value of your investments, taking into account the principal amount, interest rate, compounding frequency, and time period. This tool is perfect for investors, savers, and anyone planning their financial future. 🔮</p>
+                    </div>
+
+                    <div id="howtoContent" class="steps-container mt-3 content-section" style="display: none;">
+                        <!-- Content for How to Use -->
+                        <ol class="list-group list-group-numbered" style="counter-reset: item;">
+                            <li class="list-group-item">
+                                <span>Enter your initial investment amount (principal) 💵</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span>Input the annual interest rate and select compounding frequency 📈</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span>Set the time period and click calculate to see your results 🎯</span>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div id="descriptionContent" class="tool-info-content mt-3 content-section" style="display: none;">
+                        <!-- Content for Description -->
+                        <p>Our Compound Interest Calculator provides accurate calculations for your investments and savings. It uses the standard compound interest formula: A = P(1 + r/n)^(nt), where A is the future value, P is the principal, r is the annual interest rate, n is the number of times interest is compounded per year, and t is the time in years. The calculator also shows a detailed breakdown of your investment growth over time. 📊</p>
+                    </div>
+                </div>
+
+                <style>
+                    .content-section {
+                        transition: all 0.3s ease-in-out;
+                    }
+                    .content-section.active {
+                        display: block !important;
+                        animation: fadeIn 0.3s ease-in-out;
+                    }
+                    @keyframes fadeIn {
+                        from { opacity: 0; transform: translateY(10px); }
+                        to { opacity: 1; transform: translateY(0); }
+                    }
+                </style>
+
+                <script>
+                    function showContent(contentType) {
+                        // Hide all content sections
+                        document.querySelectorAll('.content-section').forEach(section => {
+                            section.style.display = 'none';
+                        });
+                        
+                        // Remove active class from all buttons
+                        document.querySelectorAll('.info-button').forEach(button => {
+                            button.classList.remove('active-info-button');
+                        });
+                        
+                        // Show selected content and activate button
+                        const contentId = contentType + 'Content';
+                        const selectedContent = document.getElementById(contentId);
+                        const selectedButton = document.querySelector(`[onclick="showContent('${contentType}')"]`);
+                        
+                        if (selectedContent && selectedButton) {
+                            selectedContent.style.display = 'block';
+                            selectedButton.classList.add('active-info-button');
+                        }
+                    }
+                </script>
+
+                <!-- Review and Rating Section -->
+                <section class="review-rating-section mb-4" data-aos="fade-up">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body">
+                            <div class="row mb-4">
+                                <div class="col-md-5">
+                                    <h3 class="review-section-title">Reviews & Ratings</h3>
+                                    <div class="overall-rating-summary mb-3 p-3 rounded">
+                                        <div class="large-rating text-center mb-2">
+                                            <span class="rating-value display-4 fw-bold">4.5</span>
+                                            <span class="text-muted">/5</span>
+                                </div>
+                                        <div class="stars text-center mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                                        <div class="review-count text-center mb-3">
+                                            <span class="text-muted">Based on 123 reviews</span>
+                        </div>
+                                        <div class="text-center">
+                                            <button class="btn btn-primary btn-sm px-4 rounded-pill" data-bs-toggle="modal" data-bs-target="#reviewModal">
+                                                <i class="fas fa-edit me-1"></i> Write a Review
+                                            </button>
+                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <h4 class="most-recent-title mb-3">Rating Details</h4>
+                                    <div class="mb-3">
+                                        <p class="text-muted small mb-2">Rating breakdown:</p>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">5 stars</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 75%"></div>
+                                            </div>
+                                            <div class="small ms-2">75%</div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">4 stars</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 15%"></div>
+                                            </div>
+                                            <div class="small ms-2">15%</div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">3 stars</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 5%"></div>
+                                            </div>
+                                            <div class="small ms-2">5%</div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">2 stars</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 3%"></div>
+                                            </div>
+                                            <div class="small ms-2">3%</div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">1 star</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 2%"></div>
+                                            </div>
+                                            <div class="small ms-2">2%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tool Features Section -->
+                <section class="tool-features mb-4" data-aos="fade-up">
+                    <h3 class="section-title">Features</h3>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">⚡</div>
+                                <h4>Fast Processing</h4>
+                                <p>Process your data quickly with our optimized algorithms</p>
+                                </div>
+                            </div>
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">🔒</div>
+                                <h4>Secure</h4>
+                                <p>Your data is processed locally, never sent to any server</p>
+                        </div>
+                    </div>
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">🎯</div>
+                                <h4>Accurate</h4>
+                                <p>Get precise and reliable results every time</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- FAQ Section -->
+                <section class="faq-section mb-4" data-aos="fade-up">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                                    What is compound interest and how does it work? 🤔
+                                </button>
+                            </h2>
+                            <div id="faqCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Compound interest is the interest calculated on the initial principal and also on the accumulated interest of previous periods. It's often called "interest on interest" and can significantly increase your investment returns over time. The more frequently interest is compounded, the greater the total amount of interest will be. 💫
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                                    How often should I compound my interest? ⏰
+                                </button>
+                            </h2>
+                            <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The frequency of compounding can significantly affect your returns. Common compounding periods include annually, semi-annually, quarterly, monthly, and daily. Generally, more frequent compounding leads to higher returns. For example, daily compounding will yield more than annual compounding for the same interest rate and time period. 📅
+                    </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                                    What's the difference between simple and compound interest? 🔄
+                                </button>
+                            </h2>
+                            <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Simple interest is calculated only on the principal amount, while compound interest is calculated on both the principal and accumulated interest. This means compound interest grows faster over time, especially with longer investment periods. For example, $1000 at 5% simple interest for 10 years would earn $500, while the same amount at compound interest would earn about $628.89. 📈
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                    <!-- Bottom Ad Space -->
+                    <div class="ad-space horizontal" data-aos="fade-up">
+                        <div>Advertisement Space</div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4 tool-sidebar">
+                <!-- Sidebar Ad Space -->
+                <div class="ad-space vertical" data-aos="fade-left">
+                    <div>Advertisement Space</div>
+                </div>
+
+                <!-- Related Tools -->
+                <div class="card mb-4" data-aos="fade-left">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-tools"></i>
+                            Related Tools
+                        </h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="binary-to-decimal.html">Binary to Decimal Calculator</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="age-calculator.html">Age Calculator</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="currency-converter.html">Currency Converter</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Popular Tools -->
+                <div class="card mb-4" data-aos="fade-left">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-star"></i>
+                            Popular Tools
+                        </h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="bmi-calculator.html">BMI Calculator</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="currency-converter.html">Currency Converter</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="percentage-calculator.html">Percentage Calculator</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom Sidebar Ad Space -->
+                <div class="ad-space square" data-aos="fade-left">
+                    <div>Advertisement Space</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-4" data-aos="fade-up">Most Recent Reviews</h2>
+            <div id="allRecentReviews" class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"This compound interest calculator is essential for my investment planning. The visual graphs make it easy to explain growth potential to clients."</p>
+                        <div class="testimonial-author">- Thomas Wright, Financial Advisor</div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Love the detailed breakdown of interest accumulation. Perfect for planning long-term savings and retirement goals."</p>
+                        <div class="testimonial-author">- Patricia Chen, Investment Banker</div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"The multiple compounding frequency options and clear reports make this tool invaluable for financial planning."</p>
+                        <div class="testimonial-author">- Robert Miller, Wealth Manager</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 text-center">
+                    <h2 class="cta-title">Ready to Try Our Other Tools?</h2>
+                    <p class="cta-text">Explore our collection of 100+ free online tools designed to make your life easier.</p>
+                    <a href="../../index.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-toolbox"></i> Browse All Tools
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- About Us -->
+                <div class="col-md-4">
+                    <div class="footer-about">
+                        <h4>About Us</h4>
+                        <p>Your trusted source for free online tools. We provide high-quality, easy-to-use tools for all your needs.</p>
+                </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-4">
+                    <div class="footer-links">
+                        <h4>🔗 Quick Links</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="../../index.html">🏠 Home</a></li>
+                            <li><a href="../../about.html">ℹ️ About</a></li>
+                            <li><a href="../../contact.html">📧 Contact</a></li>
+                            <li><a href="../../privacy-policy.html">🔒 Privacy Policy</a></li>
+                            <li><a href="../../terms.html">📜 Terms of Service</a></li>
+                            <li><a href="../../disclaimer.html">⚠️ Disclaimer</a></li>
+                            <li><a href="../../cookie-policy.html">🍪 Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Connect With Us -->
+                <div class="col-md-4">
+                    <div class="footer-social">
+                        <h4>🤝 Connect With Us</h4>
+                        <div class="social-links mt-3">
+                            <a href="https://www.youtube.com/@toolsnew7" target="_blank" class="me-3 text-decoration-none">
+                                <i class="fab fa-youtube fa-2x"></i>
+                                <span class="ms-2">YouTube</span>
+                            </a>
+                            <br>
+                            <a href="https://www.facebook.com/profile.php?id=61574866457908" target="_blank" class="me-3 text-decoration-none mt-2 d-inline-block">
+                                <i class="fab fa-facebook fa-2x"></i>
+                                <span class="ms-2">Facebook</span>
+                            </a>
+                            <br>
+                            <a href="https://www.tiktok.com/@toolsnew7?lang=en" target="_blank" class="me-3 text-decoration-none mt-2 d-inline-block">
+                                <i class="fab fa-tiktok fa-2x"></i>
+                                <span class="ms-2">TikTok</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="footer-copyright text-center">
+                        <p>&copy; 2025 Toolsnew. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Review Modal -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="reviewModalLabel">
+                        <i class="fas fa-star text-warning me-2"></i>Rate this Tool
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reviewForm">
+                        <div class="mb-3">
+                            <label for="reviewerName" class="form-label fw-bold">Your Name</label>
+                            <input type="text" class="form-control" id="reviewerName" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Your Rating</label>
+                            <div class="rating-input text-center mb-2">
+                                <i class="far fa-star" data-value="1"></i>
+                                <i class="far fa-star" data-value="2"></i>
+                                <i class="far fa-star" data-value="3"></i>
+                                <i class="far fa-star" data-value="4"></i>
+                                <i class="far fa-star" data-value="5"></i>
+                            </div>
+                            <input type="hidden" id="ratingValue" name="ratingValue" required>
+                            <div id="ratingHelp" class="form-text text-center">Click on a star to rate</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reviewText" class="form-label fw-bold">Your Review</label>
+                            <textarea class="form-control" id="reviewText" rows="4" placeholder="Share your experience with this tool..." required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary rounded-pill px-4" form="reviewForm">Submit Review</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/common.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+
+            // Remove loading overlay
+            const loadingOverlay = document.querySelector('.loading-overlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'none';
+            }
+
+            // Get form elements
+            const form = document.getElementById('compoundInterestForm');
+            const monthlyDepositCheckbox = document.getElementById('monthlyDeposit');
+            const monthlyDepositInput = document.getElementById('monthlyDepositInput');
+            const inflationCheckbox = document.getElementById('inflationAdjusted');
+            const inflationInput = document.getElementById('inflationInput');
+            const resultsSection = document.getElementById('results');
+            const downloadButton = document.getElementById('downloadResults');
+
+            // Initialize charts
+            let growthChart = null;
+            let pieChart = null;
+
+            // Toggle additional inputs
+            monthlyDepositCheckbox.addEventListener('change', function() {
+                monthlyDepositInput.style.display = this.checked ? 'block' : 'none';
+            });
+
+            inflationCheckbox.addEventListener('change', function() {
+                inflationInput.style.display = this.checked ? 'block' : 'none';
+            });
+
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                calculateResults();
+            });
+
+            // Reset form
+            form.addEventListener('reset', function() {
+                resultsSection.style.display = 'none';
+                if (growthChart) {
+                    growthChart.destroy();
+                }
+                if (pieChart) {
+                    pieChart.destroy();
+                }
+                monthlyDepositInput.style.display = 'none';
+                inflationInput.style.display = 'none';
+                monthlyDepositCheckbox.checked = false;
+                inflationCheckbox.checked = false;
+            });
+
+            function calculateResults() {
+                // Get input values
+                const principal = parseFloat(document.getElementById('principal').value);
+                const rate = parseFloat(document.getElementById('rate').value) / 100;
+                const time = parseFloat(document.getElementById('time').value);
+                const frequency = parseInt(document.getElementById('frequency').value);
+                const monthlyDeposit = monthlyDepositCheckbox.checked ? parseFloat(document.getElementById('monthlyDepositAmount').value) : 0;
+                const inflationRate = inflationCheckbox.checked ? parseFloat(document.getElementById('inflationRate').value) / 100 : 0;
+
+                // Validate inputs
+                if (!principal || !rate || !time || principal < 0 || rate < 0 || time < 0) {
+                    alert('Please enter valid values for all required fields.');
+                    return;
+                }
+
+                // Calculate results
+                let yearlyData = calculateYearlyData(principal, rate, time, frequency, monthlyDeposit, inflationRate);
+
+                // Display results
+                displayResults(yearlyData);
+
+                // Show results section
+                resultsSection.style.display = 'block';
+            }
+
+            function calculateYearlyData(principal, rate, time, frequency, monthlyDeposit, inflationRate) {
+                let yearlyData = [];
+                let balance = principal;
+                let totalDeposits = principal;
+                const monthlyRate = rate / 12;
+                
+                for (let year = 0; year <= time; year++) {
+                    let yearStart = balance;
+                    let yearlyInterest = 0;
+                    let yearlyDeposits = 0;
+
+                    if (year > 0) {
+                        // Calculate compound interest with monthly deposits
+                        for (let month = 0; month < 12; month++) {
+                            let monthStart = balance;
+                            
+                            // Add monthly deposit
+                            if (monthlyDeposit > 0) {
+                                balance += monthlyDeposit;
+                                yearlyDeposits += monthlyDeposit;
+                                totalDeposits += monthlyDeposit;
+                            }
+
+                            // Calculate monthly interest
+                            let monthlyInterest = balance * (rate / frequency);
+                            balance += monthlyInterest;
+                            yearlyInterest += monthlyInterest;
+                        }
+
+                        // Adjust for inflation if enabled
+                        if (inflationRate > 0) {
+                            balance = balance / (1 + inflationRate);
+                        }
+                    }
+
+                    yearlyData.push({
+                        year: year,
+                        startBalance: yearStart,
+                        interest: yearlyInterest,
+                        deposits: yearlyDeposits,
+                        endBalance: balance
+                    });
+                }
+
+                return yearlyData;
+            }
+
+            function displayResults(yearlyData) {
+                const lastYear = yearlyData[yearlyData.length - 1];
+                const totalInterest = lastYear.endBalance - yearlyData[0].startBalance - (yearlyData.reduce((sum, data) => sum + data.deposits, 0));
+                
+                // Update summary cards
+                document.getElementById('finalAmount').textContent = formatCurrency(lastYear.endBalance);
+                document.getElementById('totalInterest').textContent = formatCurrency(totalInterest);
+                document.getElementById('totalDeposits').textContent = formatCurrency(yearlyData.reduce((sum, data) => sum + data.deposits, 0));
+                document.getElementById('effectiveRate').textContent = ((totalInterest / yearlyData[0].startBalance * 100) / yearlyData.length).toFixed(2) + '%';
+
+                // Update detailed results table
+                const tbody = document.getElementById('detailedResults').getElementsByTagName('tbody')[0];
+                tbody.innerHTML = '';
+                yearlyData.forEach(data => {
+                    const row = tbody.insertRow();
+                    row.innerHTML = `
+                        <td>${data.year}</td>
+                        <td>${formatCurrency(data.startBalance)}</td>
+                        <td>${formatCurrency(data.interest)}</td>
+                        <td>${formatCurrency(data.deposits)}</td>
+                        <td>${formatCurrency(data.endBalance)}</td>
+                    `;
+                });
+
+                // Update charts
+                updateCharts(yearlyData);
+            }
+
+            function updateCharts(yearlyData) {
+                const years = yearlyData.map(data => data.year);
+                const balances = yearlyData.map(data => data.endBalance);
+                const lastYear = yearlyData[yearlyData.length - 1];
+                const totalDeposits = yearlyData.reduce((sum, data) => sum + data.deposits, 0);
+                const totalInterest = lastYear.endBalance - yearlyData[0].startBalance - totalDeposits;
+
+                // Destroy existing charts
+                if (growthChart) {
+                    growthChart.destroy();
+                }
+                if (pieChart) {
+                    pieChart.destroy();
+                }
+
+                // Create growth chart
+                const growthCtx = document.getElementById('growthChart').getContext('2d');
+                growthChart = new Chart(growthCtx, {
+                    type: 'line',
+                    data: {
+                        labels: years,
+                        datasets: [{
+                            label: 'Balance',
+                            data: balances,
+                            borderColor: 'rgb(75, 192, 192)',
+                            tension: 0.1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Investment Growth Over Time'
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    callback: function(value) {
+                                        return '$' + value.toLocaleString();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+
+                // Create pie chart
+                const pieCtx = document.getElementById('pieChart').getContext('2d');
+                pieChart = new Chart(pieCtx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Principal', 'Total Deposits', 'Interest Earned'],
+                        datasets: [{
+                            data: [
+                                yearlyData[0].startBalance,
+                                totalDeposits,
+                                totalInterest
+                            ],
+                            backgroundColor: [
+                                'rgb(255, 99, 132)',
+                                'rgb(54, 162, 235)',
+                                'rgb(75, 192, 192)'
+                            ]
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Investment Breakdown'
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Download results
+            downloadButton.addEventListener('click', function() {
+                const table = document.getElementById('detailedResults');
+                let csv = [];
+                
+                // Get headers
+                let headers = [];
+                for (let cell of table.rows[0].cells) {
+                    headers.push(cell.textContent);
+                }
+                csv.push(headers.join(','));
+
+                // Get data rows
+                for (let row of table.tBodies[0].rows) {
+                    let data = [];
+                    for (let cell of row.cells) {
+                        data.push(cell.textContent);
+                    }
+                    csv.push(data.join(','));
+                }
+                
+                // Create and trigger download
+                const blob = new Blob([csv.join('\n')], { type: 'text/csv' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.setAttribute('hidden', '');
+                a.setAttribute('href', url);
+                a.setAttribute('download', 'compound_interest_results.csv');
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            });
+
+            // Helper function to format currency
+            function formatCurrency(value) {
+                return '$' + value.toLocaleString('en-US', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                });
+            }
+
+            // Initialize tooltips
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
+    </script>
+</body>
+</html> 

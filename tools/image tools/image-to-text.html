@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Text - Free Online OCR Tool</title>
+    <meta name="description" content="Free online Image to Text (OCR) tool - Extract text from images easily">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body style="margin: 0; padding: 0;">
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-content">
+            <span class="announcement-text">🚀 Your Trust Our Aim! 💖 | 🌟 100% Free Tools Collection 🛠️ | 🎉 Premium Quality Results 💎</span>
+        </div>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">
+                    <div class="brand-container">
+                        <span class="brand-icon">🛠️</span>
+                        <span class="brand-text">Toolsnew</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">🏠 Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../about.html">ℹ️ About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../contact.html">📧 Contact</a>
+                        </li>
+                    </ul>
+                    <div class="trust-indicators">
+                        <span class="trust-item"><i class="fas fa-shield-alt"></i> 100% Secure</span>
+                        <span class="trust-item"><i class="fas fa-bolt"></i> Fast & Reliable</span>
+                        <span class="trust-item"><i class="fas fa-clock"></i> 24/7 Available</span>
+                    </div>
+                    <button class="theme-switcher" id="themeSwitcher">
+                        <i class="fas fa-palette"></i> Change Colors
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Stats Banner Section -->
+    <section class="banner-section">
+        <div class="banner-container">
+            <div class="banner-item">
+                <span class="banner-number">1M+</span>
+                <span class="banner-label">HAPPY USERS</span>
+            </div>
+            <div class="banner-item">
+                <span class="banner-number">100+</span>
+                <span class="banner-label">FREE TOOLS</span>
+            </div>
+            <div class="banner-item">
+                <span class="banner-number">99.9%</span>
+                <span class="banner-label">UPTIME</span>
+            </div>
+            <div class="banner-item">
+                <span class="banner-number">24/7</span>
+                <span class="banner-label">SUPPORT</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- Tool Title -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h1 class="tool-title" data-aos="fade-up">Image to Text Converter</h1>
+                <p class="lead" data-aos="fade-up">Extract text from images with our free online OCR tool</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Tool Content -->
+            <div class="col-lg-8">
+                <!-- Tool Interface Section -->
+                <section class="tool-interface mb-4">
+                    <div class="card" data-aos="fade-up">
+                        <div class="card-body">
+                            <div class="tool-container">
+                                <div id="dropZone" class="upload-area text-center p-5 mb-3 border rounded">
+                                    <i class="fas fa-cloud-upload-alt fa-3x mb-3"></i>
+                                    <h4>Drag & Drop your image here</h4>
+                                    <p>or</p>
+                                    <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
+                                        Choose File
+                                    </button>
+                                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                                </div>
+                                <div id="imagePreview" class="mb-3" style="display: none;">
+                                    <img id="preview" class="img-fluid rounded" alt="Image preview">
+                                </div>
+                                <div id="extractedText" class="form-group" style="display: none;">
+                                    <label for="textOutput">Extracted Text:</label>
+                                    <textarea id="textOutput" class="form-control" rows="10" readonly></textarea>
+                                    <button class="btn btn-success mt-3" onclick="copyText()">
+                                        <i class="fas fa-copy"></i> Copy Text
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tool Info Buttons -->
+                <div class="tool-info-buttons mb-4" data-aos="fade-up">
+                    <div class="tool-info-buttons-container">
+                        <a href="javascript:void(0);" class="btn info-button active-info-button">
+                            <i class="fas fa-info-circle"></i> About This Tool
+                        </a>
+                        <a href="javascript:void(0);" class="btn info-button">
+                            <i class="fas fa-book"></i> How to Use
+                        </a>
+                        <a href="javascript:void(0);" class="btn info-button">
+                            <i class="fas fa-align-left"></i> Description
+                        </a>
+                    </div>
+
+                    <div class="tool-description-box p-3">
+                        <p>Our Image to Text tool uses advanced OCR (Optical Character Recognition) technology to extract text from images. Perfect for digitizing printed documents, screenshots, or any image containing text.</p>
+                    </div>
+                    <div class="steps-container mt-3" style="display: none;">
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item">Upload your image by dragging and dropping or clicking the choose file button</li>
+                            <li class="list-group-item">Wait for the OCR process to complete</li>
+                            <li class="list-group-item">Copy the extracted text or make any necessary edits</li>
+                        </ol>
+                    </div>
+                    <div class="tool-info-content mt-3" style="display: none;">
+                        <p>Free online Image to Text converter that supports multiple languages and maintains formatting. Perfect for students, professionals, and anyone needing to digitize text from images.</p>
+                    </div>
+                </div>
+
+                <!-- Features Section -->
+                <section class="tool-features mb-4" data-aos="fade-up">
+                    <h3 class="section-title">Features</h3>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">🔍</div>
+                                <h4>High Accuracy</h4>
+                                <p>Advanced OCR technology for precise text extraction</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">🌍</div>
+                                <h4>Multi-Language</h4>
+                                <p>Supports text recognition in multiple languages</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">📱</div>
+                                <h4>Mobile Friendly</h4>
+                                <p>Works perfectly on all devices</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Most Recent Reviews -->
+                <section class="testimonials-section py-5 bg-light">
+                    <div class="container">
+                        <h2 class="section-title text-center mb-4">Most Recent Reviews</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-rating">★★★★★</div>
+                                    <p class="testimonial-text">"Amazing accuracy! Saved me hours of manual typing. Best OCR tool I've used."</p>
+                                    <div class="testimonial-author">- Emily R.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-rating">★★★★★</div>
+                                    <p class="testimonial-text">"Perfect for converting scanned documents. The multi-language support is fantastic!"</p>
+                                    <div class="testimonial-author">- David M.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-rating">★★★★★</div>
+                                    <p class="testimonial-text">"User-friendly interface and quick processing. Exactly what I needed!"</p>
+                                    <div class="testimonial-author">- Sophie K.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Related Tools -->
+                <div class="card mb-4" data-aos="fade-left">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-tools"></i>
+                            Related Tools
+                        </h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="word-counter.html">Word Counter</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="screenshot-to-pdf.html">Screenshot to PDF</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="image-to-base64.html">Image to Base64</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="qr-code-generator.html">QR Code Generator</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="all-in-one-conversions.html">All-in-One Conversions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Popular Tools -->
+                <div class="card mb-4" data-aos="fade-left">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-star"></i>
+                            Popular Tools
+                        </h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="image-resizer.html">Image Resizer</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="image-cropper.html">Image Cropper</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="gif-maker.html">GIF Maker</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="webp-to-png.html">WebP to PNG</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="image-compressor.html">Image Compressor</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-about">
+                        <h4>About Us</h4>
+                        <p>Your trusted source for free online tools. We provide high-quality, easy-to-use tools for all your needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-links">
+                        <h4>🔗 Quick Links</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="../../index.html">🏠 Home</a></li>
+                            <li><a href="../../about.html">ℹ️ About</a></li>
+                            <li><a href="../../contact.html">📧 Contact</a></li>
+                            <li><a href="../../privacy-policy.html">🔒 Privacy Policy</a></li>
+                            <li><a href="../../terms.html">📜 Terms of Service</a></li>
+                            <li><a href="../../disclaimer.html">⚠️ Disclaimer</a></li>
+                            <li><a href="../../cookie-policy.html">🍪 Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-social">
+                        <h4>🤝 Connect With Us</h4>
+                        <div class="social-links mt-3">
+                            <a href="https://www.youtube.com/@toolsnew7" target="_blank" class="me-3 text-decoration-none">
+                                <i class="fab fa-youtube fa-2x"></i>
+                                <span class="ms-2">YouTube</span>
+                            </a>
+                            <br>
+                            <a href="https://www.facebook.com/profile.php?id=61574866457908" target="_blank" class="me-3 text-decoration-none mt-2 d-inline-block">
+                                <i class="fab fa-facebook fa-2x"></i>
+                                <span class="ms-2">Facebook</span>
+                            </a>
+                            <br>
+                            <a href="https://www.tiktok.com/@toolsnew7?lang=en" target="_blank" class="me-3 text-decoration-none mt-2 d-inline-block">
+                                <i class="fab fa-tiktok fa-2x"></i>
+                                <span class="ms-2">TikTok</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="footer-copyright text-center">
+                        <p>&copy; 2025 Toolsnew. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../js/common.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html> 

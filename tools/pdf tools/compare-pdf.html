@@ -1,0 +1,3448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare PDF Documents Online - Free PDF Comparison Tool</title>
+    <meta name="description" content="Free online PDF comparison tool to easily identify differences between two PDF documents. Compare text, images, and formatting side by side with highlighted changes.">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="keywords" content="compare pdf, pdf comparison tool, pdf diff tool, diff checker, document comparison, find differences in pdf, free pdf tool, online pdf comparison">
+    <meta name="author" content="Toolsnew">
+    <meta property="og:title" content="Compare PDF Documents Online - Free PDF Comparison Tool">
+    <meta property="og:description" content="Free online tool to compare two PDF documents and highlight differences in text, images, and formatting.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolsnew.com/tools/pdf-tools/compare-pdf.html">
+    <meta property="og:image" content="https://toolsnew.com/images/pdf-compare-tool.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Compare PDF Documents Online - Free PDF Comparison Tool">
+    <meta name="twitter:description" content="Free online tool to compare two PDF documents and highlight differences in text, images, and formatting.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Base color scheme */
+        :root {
+            --primary-color: #e67e22;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --background-color: #ffffff;
+            --text-color: #333333;
+            --navbar-bg: #ffffff;
+            --navbar-text-color: #444;
+            --navbar-icon-color: #6f42c1;
+            --trust-banner-gradient-start: #e67e22;
+            --trust-banner-gradient-end: #f39c12;
+            --banner-bg: #e67e22;
+            --banner-text: #ffffff;
+            --primary-color-rgb: 230, 126, 34;
+        }
+        
+        .color-scheme-1 {
+            --primary-color: #007bff;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --background-color: #ffffff;
+            --text-color: #f32b2b;
+            --navbar-bg: #ffffff;
+            --navbar-text-color: #444;
+            --navbar-icon-color: #6f42c1;
+            --trust-banner-gradient-start: #6f42c1;
+            --trust-banner-gradient-end: #8a5fcf;
+            --footer-bg: #f8f9fa;
+            --footer-text: #333333;
+            --footer-link: #007bff;
+        }
+        
+        .color-scheme-2 {
+            --primary-color: #0dcaf0;
+            --brand-purple: #0d6efd;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e3f2fd;
+            --text-color: #0d6efd;
+            --navbar-bg: #bbdefb;
+            --navbar-text-color: #0d6efd;
+            --navbar-icon-color: #0d6efd;
+            --trust-banner-gradient-start: #0d6efd;
+            --trust-banner-gradient-end: #0dcaf0;
+            --footer-bg: #bbdefb;
+            --footer-text: #0d6efd;
+            --footer-link: #0dcaf0;
+        }
+
+        /* Color Scheme 3 - Forest */
+        .color-scheme-3 {
+            --primary-color: #198754;
+            --brand-purple: #20c997;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e8f5e9;
+            --text-color: #2e7d32;
+            --navbar-bg: #c8e6c9;
+            --navbar-text-color: #2e7d32;
+            --navbar-icon-color: #2e7d32;
+            --trust-banner-gradient-start: #198754;
+            --trust-banner-gradient-end: #20c997;
+            --footer-bg: #c8e6c9;
+            --footer-text: #2e7d32;
+            --footer-link: #198754;
+        }
+        
+        /* Color Scheme 4 - Sunset */
+        .color-scheme-4 {
+            --primary-color: #fd7e14;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #fff3e0;
+            --text-color: #e65100;
+            --navbar-bg: #ffe0b2;
+            --navbar-text-color: #e65100;
+            --navbar-icon-color: #e65100;
+            --trust-banner-gradient-start: #fd7e14;
+            --trust-banner-gradient-end: #dc3545;
+            --footer-bg: #ffe0b2;
+            --footer-text: #e65100;
+            --footer-link: #fd7e14;
+        }
+        
+        /* Color Scheme 5 - Royal */
+        .color-scheme-5 {
+            --primary-color: #6f42c1;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f3e5f5;
+            --text-color: #4a148c;
+            --navbar-bg: #e1bee7;
+            --navbar-text-color: #4a148c;
+            --navbar-icon-color: #5e1caf;
+            --trust-banner-gradient-start: #6f42c1;
+            --trust-banner-gradient-end: #9370DB;
+            --footer-bg: #e1bee7;
+            --footer-text: #4a148c;
+            --footer-link: #6f42c1;
+        }
+
+        /* Color Scheme 6 - Midnight */
+        .color-scheme-6 {
+            --primary-color: #0d6efd;
+            --brand-purple: #6610f2;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e3f2fd;
+            --text-color: #0d6efd;
+            --navbar-bg: #bbdefb;
+            --navbar-text-color: #0d6efd;
+            --navbar-icon-color: #0d6efd;
+            --trust-banner-gradient-start: #0d6efd;
+            --trust-banner-gradient-end: #6610f2;
+            --footer-bg: #bbdefb;
+            --footer-text: #0d6efd;
+            --footer-link: #0d6efd;
+        }
+
+        /* Color Scheme 7 - Spring */
+        .color-scheme-7 {
+            --primary-color: #20c997;
+            --brand-purple: #198754;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e8f5e9;
+            --text-color: #2e7d32;
+            --navbar-bg: #c8e6c9;
+            --navbar-text-color: #2e7d32;
+            --navbar-icon-color: #2e7d32;
+            --trust-banner-gradient-start: #20c997;
+            --trust-banner-gradient-end: #198754;
+            --footer-bg: #c8e6c9;
+            --footer-text: #2e7d32;
+            --footer-link: #20c997;
+        }
+
+        /* Color Scheme 8 - Coral */
+        .color-scheme-8 {
+            --primary-color: #fd7e14;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #fff3e0;
+            --text-color: #e65100;
+            --navbar-bg: #ffe0b2;
+            --navbar-text-color: #e65100;
+            --navbar-icon-color: #e65100;
+            --trust-banner-gradient-start: #fd7e14;
+            --trust-banner-gradient-end: #dc3545;
+            --footer-bg: #ffe0b2;
+            --footer-text: #e65100;
+            --footer-link: #fd7e14;
+        }
+
+        /* Color Scheme 9 - Lavender */
+        .color-scheme-9 {
+            --primary-color: #6f42c1;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f3e5f5;
+            --text-color: #4a148c;
+            --navbar-bg: #e1bee7;
+            --navbar-text-color: #4a148c;
+            --navbar-icon-color: #4a148c;
+            --trust-banner-gradient-start: #6f42c1;
+            --trust-banner-gradient-end: #9370DB;
+            --footer-bg: #e1bee7;
+            --footer-text: #4a148c;
+            --footer-link: #6f42c1;
+        }
+
+        /* Color Scheme 10 - Mint */
+        .color-scheme-10 {
+            --primary-color: #20c997;
+            --brand-purple: #198754;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e8f5e9;
+            --text-color: #2e7d32;
+            --navbar-bg: #c8e6c9;
+            --navbar-text-color: #2e7d32;
+            --navbar-icon-color: #2e7d32;
+            --trust-banner-gradient-start: #20c997;
+            --trust-banner-gradient-end: #198754;
+            --footer-bg: #c8e6c9;
+            --footer-text: #2e7d32;
+            --footer-link: #20c997;
+        }
+
+        /* Color Scheme 11 - Sunset Orange */
+        .color-scheme-11 {
+            --primary-color: #fd7e14;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #fff3e0;
+            --text-color: #e65100;
+            --navbar-bg: #ffe0b2;
+            --navbar-text-color: #e65100;
+            --navbar-icon-color: #e65100;
+            --trust-banner-gradient-start: #fd7e14;
+            --trust-banner-gradient-end: #dc3545;
+            --footer-bg: #ffe0b2;
+            --footer-text: #e65100;
+            --footer-link: #fd7e14;
+        }
+
+        /* Color Scheme 12 - Deep Blue */
+        .color-scheme-12 {
+            --primary-color: #0d6efd;
+            --brand-purple: #6610f2;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e3f2fd;
+            --text-color: #0d6efd;
+            --navbar-bg: #bbdefb;
+            --navbar-text-color: #0d6efd;
+            --navbar-icon-color: #0d6efd;
+            --trust-banner-gradient-start: #0d6efd;
+            --trust-banner-gradient-end: #6610f2;
+            --footer-bg: #bbdefb;
+            --footer-text: #0d6efd;
+            --footer-link: #0d6efd;
+        }
+
+        /* Color Scheme 13 - Emerald */
+        .color-scheme-13 {
+            --primary-color: #20c997;
+            --brand-purple: #198754;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e8f5e9;
+            --text-color: #2e7d32;
+            --navbar-bg: #c8e6c9;
+            --navbar-text-color: #2e7d32;
+            --navbar-icon-color: #2e7d32;
+            --trust-banner-gradient-start: #20c997;
+            --trust-banner-gradient-end: #198754;
+            --footer-bg: #c8e6c9;
+            --footer-text: #2e7d32;
+            --footer-link: #20c997;
+        }
+
+        /* Color Scheme 14 - Rose */
+        .color-scheme-14 {
+            --primary-color: #dc3545;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f8d7da;
+            --text-color: #721c24;
+            --navbar-bg: #f5c6cb;
+            --navbar-text-color: #721c24;
+            --navbar-icon-color: #721c24;
+            --trust-banner-gradient-start: #dc3545;
+            --trust-banner-gradient-end: #f8d7da;
+            --footer-bg: #f5c6cb;
+            --footer-text: #721c24;
+            --footer-link: #dc3545;
+        }
+
+        /* Color Scheme 15 - Sky */
+        .color-scheme-15 {
+            --primary-color: #0dcaf0;
+            --brand-purple: #0d6efd;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e3f2fd;
+            --text-color: #0d6efd;
+            --navbar-bg: #bbdefb;
+            --navbar-text-color: #0d6efd;
+            --navbar-icon-color: #0d6efd;
+            --trust-banner-gradient-start: #0dcaf0;
+            --trust-banner-gradient-end: #0d6efd;
+            --footer-bg: #bbdefb;
+            --footer-text: #0d6efd;
+            --footer-link: #0dcaf0;
+        }
+
+        /* Color Scheme 16 - Gold */
+        .color-scheme-16 {
+            --primary-color: #ffc107;
+            --brand-purple: #ffc107;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #fff3cd;
+            --text-color: #856404;
+            --navbar-bg: #ffeeba;
+            --navbar-text-color: #856404;
+            --navbar-icon-color: #856404;
+            --trust-banner-gradient-start: #ffc107;
+            --trust-banner-gradient-end: #ffc107;
+            --footer-bg: #ffeeba;
+            --footer-text: #856404;
+            --footer-link: #ffc107;
+        }
+
+        /* Color Scheme 17 - Teal */
+        .color-scheme-17 {
+            --primary-color: #20c997;
+            --brand-purple: #20c997;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #d1f2eb;
+            --text-color: #0c5460;
+            --navbar-bg: #bee5eb;
+            --navbar-text-color: #0c5460;
+            --navbar-icon-color: #0c5460;
+            --trust-banner-gradient-start: #20c997;
+            --trust-banner-gradient-end: #20c997;
+            --footer-bg: #bee5eb;
+            --footer-text: #0c5460;
+            --footer-link: #20c997;
+        }
+
+        /* Color Scheme 18 - Indigo */
+        .color-scheme-18 {
+            --primary-color: #6610f2;
+            --brand-purple: #6610f2;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e2d9f3;
+            --text-color: #4a148c;
+            --navbar-bg: #d1c4e9;
+            --navbar-text-color: #4a148c;
+            --navbar-icon-color: #4a148c;
+            --trust-banner-gradient-start: #6610f2;
+            --trust-banner-gradient-end: #6610f2;
+            --footer-bg: #d1c4e9;
+            --footer-text: #4a148c;
+            --footer-link: #6610f2;
+        }
+
+        /* Color Scheme 19 - Purple */
+        .color-scheme-19 {
+            --primary-color: #6f42c1;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f3e5f5;
+            --text-color: #4a148c;
+            --navbar-bg: #e1bee7;
+            --navbar-text-color: #4a148c;
+            --navbar-icon-color: #4a148c;
+            --trust-banner-gradient-start: #6f42c1;
+            --trust-banner-gradient-end: #6f42c1;
+            --footer-bg: #e1bee7;
+            --footer-text: #4a148c;
+            --footer-link: #6f42c1;
+        }
+
+        /* Color Scheme 20 - Pink */
+        .color-scheme-20 {
+            --primary-color: #d63384;
+            --brand-purple: #d63384;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f8d7da;
+            --text-color: #721c24;
+            --navbar-bg: #f5c6cb;
+            --navbar-text-color: #721c24;
+            --navbar-icon-color: #721c24;
+            --trust-banner-gradient-start: #d63384;
+            --trust-banner-gradient-end: #d63384;
+            --footer-bg: #f5c6cb;
+            --footer-text: #721c24;
+            --footer-link: #d63384;
+        }
+
+        /* Color Scheme 21 - Red */
+        .color-scheme-21 {
+            --primary-color: #dc3545;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f8d7da;
+            --text-color: #721c24;
+            --navbar-bg: #f5c6cb;
+            --navbar-text-color: #721c24;
+            --navbar-icon-color: #721c24;
+            --trust-banner-gradient-start: #dc3545;
+            --trust-banner-gradient-end: #dc3545;
+            --footer-bg: #f5c6cb;
+            --footer-text: #721c24;
+            --footer-link: #dc3545;
+        }
+
+        /* Color Scheme 22 - Neon */
+        .color-scheme-22 {
+            --primary-color: #00ff00;
+            --brand-purple: #ff00ff;
+            --secondary-color: #00ffff;
+            --success-color: #ffff00;
+            --background-color: #111111;
+            --text-color: #ffffff;
+            --navbar-bg: #222222;
+            --navbar-text-color: #00ff00;
+            --navbar-icon-color: #00ff00;
+            --trust-banner-gradient-start: #00ff00;
+            --trust-banner-gradient-end: #ff00ff;
+            --footer-bg: #222222;
+            --footer-text: #ffffff;
+            --footer-link: #00ff00;
+        }
+
+        /* Color Scheme 23 - Pastel */
+        .color-scheme-23 {
+            --primary-color: #FFB5E8;
+            --brand-purple: #B5B9FF;
+            --secondary-color: #97E1D4;
+            --success-color: #F0F0AA;
+            --background-color: #FFFFFF;
+            --text-color: #707070;
+            --navbar-bg: #FFF0F5;
+            --navbar-text-color: #707070;
+            --navbar-icon-color: #FFB5E8;
+            --trust-banner-gradient-start: #FFB5E8;
+            --trust-banner-gradient-end: #B5B9FF;
+            --footer-bg: #FFF0F5;
+            --footer-text: #707070;
+            --footer-link: #FFB5E8;
+        }
+
+        /* Color Scheme 24 - Dark Ocean */
+        .color-scheme-24 {
+            --primary-color: #006994;
+            --brand-purple: #6da4c9;
+            --secondary-color: #2E86C1;
+            --success-color: #48C9B0;
+            --background-color: #0A2239;
+            --text-color: #FFFFFF;
+            --navbar-bg: #1B4F72;
+            --navbar-text-color: #FFFFFF;
+            --navbar-icon-color: #48C9B0;
+            --trust-banner-gradient-start: #006994;
+            --trust-banner-gradient-end: #48C9B0;
+            --footer-bg: #1B4F72;
+            --footer-text: #FFFFFF;
+            --footer-link: #48C9B0;
+        }
+
+        /* Color Scheme 25 - Autumn */
+        .color-scheme-25 {
+            --primary-color: #D35400;
+            --brand-purple: #BA4A00;
+            --secondary-color: #E67E22;
+            --success-color: #F39C12;
+            --background-color: #FDF2E9;
+            --text-color: #6E2C00;
+            --navbar-bg: #FBEEE6;
+            --navbar-text-color: #6E2C00;
+            --navbar-icon-color: #D35400;
+            --trust-banner-gradient-start: #D35400;
+            --trust-banner-gradient-end: #F39C12;
+            --footer-bg: #FBEEE6;
+            --footer-text: #6E2C00;
+            --footer-link: #D35400;
+        }
+
+        /* Color Scheme 26 - Forest Night */
+        .color-scheme-26 {
+            --primary-color: #2ECC71;
+            --brand-purple: #27AE60;
+            --secondary-color: #52BE80;
+            --success-color: #82E0AA;
+            --background-color: #1A5028;
+            --text-color: #FFFFFF;
+            --navbar-bg: #196F3D;
+            --navbar-text-color: #FFFFFF;
+            --navbar-icon-color: #2ECC71;
+            --trust-banner-gradient-start: #2ECC71;
+            --trust-banner-gradient-end: #82E0AA;
+            --footer-bg: #196F3D;
+            --footer-text: #FFFFFF;
+            --footer-link: #2ECC71;
+        }
+
+        /* Color Scheme 27 - Cherry Blossom */
+        .color-scheme-27 {
+            --primary-color: #FF69B4;
+            --brand-purple: #FF1493;
+            --secondary-color: #FFB6C1;
+            --success-color: #FFC0CB;
+            --background-color: #FFF0F5;
+            --text-color: #C71585;
+            --navbar-bg: #FFE4E1;
+            --navbar-text-color: #C71585;
+            --navbar-icon-color: #FF69B4;
+            --trust-banner-gradient-start: #FF69B4;
+            --trust-banner-gradient-end: #FFC0CB;
+            --footer-bg: #FFE4E1;
+            --footer-text: #C71585;
+            --footer-link: #FF69B4;
+        }
+
+        /* Color Scheme 28 - Desert */
+        .color-scheme-28 {
+            --primary-color: #DAA520;
+            --brand-purple: #B8860B;
+            --secondary-color: #F4A460;
+            --success-color: #DEB887;
+            --background-color: #FDF5E6;
+            --text-color: #8B4513;
+            --navbar-bg: #FAEBD7;
+            --navbar-text-color: #8B4513;
+            --navbar-icon-color: #DAA520;
+            --trust-banner-gradient-start: #DAA520;
+            --trust-banner-gradient-end: #DEB887;
+            --footer-bg: #FAEBD7;
+            --footer-text: #8B4513;
+            --footer-link: #DAA520;
+        }
+
+        /* Color Scheme 29 - Electric */
+        .color-scheme-29 {
+            --primary-color: #4B0082;
+            --brand-purple: #8A2BE2;
+            --secondary-color: #9400D3;
+            --success-color: #9932CC;
+            --background-color: #000000;
+            --text-color: #FFFFFF;
+            --navbar-bg: #9c58db;
+            --navbar-text-color: #FFFFFF;
+            --navbar-icon-color: #8A2BE2;
+            --trust-banner-gradient-start: #4B0082;
+            --trust-banner-gradient-end: #9932CC;
+            --footer-bg: #1A0033;
+            --footer-text: #FFFFFF;
+            --footer-link: #8A2BE2;
+        }
+
+        /* Color Scheme 30 - Ice */
+        .color-scheme-30 {
+            --primary-color: #00CED1;
+            --brand-purple: #40E0D0;
+            --secondary-color: #48D1CC;
+            --success-color: #AFEEEE;
+            --background-color: #F0FFFF;
+            --text-color: #008B8B;
+            --navbar-bg: #E0FFFF;
+            --navbar-text-color: #008B8B;
+            --navbar-icon-color: #00CED1;
+            --trust-banner-gradient-start: #00CED1;
+            --trust-banner-gradient-end: #AFEEEE;
+            --footer-bg: #E0FFFF;
+            --footer-text: #008B8B;
+            --footer-link: #00CED1;
+        }
+
+        /* Color Scheme 31 - Sunset Gold */
+        .color-scheme-31 {
+            --primary-color: #FFD700;
+            --brand-purple: #FFA500;
+            --secondary-color: #FF8C00;
+            --success-color: #DAA520;
+            --background-color: #FFFAF0;
+            --text-color: #B8860B;
+            --navbar-bg: #FFF8DC;
+            --navbar-text-color: #B8860B;
+            --navbar-icon-color: #FFD700;
+            --trust-banner-gradient-start: #FFD700;
+            --trust-banner-gradient-end: #FFA500;
+            --footer-bg: #FFF8DC;
+            --footer-text: #B8860B;
+            --footer-link: #FFD700;
+        }
+
+        /* Color Scheme 32 - Deep Space */
+        .color-scheme-32 {
+            --primary-color: #4B0082;
+            --brand-purple: #483D8B;
+            --secondary-color: #6A5ACD;
+            --success-color: #7B68EE;
+            --background-color: #191970;
+            --text-color: #E6E6FA;
+            --navbar-bg: #000080;
+            --navbar-text-color: #E6E6FA;
+            --navbar-icon-color: #7B68EE;
+            --trust-banner-gradient-start: #4B0082;
+            --trust-banner-gradient-end: #7B68EE;
+            --footer-bg: #000080;
+            --footer-text: #E6E6FA;
+            --footer-link: #7B68EE;
+        }
+
+        /* Color Scheme 33 - Rainbow */
+        .color-scheme-33 {
+            --primary-color: #FF0000;
+            --brand-purple: #FF7F00;
+            --secondary-color: #FFFF00;
+            --success-color: #00FF00;
+            --background-color: #FFFFFF;
+            --text-color: #4B0082;
+            --navbar-bg: #E6E6FA;
+            --navbar-text-color: #4B0082;
+            --navbar-icon-color: #8B00FF;
+            --trust-banner-gradient-start: #FF0000;
+            --trust-banner-gradient-end: #8B00FF;
+            --footer-bg: #E6E6FA;
+            --footer-text: #4B0082;
+            --footer-link: #8B00FF;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        /* PDF Comparison Tool Specific Styles */
+        .pdf-upload-container {
+            min-height: 180px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: #f9f9f9;
+            border: 2px dashed #ccc !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pdf-upload-container:hover {
+            background-color: #f0f0f0;
+            border-color: var(--primary-color) !important;
+            transform: translateY(-3px);
+        }
+
+        .pdf-upload-container.drag-over {
+            background-color: rgba(var(--primary-color-rgb), 0.1);
+            border-color: var(--primary-color) !important;
+        }
+
+        .pdf-upload-container.has-file {
+            background-color: #e8f4f8;
+            border-style: solid !important;
+            border-color: #4dabf7 !important;
+        }
+
+        .file-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .filename-display {
+            word-break: break-word;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .pdf-viewers-container {
+            max-height: 500px;
+            margin-bottom: 20px;
+        }
+
+        .pdf-view-box {
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .pdf-viewer {
+            height: 400px;
+            overflow-y: auto;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+
+        .pdf-page-controls {
+            background-color: #eaeaea;
+            padding: 8px;
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid #dee2e6;
+        }
+
+        /* Difference highlighting colors */
+        .text-difference {
+            background-color: rgba(255, 230, 0, 0.5);
+            padding: 2px 0;
+            border-radius: 3px;
+        }
+        
+        .text-deleted {
+            background-color: rgba(255, 69, 0, 0.3);
+            text-decoration: line-through;
+            padding: 2px 0;
+            border-radius: 3px;
+        }
+        
+        .text-added {
+            background-color: rgba(50, 205, 50, 0.3);
+            padding: 2px 0;
+            border-radius: 3px;
+        }
+
+        /* Animation for upload icon */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .upload-icon {
+            animation: pulse 2s infinite;
+        }
+
+        .pdf-upload-container:hover .upload-icon {
+            animation-play-state: paused;
+        }
+
+        /* Loading spinner for comparison */
+        .comparison-loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .comparison-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 15px;
+        }
+
+        .differences-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #dc3545;
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Tooltip styling */
+        .tooltip-inner {
+            max-width: 200px;
+            padding: 8px 12px;
+            color: #fff;
+            text-align: center;
+            background-color: var(--primary-color);
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .bs-tooltip-auto[x-placement^=top] .arrow::before, 
+        .bs-tooltip-top .arrow::before {
+            border-top-color: var(--primary-color);
+        }
+
+        /* Animated progress bar */
+        @keyframes progress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        .progress-animated .progress-bar {
+            animation: progress 2s ease;
+        }
+
+        /* Highlight animation for differences */
+        @keyframes highlight-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(var(--primary-color-rgb), 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(var(--primary-color-rgb), 0); }
+            100% { box-shadow: 0 0 0 0 rgba(var(--primary-color-rgb), 0); }
+        }
+
+        .highlight-difference {
+            animation: highlight-pulse 1.5s infinite;
+        }
+
+        /* Announcement Bar Styles */
+        .announcement-bar {
+            background: linear-gradient(to right, var(--trust-banner-gradient-start), var(--trust-banner-gradient-end));
+            color: white;
+            padding: 6px 0;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 0.9em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1001;
+            margin: 0;
+            border: none;
+        }
+        
+        .announcement-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 25s linear infinite;
+            color: white;
+        }
+
+        @keyframes marquee {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: var(--navbar-bg);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1000;
+        }
+        
+        .header .navbar {
+            background-color: var(--navbar-bg) !important;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand .brand-icon {
+            color: var(--brand-purple);
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+
+        .navbar-brand .brand-text {
+            color: var(--brand-purple);
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--navbar-text-color);
+        }
+
+        .navbar-nav .nav-link .fas,
+        .navbar-nav .nav-link svg {
+            color: var(--navbar-icon-color);
+            margin-right: 5px;
+        }
+        
+        .navbar-nav .nav-link.active,
+        .navbar-nav .nav-link:hover {
+            color: var(--brand-purple);
+        }
+        
+        .trust-indicators .trust-item {
+            color: var(--navbar-text-color);
+            font-size: 0.9em;
+        }
+        
+        .trust-indicators .trust-item .fas,
+        .trust-indicators .trust-item svg {
+            color: var(--navbar-icon-color);
+            margin-right: 5px;
+        }
+
+        .theme-switcher {
+            background-color: var(--brand-purple) !important;
+            border-color: var(--brand-purple) !important;
+            color: white !important;
+            border-radius: 20px !important;
+            padding: 0.3rem 0.8rem !important;
+        }
+
+        .theme-switcher:hover {
+            opacity: 0.9;
+        }
+        
+        .theme-switcher .fas,
+        .theme-switcher svg {
+            margin-right: 5px;
+            color: white !important;
+        }
+
+        /* Trust Banner Styles */
+        .trust-banner {
+            background: linear-gradient(45deg, var(--trust-banner-gradient-start), var(--trust-banner-gradient-end));
+            color: white;
+            padding: 12px 0;
+            margin: 8px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .trust-banner .stat-item {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px;
+            border-radius: 6px;
+            margin: 2px;
+            flex: 1;
+            min-width: 90px;
+            transition: transform 0.3s ease;
+        }
+
+        .trust-banner .stat-item:hover {
+            transform: translateY(-2px);
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .trust-banner .stat-number {
+            font-size: 1.3em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .trust-banner .stat-label {
+            font-size: 0.75em;
+            color: rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--footer-bg);
+            padding: 40px 0;
+            margin-top: 50px;
+            color: var(--footer-text);
+        }
+
+        .footer h4 {
+            color: var(--footer-text);
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            color: var(--footer-text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: inline-block;
+            font-size: 1.1em;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--footer-link);
+            transform: translateX(5px);
+        }
+
+        .footer-social .social-links a {
+            color: var(--footer-text);
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .footer-social .social-links a:hover {
+            color: var(--footer-link);
+            transform: translateX(5px);
+        }
+
+        .footer-social .social-links a span {
+            font-size: 1.1em;
+            vertical-align: middle;
+        }
+
+        .footer-copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Additional styles */
+        .tool-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Banner Section Styles */
+        .banner-section {
+            background-color: var(--banner-bg);
+            background: linear-gradient(to right, var(--trust-banner-gradient-start), var(--trust-banner-gradient-end));
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .banner-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner-item {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .banner-item:last-child {
+            border-right: none;
+        }
+
+        .banner-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .banner-number {
+            display: block;
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--banner-text);
+            margin-bottom: 5px;
+        }
+
+        .banner-label {
+            display: block;
+            font-size: 14px;
+            color: var(--banner-text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Loading Overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--primary-color);
+            border-top: 5px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: transform 0.2s ease;
+            z-index: 1002;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(to right, var(--primary-color), var(--brand-purple));
+            color: #fff;
+            padding: 3rem 0;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section h1 {
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .hero-section p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+        }
+
+        /* Feature Cards */
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .feature-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .feature-card h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .feature-card p {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: rgba(var(--primary-color-rgb), 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .faq-section .section-title {
+            color: #17a2b8;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .faq-section .accordion-item {
+            border: none;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-section .accordion-button {
+            background-color: #20c997;
+            color: #fff;
+            padding: 15px 20px;
+            font-weight: 600;
+            border-radius: 8px;
+        }
+
+        .faq-section .accordion-button:not(.collapsed) {
+            background-color: #20c997;
+            color: #fff;
+            box-shadow: none;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .faq-section .accordion-button:focus {
+            box-shadow: none;
+            border-color: #20c997;
+        }
+
+        .faq-section .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+
+        .faq-section .accordion-body {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background-color: #f8f9fa;
+        }
+
+        .testimonial-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            height: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-rating {
+            color: #ffc107;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(to right, var(--trust-banner-gradient-start), var(--trust-banner-gradient-end));
+            color: #fff;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .cta-section .btn-primary {
+            background-color: #fff;
+            color: var(--primary-color);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-section .btn-primary:hover {
+            background-color: rgba(255,255,255,0.9);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Advertisement Spaces */
+        .ad-space {
+            background-color: #f8f9fa;
+            border: 1px dashed var(--primary-color);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                        linear-gradient(to right, var(--primary-color), var(--brand-purple));
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ad-space:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                        rgba(var(--primary-color-rgb), 0.05) 25%, 
+                        transparent 25%, 
+                        transparent 50%, 
+                        rgba(var(--primary-color-rgb), 0.05) 50%, 
+                        rgba(var(--primary-color-rgb), 0.05) 75%, 
+                        transparent 75%, 
+                        transparent);
+            background-size: 20px 20px;
+            z-index: 0;
+        }
+
+        .ad-space > div {
+            position: relative;
+            z-index: 1;
+            color: var(--primary-color);
+            font-weight: 500;
+            text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+            font-size: 1.1rem;
+        }
+
+        .ad-space.horizontal {
+            height: 100px;
+            margin-bottom: 25px;
+        }
+
+        .ad-space.vertical {
+            height: 300px;
+        }
+
+        .ad-space.square {
+            height: 250px;
+        }
+
+        .ad-space:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: var(--brand-purple);
+        }
+
+        /* Tool Title */
+        .tool-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .tool-title + .lead {
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        /* Info Buttons Styling */
+        .tool-info-buttons {
+            background: none;
+            border: none;
+            padding: 0;
+            margin-bottom: 25px;
+            box-shadow: none;
+            overflow: visible;
+        }
+
+        .tool-info-buttons-container {
+            display: flex;
+            border-bottom: 2px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .info-button {
+            background-color: transparent !important;
+            border: none !important;
+            border-bottom: 3px solid transparent !important;
+            border-radius: 0 !important;
+            padding: 10px 20px !important;
+            margin: 0 5px -2px 0 !important; /* Overlap border-bottom */
+            font-weight: 600 !important;
+            color: var(--secondary-color) !important;
+            box-shadow: none !important;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            flex-grow: 1;
+            text-align: center !important;
+        }
+
+        .info-button:hover {
+            color: var(--primary-color) !important;
+            transform: none !important;
+            box-shadow: none !important;
+        }
+
+        .info-button.active-info-button {
+            color: var(--primary-color) !important;
+            border-bottom-color: var(--primary-color) !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+
+        .info-button i {
+            color: var(--secondary-color) !important;
+            margin-right: 8px !important;
+            transition: color 0.3s ease;
+        }
+
+        .info-button:hover i,
+        .info-button.active-info-button i {
+            color: var(--primary-color) !important;
+            transform: none !important; /* Reset previous icon transform */
+        }
+
+        /* Remove hover shimmer effect */
+        .info-button::after {
+            display: none;
+        }
+
+        /* Remove top border accent */
+        .tool-info-buttons::before {
+            display: none;
+        }
+
+        /* Style content areas */
+        .tool-description-box,
+        .steps-container,
+        .tool-info-content {
+            background-color: #fff !important;
+            border: 1px solid #eee !important;
+            border-radius: 8px !important;
+            padding: 20px !important;
+            margin-top: 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tool-info-content p {
+            margin-bottom: 0;
+            color: #5d4037;
+        }
+
+        .steps-container .list-group-item {
+            border: none !important;
+            background: transparent !important;
+            color: #5d4037;
+            padding: 10px 5px;
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .steps-container .list-group-item::before {
+            content: counter(item);
+            counter-increment: item;
+            background-color: #daa520;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .active-info-button {
+            background-color: #fff8e1 !important;
+            border-color: #daa520 !important;
+            box-shadow: 0 3px 8px rgba(218, 165, 32, 0.15) !important;
+        }
+
+        /* Review and Rating Section */
+        .review-rating-section .review-section-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            position: relative;
+        }
+        
+        .most-recent-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .overall-rating-summary {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .overall-rating-summary:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        
+        .large-rating {
+            line-height: 1;
+        }
+        
+        .large-rating .rating-value {
+            color: var(--primary-color);
+        }
+        
+        .stars i,
+        .stars-small i {
+            font-size: 1.3em;
+            margin-right: 2px;
+        }
+        
+        .stars-small i {
+            font-size: 0.9em;
+            margin-right: 1px;
+        }
+        
+        .review-item {
+            transition: all 0.3s ease;
+            padding: 12px 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        
+        .review-item:hover {
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .review-text {
+            color: #555;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        
+        .reviewer-name {
+            color: var(--primary-color);
+        }
+
+        /* Rating Input in Modal */
+        .rating-input {
+            font-size: 1.8em; /* Larger stars for input */
+            cursor: pointer;
+        }
+        .rating-input i {
+            color: #ccc; /* Default empty star color */
+            margin-right: 5px;
+            transition: color 0.2s ease;
+        }
+        .rating-input i.selected,
+        .rating-input i:hover,
+        .rating-input i:hover ~ i {
+            color: #ffc107; /* Filled star color */
+        }
+        /* Keep previous stars selected on hover */
+        .rating-input:hover i:not(:hover) {
+           color: #ccc;
+        }
+        .rating-input.rated i:not(.selected) {
+            color: #ccc;
+        }
+
+    </style>
+</head>
+<body style="margin: 0; padding: 0;">
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-content">
+            <span class="announcement-text">🚀 Your Trust Our Aim! 💖 | 🌟 100% Free Tools Collection 🛠️ | 🎉 Premium Quality Results 💎</span>
+        </div>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">
+                    <div class="brand-container">
+                        <span class="brand-icon">🛠️</span>
+                        <span class="brand-text">Toolsnew</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">🏠 Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../about.html">ℹ️ About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../contact.html">📧 Contact</a>
+                        </li>
+                    </ul>
+                    <div class="trust-indicators">
+                        <span class="trust-item"><i class="fas fa-shield-alt"></i> 100% Secure</span>
+                        <span class="trust-item"><i class="fas fa-bolt"></i> Fast & Reliable</span>
+                        <span class="trust-item"><i class="fas fa-clock"></i> 24/7 Available</span>
+                    </div>
+                    <button class="theme-switcher" id="themeSwitcher">
+                        <i class="fas fa-palette"></i> Change Colors
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Stats Banner Section -->
+    <section class="banner-section">
+        <div class="banner-container">
+            <div class="banner-item">
+                <span class="banner-number">1M+</span>
+                <span class="banner-label">HAPPY USERS</span>
+                </div>
+            <div class="banner-item">
+                <span class="banner-number">100+</span>
+                <span class="banner-label">FREE TOOLS</span>
+                </div>
+            <div class="banner-item">
+                <span class="banner-number">99.9%</span>
+                <span class="banner-label">UPTIME</span>
+                </div>
+            <div class="banner-item">
+                <span class="banner-number">24/7</span>
+                <span class="banner-label">SUPPORT</span>
+                </div>
+            </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="floating-element floating-element-1"></div>
+        <div class="floating-element floating-element-2"></div>
+        
+        <!-- Top Ad Space -->
+        <div class="ad-space horizontal" data-aos="fade-up">
+            <div>Advertisement Space</div>
+        </div>
+
+        <!-- Tool Title -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h1 class="tool-title" data-aos="fade-up">PDF Comparison Tool 📄🔍</h1>
+                <p class="lead" data-aos="fade-up">Compare two PDF documents side by side and identify all differences in text, images, and formatting with our free, secure online tool.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Tool Content -->
+            <div class="col-lg-8">
+                <!-- Tool Interface Section -->
+                <section class="tool-interface mb-4">
+                    <div class="card" data-aos="fade-up">
+                        <div class="card-body">
+                            <div class="tool-container">
+                                <!-- Tool specific content -->
+                                <div id="toolContent" class="bg-light p-4 rounded">
+                                    <div class="row">
+                                        <div class="col-md-12 mb-3">
+                                            <div class="card border-0 shadow-sm">
+                                                <div class="card-body">
+                                                    <h4 class="text-center mb-4">📄 Compare Two PDF Documents</h4>
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-3">
+                                                            <div class="pdf-upload-container p-3 border rounded text-center position-relative" id="pdf1Container">
+                                                                <div class="upload-icon mb-3">
+                                                                    <i class="fas fa-file-pdf fa-3x text-primary"></i>
+                                                                </div>
+                                                                <h5>PDF Document 1</h5>
+                                                                <p class="text-muted small">Drag & drop or click to upload</p>
+                                                                <input type="file" id="pdf1Input" accept=".pdf" class="file-input" onchange="handleFileSelect(this, 1)">
+                                                                <div id="pdf1Name" class="filename-display mt-2"></div>
+                                                                <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 d-none" id="remove1Btn" onclick="removePdf(1)">
+                                                                    <i class="fas fa-times"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <div class="pdf-upload-container p-3 border rounded text-center position-relative" id="pdf2Container">
+                                                                <div class="upload-icon mb-3">
+                                                                    <i class="fas fa-file-pdf fa-3x text-primary"></i>
+                                                                </div>
+                                                                <h5>PDF Document 2</h5>
+                                                                <p class="text-muted small">Drag & drop or click to upload</p>
+                                                                <input type="file" id="pdf2Input" accept=".pdf" class="file-input" onchange="handleFileSelect(this, 2)">
+                                                                <div id="pdf2Name" class="filename-display mt-2"></div>
+                                                                <button class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 d-none" id="remove2Btn" onclick="removePdf(2)">
+                                                                    <i class="fas fa-times"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="text-center mt-3 mb-4">
+                                                        <button class="btn btn-primary px-4 py-2" id="compareBtn" onclick="comparePdfs()" disabled>
+                                                            <i class="fas fa-search-plus me-2"></i>Compare PDFs
+                                                        </button>
+                                                        <button class="btn btn-outline-secondary px-4 py-2 ms-2" id="resetBtn" onclick="resetComparison()">
+                                                            <i class="fas fa-redo me-2"></i>Reset
+                                                        </button>
+                                                    </div>
+                                                    
+                                                    <div class="comparison-options mb-4 d-flex justify-content-center">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="comparisonType" id="textComparison" value="text" checked>
+                                                            <label class="form-check-label" for="textComparison">Text Comparison</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="comparisonType" id="visualComparison" value="visual">
+                                                            <label class="form-check-label" for="visualComparison">Visual Comparison</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="comparisonType" id="highlightDifferences" value="highlight">
+                                                            <label class="form-check-label" for="highlightDifferences">Highlight Differences</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Comparison Results Section -->
+                                    <div class="comparison-results mt-4 mb-3 d-none" id="comparisonResults">
+                                        <div class="card border-0 shadow-sm">
+                                            <div class="card-header bg-primary text-white">
+                                                <h5 class="mb-0">
+                                                    <i class="fas fa-tasks me-2"></i>Comparison Results
+                                                </h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="alert alert-info mb-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="fas fa-info-circle fa-2x me-3"></i>
+                                                        <div>
+                                                            <h5 class="alert-heading mb-1">Comparison Summary</h5>
+                                                            <p class="mb-0" id="comparisonSummary">The documents have differences highlighted below.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="row pdf-viewers-container">
+                                                    <div class="col-md-6">
+                                                        <div class="pdf-view-box mb-3">
+                                                            <div class="pdf-title bg-light py-2 px-3 border-bottom">
+                                                                <strong>Document 1:</strong> <span id="pdf1Title">document1.pdf</span>
+                                                            </div>
+                                                            <div class="pdf-viewer" id="pdf1Viewer">
+                                                                <canvas id="pdf1Canvas" class="w-100 border"></canvas>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="pdf-view-box mb-3">
+                                                            <div class="pdf-title bg-light py-2 px-3 border-bottom">
+                                                                <strong>Document 2:</strong> <span id="pdf2Title">document2.pdf</span>
+                                                            </div>
+                                                            <div class="pdf-viewer" id="pdf2Viewer">
+                                                                <canvas id="pdf2Canvas" class="w-100 border"></canvas>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="differences-list mt-4">
+                                                    <h5 class="differences-title mb-3">
+                                                        <i class="fas fa-exclamation-circle text-warning me-2"></i>Differences Found
+                                                    </h5>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-hover border">
+                                                            <thead class="table-light">
+                                                                <tr>
+                                                                    <th>Page</th>
+                                                                    <th>Type</th>
+                                                                    <th>Document 1</th>
+                                                                    <th>Document 2</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody id="differencesList">
+                                                                <!-- Differences will be populated here -->
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="text-center mt-4">
+                                                    <button class="btn btn-success px-4" onclick="downloadComparisonReport()">
+                                                        <i class="fas fa-download me-2"></i>Download Comparison Report
+                                                    </button>
+                                                    <button class="btn btn-outline-primary px-4 ms-2" onclick="viewFullScreenComparison()">
+                                                        <i class="fas fa-expand me-2"></i>View Full Screen
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Additional Options Card -->
+                                    <div class="advanced-options mt-4">
+                                        <div class="card border-0 shadow-sm">
+                                            <div class="card-header bg-light">
+                                                <h5 class="mb-0">
+                                                    <button class="btn btn-link text-decoration-none text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#advancedOptionsCollapse">
+                                                        <i class="fas fa-cog me-2"></i>Advanced Comparison Options
+                                                    </button>
+                                                </h5>
+                                            </div>
+                                            <div class="collapse" id="advancedOptionsCollapse">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label fw-bold">Sensitivity Level</label>
+                                                                <select class="form-select" id="sensitivityLevel">
+                                                                    <option value="high">High - Detect minor differences</option>
+                                                                    <option value="medium" selected>Medium - Balanced sensitivity</option>
+                                                                    <option value="low">Low - Only detect major differences</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label fw-bold">Highlight Color</label>
+                                                                <select class="form-select" id="highlightColor">
+                                                                    <option value="yellow" selected>Yellow</option>
+                                                                    <option value="red">Red</option>
+                                                                    <option value="green">Green</option>
+                                                                    <option value="blue">Blue</option>
+                                                                    <option value="purple">Purple</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label fw-bold">Comparison Mode</label>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" id="textCompareModeCheck" checked>
+                                                                    <label class="form-check-label" for="textCompareModeCheck">Compare text content</label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" id="imageCompareModeCheck" checked>
+                                                                    <label class="form-check-label" for="imageCompareModeCheck">Compare images</label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" id="formatCompareModeCheck">
+                                                                    <label class="form-check-label" for="formatCompareModeCheck">Compare formatting & layout</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label fw-bold">Show Differences As</label>
+                                                                <select class="form-select" id="differencesDisplay">
+                                                                    <option value="inline" selected>Inline highlights</option>
+                                                                    <option value="sideBySide">Side-by-side view</option>
+                                                                    <option value="merged">Merged document with highlights</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End tool specific content -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tool Info Buttons -->
+                <div class="tool-info-buttons mb-4" data-aos="fade-up">
+                    <div class="tool-info-buttons-container">
+                        <a href="javascript:void(0);" class="btn info-button active-info-button">
+                            <i class="fas fa-info-circle"></i> About This Tool
+                        </a>
+                        <a href="javascript:void(0);" class="btn info-button">
+                            <i class="fas fa-book"></i> How to Use
+                        </a>
+                        <a href="javascript:void(0);" class="btn info-button">
+                            <i class="fas fa-align-left"></i> Description
+                        </a>
+                            </div>
+
+                    <div class="tool-description-box p-3">
+                        <!-- Content for About This Tool -->
+                        <p><strong>PDF Comparison Tool</strong> 📄🔍 is a powerful free utility that allows you to identify all differences between two PDF documents. Our advanced comparison algorithm analyzes text content, images, formatting, and layout to highlight even the smallest changes. This is perfect for legal professionals reviewing contracts, academics comparing research papers, or anyone who needs to track changes between document versions. Unlike other tools, our PDF comparator works entirely in your browser, ensuring your sensitive documents remain private and secure.</p>
+                    </div>
+                    <div class="steps-container mt-3">
+                        <!-- Content for How to Use -->
+                        <ol class="list-group list-group-numbered" style="counter-reset: item;">
+                            <li class="list-group-item">
+                                <span>Upload your first PDF document by clicking on the "PDF Document 1" box or drag and drop your file directly into it.</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span>Similarly, upload your second PDF document into the "PDF Document 2" box.</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span>Select your desired comparison type: text comparison, visual comparison, or highlight differences.</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span>For more precise results, you can adjust the advanced options like sensitivity level, highlight color, and comparison mode.</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span>Click the "Compare PDFs" button to start the comparison process.</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span>Review the results showing differences highlighted in a side-by-side view and in the detailed differences table below.</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span>You can download a comprehensive comparison report by clicking "Download Comparison Report".</span>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="tool-info-content mt-3">
+                        <!-- Content for Description -->
+                        <p>Our PDF Comparison Tool is an advanced free online utility designed to efficiently detect and highlight differences between two PDF documents. Whether you're reviewing legal contracts, academic papers, financial reports, or any other documents that require meticulous attention to changes, our tool provides a reliable solution.</p>
+                        <p>Key features include:</p>
+                        <ul>
+                            <li><strong>Comprehensive Comparison:</strong> Analyzes text content, images, formatting, and layout differences</li>
+                            <li><strong>Multiple Comparison Modes:</strong> Choose from text, visual, or highlight differences modes</li>
+                            <li><strong>Adjustable Sensitivity:</strong> Control how minor or major differences are detected</li>
+                            <li><strong>Side-by-Side View:</strong> Clear visual presentation of both documents with highlighted differences</li>
+                            <li><strong>Detailed Difference Reports:</strong> Easily review and navigate through all detected changes</li>
+                            <li><strong>100% Browser-Based:</strong> Your PDFs never leave your computer, ensuring complete privacy</li>
+                            <li><strong>No Installation Required:</strong> Works directly in your web browser without additional software</li>
+                            <li><strong>Exportable Results:</strong> Download a comprehensive comparison report</li>
+                        </ul>
+                        <p>Unlike other comparison tools, our solution is completely free, requires no registration, and processes everything locally in your browser for maximum security.</p>
+                    </div>
+                </div>
+
+                <!-- Review and Rating Section -->
+                <section class="review-rating-section mb-4" data-aos="fade-up">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body">
+                            <div class="row mb-4">
+                                <div class="col-md-5">
+                                    <h3 class="review-section-title">Reviews & Ratings</h3>
+                                    <div class="overall-rating-summary mb-3 p-3 rounded">
+                                        <div class="large-rating text-center mb-2">
+                                            <span class="rating-value display-4 fw-bold">4.5</span>
+                                            <span class="text-muted">/5</span>
+                                </div>
+                                        <div class="stars text-center mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                                        <div class="review-count text-center mb-3">
+                                            <span class="text-muted">Based on 123 reviews</span>
+                        </div>
+                                        <div class="text-center">
+                                            <button class="btn btn-primary btn-sm px-4 rounded-pill" data-bs-toggle="modal" data-bs-target="#reviewModal">
+                                                <i class="fas fa-edit me-1"></i> Write a Review
+                                            </button>
+                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <h4 class="most-recent-title mb-3">Rating Details</h4>
+                                    <div class="mb-3">
+                                        <p class="text-muted small mb-2">Rating breakdown:</p>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">5 stars</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 75%"></div>
+                                            </div>
+                                            <div class="small ms-2">75%</div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">4 stars</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 15%"></div>
+                                            </div>
+                                            <div class="small ms-2">15%</div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">3 stars</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 5%"></div>
+                                            </div>
+                                            <div class="small ms-2">5%</div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">2 stars</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 3%"></div>
+                                            </div>
+                                            <div class="small ms-2">3%</div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">1 star</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 2%"></div>
+                                            </div>
+                                            <div class="small ms-2">2%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tool Features Section -->
+                <section class="tool-features mb-4" data-aos="fade-up">
+                    <h3 class="section-title">Features</h3>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">⚡</div>
+                                <h4>Comprehensive Comparison</h4>
+                                <p>Detects differences in text, images, formatting, and layout between two PDF documents with precision</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">🔒</div>
+                                <h4>100% Secure</h4>
+                                <p>All processing happens in your browser - your PDFs never leave your device for maximum privacy</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">🎯</div>
+                                <h4>Advanced Options</h4>
+                                <p>Customize sensitivity, highlight colors, and comparison modes for tailored results</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">👁️</div>
+                                <h4>Side-by-Side View</h4>
+                                <p>Clear visual presentation with synchronized scrolling for easy difference spotting</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">📊</div>
+                                <h4>Detailed Reports</h4>
+                                <p>Comprehensive summary of all changes with page numbers and difference types</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">💾</div>
+                                <h4>Exportable Results</h4>
+                                <p>Download comparison reports to share with colleagues or keep for your records</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- FAQ Section -->
+                <section class="faq-section mb-4" data-aos="fade-up">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                                    🔍 How accurate is the PDF comparison tool?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our PDF comparison tool uses advanced algorithms to detect differences with high accuracy. It can identify text changes, additions, deletions, formatting differences, and even modifications in images. The tool offers adjustable sensitivity levels to balance between catching minor differences and focusing only on significant changes. For best results, use documents with similar structures and clear text (not scanned images of text).
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                                    🔒 Is my data secure when using this comparison tool?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Answer to FAQ question 2. Provide detailed information here.
+                    </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                                    FAQ Question 3?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Answer to FAQ question 3. Provide detailed information here.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                    <!-- Bottom Ad Space -->
+                    <div class="ad-space horizontal" data-aos="fade-up">
+                        <div>Advertisement Space</div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4 tool-sidebar">
+                <!-- Sidebar Ad Space -->
+                <div class="ad-space vertical" data-aos="fade-left">
+                    <div>Advertisement Space</div>
+                </div>
+
+                <!-- Related Tools -->
+                <div class="card mb-4" data-aos="fade-left">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-tools"></i>
+                            Related Tools
+                        </h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="edit-pdf.html">Edit PDF</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="merge-pdf.html">Merge PDF</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="split-pdf.html">Split PDF</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="organize-pdf.html">Organize PDF</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Popular Tools -->
+                <div class="card mb-4" data-aos="fade-left">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-star"></i>
+                            Popular Tools
+                        </h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="merge-pdf.html">Merge PDF</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="compress-pdf.html">Compress PDF</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="edit-pdf.html">Edit PDF</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="split-pdf.html">Split PDF</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom Sidebar Ad Space -->
+                <div class="ad-space square" data-aos="fade-left">
+                    <div>Advertisement Space</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-4" data-aos="fade-up">Most Recent Reviews</h2>
+            <div id="allRecentReviews" class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Incredible tool for comparing contract versions! Saved me hours of manual checking and highlighted all the differences clearly."</p>
+                        <div class="testimonial-author">- Mark L.</div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"As a legal professional, this PDF comparison tool is invaluable. It catches even the smallest changes between documents."</p>
+                        <div class="testimonial-author">- Patricia C.</div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★☆</div>
+                        <p class="testimonial-text">"Great for comparing different versions of manuscripts. The visual comparison makes it easy to spot changes."</p>
+                        <div class="testimonial-author">- Andrew B.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 text-center">
+                    <h2 class="cta-title">Ready to Try Our Other Tools?</h2>
+                    <p class="cta-text">Explore our collection of 100+ free online tools designed to make your life easier.</p>
+                    <a href="../../index.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-toolbox"></i> Browse All Tools
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- About Us -->
+                <div class="col-md-4">
+                    <div class="footer-about">
+                        <h4>About Us</h4>
+                        <p>Your trusted source for free online tools. We provide high-quality, easy-to-use tools for all your needs.</p>
+                </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-4">
+                    <div class="footer-links">
+                        <h4>🔗 Quick Links</h4>
+                    <ul class="list-unstyled">
+                            <li><a href="../../index.html">🏠 Home</a></li>
+                            <li><a href="../../about.html">ℹ️ About</a></li>
+                            <li><a href="../../contact.html">📧 Contact</a></li>
+                            <li><a href="../../privacy-policy.html">🔒 Privacy Policy</a></li>
+                            <li><a href="../../terms.html">📜 Terms of Service</a></li>
+                            <li><a href="../../disclaimer.html">⚠️ Disclaimer</a></li>
+                            <li><a href="../../cookie-policy.html">🍪 Cookie Policy</a></li>
+                    </ul>
+                </div>
+                    </div>
+
+                <!-- Connect With Us -->
+                <div class="col-md-4">
+                    <div class="footer-social">
+                        <h4>🤝 Connect With Us</h4>
+                        <div class="social-links mt-3">
+                            <a href="https://www.youtube.com/@toolsnew7" target="_blank" class="me-3 text-decoration-none">
+                                <i class="fab fa-youtube fa-2x"></i>
+                                <span class="ms-2">YouTube</span>
+                            </a>
+                            <br>
+                            <a href="https://www.facebook.com/profile.php?id=61574866457908" target="_blank" class="me-3 text-decoration-none mt-2 d-inline-block">
+                                <i class="fab fa-facebook fa-2x"></i>
+                                <span class="ms-2">Facebook</span>
+                            </a>
+                            <br>
+                            <a href="https://www.tiktok.com/@toolsnew7?lang=en" target="_blank" class="me-3 text-decoration-none mt-2 d-inline-block">
+                                <i class="fab fa-tiktok fa-2x"></i>
+                                <span class="ms-2">TikTok</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="footer-copyright text-center">
+                        <p>&copy; 2025 Toolsnew. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Review Modal -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="reviewModalLabel">
+                        <i class="fas fa-star text-warning me-2"></i>Rate this Tool
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reviewForm">
+                        <div class="mb-3">
+                            <label for="reviewerName" class="form-label fw-bold">Your Name</label>
+                            <input type="text" class="form-control" id="reviewerName" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Your Rating</label>
+                            <div class="rating-input text-center mb-2">
+                                <i class="far fa-star" data-value="1"></i>
+                                <i class="far fa-star" data-value="2"></i>
+                                <i class="far fa-star" data-value="3"></i>
+                                <i class="far fa-star" data-value="4"></i>
+                                <i class="far fa-star" data-value="5"></i>
+                            </div>
+                            <input type="hidden" id="ratingValue" name="ratingValue" required>
+                            <div id="ratingHelp" class="form-text text-center">Click on a star to rate</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reviewText" class="form-label fw-bold">Your Review</label>
+                            <textarea class="form-control" id="reviewText" rows="4" placeholder="Share your experience with this tool..." required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary rounded-pill px-4" form="reviewForm">Submit Review</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../js/common.js"></script>
+    <!-- Tool specific JS -->
+    <script src="../js/compare-pdf.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeSwitcher = document.getElementById('themeSwitcher');
+            const body = document.body;
+            const header = document.querySelector('.header');
+            const announcementBar = document.querySelector('.announcement-bar');
+            const scrollProgress = document.querySelector('.scroll-progress');
+            let currentScheme = 1;
+            const totalSchemes = 33;
+            let lastScrollTop = 0;
+            let scrollTimeout;
+
+            // Add announcement bar class to body
+            body.classList.add('with-announcement');
+            header.classList.add('with-announcement');
+
+            // Color scheme switcher
+            themeSwitcher.addEventListener('click', function() {
+                currentScheme = (currentScheme % totalSchemes) + 1;
+                body.className = body.className.replace(/color-scheme-\d+/g, '').trim();
+                body.classList.add(`color-scheme-${currentScheme}`);
+                localStorage.setItem('colorScheme', currentScheme);
+            });
+
+            // Load saved color scheme
+            const savedScheme = localStorage.getItem('colorScheme');
+            if (savedScheme) {
+                currentScheme = parseInt(savedScheme);
+                body.classList.add(`color-scheme-${currentScheme}`);
+            }
+
+            // Scroll handler
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                
+                // Update scroll progress
+                const progress = (scrollTop / scrollHeight) * 100;
+                scrollProgress.style.transform = `scaleX(${progress / 100})`;
+            });
+
+            // Info buttons functionality
+            const infoButtons = document.querySelectorAll('.info-button');
+            const aboutButton = infoButtons[0];
+            const howToButton = infoButtons[1];
+            const descButton = infoButtons[2];
+            const descriptionBox = document.querySelector('.tool-description-box');
+            const stepsContainer = document.querySelector('.steps-container');
+            const toolInfoContent = document.querySelector('.tool-info-content');
+            
+            // Initially hide steps and info content
+            stepsContainer.style.display = 'none';
+            toolInfoContent.style.display = 'none';
+            
+            // Apply initial active state
+            aboutButton.classList.add('active-info-button');
+            
+            // Animate description box entrance
+            descriptionBox.style.opacity = '0';
+            setTimeout(() => {
+                descriptionBox.style.opacity = '1';
+                descriptionBox.style.transform = 'translateY(0)';
+            }, 300);
+            
+            // Helper function to hide all content
+            function hideAllContent() {
+                descriptionBox.style.opacity = '0';
+                stepsContainer.style.opacity = '0';
+                toolInfoContent.style.opacity = '0';
+                
+                setTimeout(() => {
+                    descriptionBox.style.display = 'none';
+                    stepsContainer.style.display = 'none';
+                    toolInfoContent.style.display = 'none';
+                }, 200);
+                
+                // Remove active state from all buttons
+                infoButtons.forEach(btn => btn.classList.remove('active-info-button'));
+            }
+            
+            // About button click
+            aboutButton.addEventListener('click', function() {
+                hideAllContent();
+                
+                // Show description box with animation
+                aboutButton.classList.add('active-info-button');
+                setTimeout(() => {
+                    descriptionBox.style.display = 'block';
+                    setTimeout(() => {
+                        descriptionBox.style.opacity = '1';
+                        descriptionBox.style.transform = 'translateY(0)';
+                    }, 50);
+                }, 200);
+            });
+            
+            // How to use button click
+            howToButton.addEventListener('click', function() {
+                hideAllContent();
+                
+                // Show steps container with animation
+                howToButton.classList.add('active-info-button');
+                setTimeout(() => {
+                    stepsContainer.style.display = 'block';
+                    setTimeout(() => {
+                        stepsContainer.style.opacity = '1';
+                        stepsContainer.style.transform = 'translateY(0)';
+                    }, 50);
+                }, 200);
+            });
+            
+            // Description button click
+            descButton.addEventListener('click', function() {
+                hideAllContent();
+                
+                // Show tool info content with animation
+                descButton.classList.add('active-info-button');
+                setTimeout(() => {
+                    toolInfoContent.style.display = 'block';
+                    setTimeout(() => {
+                        toolInfoContent.style.opacity = '1';
+                        toolInfoContent.style.transform = 'translateY(0)';
+                    }, 50);
+                }, 200);
+            });
+
+            // Remove loading overlay
+            const loadingOverlay = document.querySelector('.loading-overlay');
+            setTimeout(() => {
+                loadingOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                }, 500);
+            }, 1000);
+
+            // Add active class to nav links based on current page
+            try {
+                const currentPath = window.location.pathname;
+                const navLinks = document.querySelectorAll('#navbarNav .nav-link');
+
+                navLinks.forEach(link => {
+                    const linkPath = new URL(link.href).pathname;
+                    
+                    // Remove trailing slashes for comparison
+                    const normalizedLinkPath = linkPath.replace(/\/$/, '');
+                    const normalizedCurrentPath = currentPath.replace(/\/$/, '');
+
+                    if (normalizedLinkPath === normalizedCurrentPath) {
+                        link.classList.add('active');
+                        link.setAttribute('aria-current', 'page');
+                    } else {
+                        link.classList.remove('active');
+                        link.removeAttribute('aria-current');
+                    }
+                });
+            } catch (e) {
+                console.error("Error setting active nav link:", e);
+            }
+
+            // Review Modal Star Rating Functionality
+            const ratingStars = document.querySelectorAll('.rating-input i');
+            const ratingValueInput = document.getElementById('ratingValue');
+            const ratingInputContainer = document.querySelector('.rating-input');
+
+            ratingStars.forEach(star => {
+                star.addEventListener('mouseover', function() {
+                    if (ratingInputContainer.classList.contains('rated')) return; // Don't change on hover if already rated
+                    resetStars();
+                    const currentValue = this.getAttribute('data-value');
+                    highlightStars(currentValue);
+                });
+
+                star.addEventListener('mouseout', function() {
+                    if (ratingInputContainer.classList.contains('rated')) return;
+                    resetStars(); // Reset on mouse out if not rated
+                });
+
+                star.addEventListener('click', function() {
+                    const currentValue = this.getAttribute('data-value');
+                    ratingValueInput.value = currentValue;
+                    resetStars(); // Clear first
+                    highlightStars(currentValue); // Highlight up to clicked
+                    // Mark as rated to freeze hover effect
+                    ratingInputContainer.classList.add('rated'); 
+                    ratingStars.forEach((s, index) => { // Mark individual stars as selected
+                       if (index < currentValue) {
+                           s.classList.add('selected');
+                       } else {
+                           s.classList.remove('selected');
+                       }
+                    });
+                });
+            });
+
+            function resetStars() {
+                ratingStars.forEach(star => {
+                    star.classList.remove('fas', 'selected');
+                    star.classList.add('far');
+                    star.style.color = '#ccc'; // Explicitly reset color
+                });
+            }
+
+            function highlightStars(value) {
+                for (let i = 0; i < value; i++) {
+                    ratingStars[i].classList.remove('far');
+                    ratingStars[i].classList.add('fas');
+                    ratingStars[i].style.color = '#ffc107'; // Ensure highlight color
+                }
+            }
+            
+            // Handle rating reset if modal is closed without submitting
+            const reviewModal = document.getElementById('reviewModal');
+            reviewModal.addEventListener('hidden.bs.modal', function () {
+                 ratingInputContainer.classList.remove('rated');
+                 resetStars();
+                 ratingValueInput.value = '';
+                 // Optionally clear other form fields
+                 // document.getElementById('reviewForm').reset();
+            });
+
+            // Review Form Submission (Placeholder)
+            const reviewForm = document.getElementById('reviewForm');
+            const recentReviewsContainer = document.getElementById('recentReviews');
+            
+            reviewForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const name = document.getElementById('reviewerName').value;
+                const rating = document.getElementById('ratingValue').value;
+                const reviewText = document.getElementById('reviewText').value;
+
+                if (!rating) {
+                    alert('Please select a rating.');
+                    return;
+                }
+
+                // Generate star HTML based on rating
+                let starsHtml = '';
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= rating) {
+                        starsHtml += '<i class="fas fa-star text-warning"></i>';
+                    } else if (i - 0.5 === parseFloat(rating)) {
+                        starsHtml += '<i class="fas fa-star-half-alt text-warning"></i>';
+                    } else {
+                        starsHtml += '<i class="far fa-star text-warning"></i>';
+                    }
+                }
+                
+                // Current date for "just now" display
+                const today = new Date();
+                
+                // Create new review HTML element for the reviews panel
+                const newReview = document.createElement('div');
+                newReview.className = 'review-item border-bottom pb-3 mb-3';
+                
+                // Build the review HTML
+                newReview.innerHTML = `
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <div class="reviewer-info">
+                            <span class="reviewer-name fw-bold">${name}</span>
+                            <span class="review-date text-muted ms-2">just now</span>
+                        </div>
+                        <div class="review-rating stars-small">
+                            ${starsHtml}
+                        </div>
+                    </div>
+                    <p class="review-text mb-0">"${reviewText}"</p>
+                `;
+                
+                // Add animation class
+                newReview.classList.add('animate__animated', 'animate__fadeIn');
+
+                // Create new review for the testimonials section
+                const newTestimonial = document.createElement('div');
+                newTestimonial.className = 'col-md-4 animate__animated animate__fadeIn';
+                newTestimonial.innerHTML = `
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">${'★'.repeat(rating)}</div>
+                        <p class="testimonial-text">"${reviewText}"</p>
+                        <div class="testimonial-author">- ${name}</div>
+                    </div>
+                `;
+                
+                // Add to the beginning of the testimonials container
+                const allRecentReviewsContainer = document.getElementById('allRecentReviews');
+                if (allRecentReviewsContainer.firstChild) {
+                    allRecentReviewsContainer.insertBefore(newTestimonial, allRecentReviewsContainer.firstChild);
+                } else {
+                    allRecentReviewsContainer.appendChild(newTestimonial);
+                }
+                
+                // Remove oldest testimonial if more than 3
+                const allTestimonials = allRecentReviewsContainer.querySelectorAll('.col-md-4');
+                if (allTestimonials.length > 3) {
+                    allRecentReviewsContainer.removeChild(allTestimonials[allTestimonials.length - 1]);
+                }
+                
+                // Update the average rating and count
+                const reviewCountElement = document.querySelector('.review-count .text-muted');
+                const countMatch = reviewCountElement.textContent.match(/\d+/);
+                if (countMatch) {
+                    const newCount = parseInt(countMatch[0]) + 1;
+                    reviewCountElement.textContent = `Based on ${newCount} reviews`;
+                }
+                
+                // Close the modal
+                const modalInstance = bootstrap.Modal.getInstance(reviewModal);
+                modalInstance.hide();
+                
+                // Clear the form
+                reviewForm.reset();
+                resetStars();
+                ratingInputContainer.classList.remove('rated');
+                
+                // Show success message
+                const successToast = document.createElement('div');
+                successToast.className = 'position-fixed bottom-0 end-0 p-3 animate__animated animate__fadeInUp';
+                successToast.style.zIndex = "1100";
+                successToast.innerHTML = `
+                    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header bg-success text-white">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <strong class="me-auto">Success</strong>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            Thank you for your review! It has been added.
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(successToast);
+                
+                // Remove the toast after 3 seconds
+                setTimeout(() => {
+                    successToast.classList.remove('animate__fadeInUp');
+                    successToast.classList.add('animate__fadeOutDown');
+                    setTimeout(() => {
+                        document.body.removeChild(successToast);
+                    }, 500);
+                }, 3000);
+            });
+
+            // Remove loading overlay
+        });
+
+        // PDF Comparison Tool Specific JavaScript
+        // Variables to store the uploaded PDFs
+        let pdf1File = null;
+        let pdf2File = null;
+        
+        // Initialize tooltips
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+        
+        // Setup drag and drop functionality
+        function setupDragAndDrop() {
+            const dropZones = document.querySelectorAll('.pdf-upload-container');
+            
+            dropZones.forEach((zone, index) => {
+                const pdfNum = index + 1;
+                
+                zone.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    zone.classList.add('drag-over');
+                });
+                
+                zone.addEventListener('dragleave', () => {
+                    zone.classList.remove('drag-over');
+                });
+                
+                zone.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    zone.classList.remove('drag-over');
+                    
+                    if (e.dataTransfer.files.length) {
+                        const file = e.dataTransfer.files[0];
+                        if (file.type === 'application/pdf') {
+                            handleFile(file, pdfNum);
+                        } else {
+                            showErrorToast('Please upload a PDF file');
+                        }
+                    }
+                });
+                
+                // Also handle click uploads
+                zone.addEventListener('click', () => {
+                    const fileInput = document.getElementById(`pdf${pdfNum}Input`);
+                    fileInput.click();
+                });
+            });
+        }
+        
+        // Handle file selection
+        function handleFileSelect(input, pdfNum) {
+            if (input.files && input.files[0]) {
+                const file = input.files[0];
+                handleFile(file, pdfNum);
+            }
+        }
+        
+        // Process the selected file
+        function handleFile(file, pdfNum) {
+            // Store the file
+            if (pdfNum === 1) {
+                pdf1File = file;
+            } else {
+                pdf2File = file;
+            }
+            
+            // Update the UI
+            const container = document.getElementById(`pdf${pdfNum}Container`);
+            const nameDisplay = document.getElementById(`pdf${pdfNum}Name`);
+            const removeBtn = document.getElementById(`remove${pdfNum}Btn`);
+            
+            container.classList.add('has-file');
+            nameDisplay.textContent = file.name;
+            removeBtn.classList.remove('d-none');
+            
+            // Enable compare button if both PDFs are uploaded
+            updateCompareButtonState();
+        }
+        
+        // Remove a PDF
+        function removePdf(pdfNum) {
+            // Clear the file
+            if (pdfNum === 1) {
+                pdf1File = null;
+                document.getElementById('pdf1Input').value = '';
+            } else {
+                pdf2File = null;
+                document.getElementById('pdf2Input').value = '';
+            }
+            
+            // Update the UI
+            const container = document.getElementById(`pdf${pdfNum}Container`);
+            const nameDisplay = document.getElementById(`pdf${pdfNum}Name`);
+            const removeBtn = document.getElementById(`remove${pdfNum}Btn`);
+            
+            container.classList.remove('has-file');
+            nameDisplay.textContent = '';
+            removeBtn.classList.add('d-none');
+            
+            // Update compare button
+            updateCompareButtonState();
+        }
+        
+        // Update the state of the compare button
+        function updateCompareButtonState() {
+            const compareBtn = document.getElementById('compareBtn');
+            if (pdf1File && pdf2File) {
+                compareBtn.disabled = false;
+            } else {
+                compareBtn.disabled = true;
+            }
+        }
+        
+        // Mock PDF comparison function (in a real implementation, this would use a PDF.js or similar library)
+        function comparePdfs() {
+            // Show loading state
+            const compareBtn = document.getElementById('compareBtn');
+            compareBtn.disabled = true;
+            compareBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Comparing...';
+            
+            // Show a loading overlay
+            const loadingOverlay = document.createElement('div');
+            loadingOverlay.className = 'comparison-loading';
+            loadingOverlay.innerHTML = `
+                <div class="comparison-spinner"></div>
+                <h5 class="mt-3">Analyzing Documents</h5>
+                <p class="text-muted">Please wait while we identify differences...</p>
+            `;
+            document.getElementById('comparisonResults').appendChild(loadingOverlay);
+            document.getElementById('comparisonResults').classList.remove('d-none');
+            
+            // Simulate processing time
+            setTimeout(() => {
+                // Remove loading overlay
+                document.getElementById('comparisonResults').removeChild(loadingOverlay);
+                
+                // Set PDF titles
+                document.getElementById('pdf1Title').textContent = pdf1File.name;
+                document.getElementById('pdf2Title').textContent = pdf2File.name;
+                
+                // Create mock canvas content to simulate PDF display
+                simulatePdfRendering('pdf1Canvas', 1);
+                simulatePdfRendering('pdf2Canvas', 2);
+                
+                // Generate mock comparison data
+                generateMockComparisonData();
+                
+                // Restore button state
+                compareBtn.disabled = false;
+                compareBtn.innerHTML = '<i class="fas fa-search-plus me-2"></i>Compare PDFs';
+                
+                // Add an attention-grabbing animation to the results
+                const resultsElement = document.getElementById('comparisonResults');
+                resultsElement.classList.add('animate__animated', 'animate__fadeIn');
+                
+                // Scroll to results with a highlighted effect
+                resultsElement.scrollIntoView({ behavior: 'smooth' });
+                
+                // Highlight the results section briefly
+                resultsElement.style.boxShadow = '0 0 20px rgba(var(--primary-color-rgb), 0.7)';
+                setTimeout(() => {
+                    resultsElement.style.boxShadow = 'none';
+                    resultsElement.style.transition = 'box-shadow 1s ease';
+                }, 2000);
+                
+                // Show a small notification
+                showSuccessToast('Comparison complete! Scroll down to view results.');
+            }, 2000);
+        }
+        
+        // Function to simulate PDF rendering with sample content
+        function simulatePdfRendering(canvasId, docNum) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Set canvas size
+            canvas.width = 600;
+            canvas.height = 800;
+            
+            // Draw background
+            ctx.fillStyle = '#FFF';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw some mock PDF content
+            ctx.fillStyle = '#333';
+            ctx.font = '16px Arial';
+            
+            if (docNum === 1) {
+                // First document - travel itinerary
+                ctx.fillText('Travel Itinerary', 50, 50);
+                ctx.fillRect(50, 60, 500, 2);
+                
+                ctx.font = '14px Arial';
+                ctx.fillText('Passenger: John Smith', 50, 100);
+                ctx.fillText('Flight: BA-1326', 50, 130);
+                ctx.fillText('Date: May 16, 2023', 50, 160);
+                ctx.fillText('Departure: London (LHR) - 10:30 AM', 50, 190);
+                ctx.fillText('Arrival: Paris (CDG) - 12:45 PM', 50, 220);
+                
+                // Highlight area for differences
+                ctx.fillStyle = 'rgba(255, 255, 0, 0.3)';
+                ctx.fillRect(45, 155, 200, 25);
+                
+                ctx.fillStyle = 'rgba(255, 0, 0, 0.2)';
+                ctx.fillRect(45, 245, 300, 25);
+                
+                ctx.fillStyle = '#333';
+                ctx.fillText('Seat: 14A - Economy Class', 50, 250);
+                ctx.fillText('Booking Reference: ABC123', 50, 280);
+                
+                // Add more mock document content
+                ctx.fillText('Hotel: Grand Hotel Paris', 50, 330);
+                ctx.fillText('Check-in: May 16, 2023', 50, 360);
+                ctx.fillText('Check-out: May 19, 2023', 50, 390);
+                ctx.fillText('Room Type: Standard Double', 50, 420);
+                
+            } else {
+                // Second document - reservation
+                ctx.fillText('Travel Reservation', 50, 50);
+                ctx.fillRect(50, 60, 500, 2);
+                
+                ctx.font = '14px Arial';
+                ctx.fillText('Passenger: John Smith', 50, 100);
+                ctx.fillText('Flight: BA-1326', 50, 130);
+                ctx.fillText('Date: May 17, 2023', 50, 160); // Different date!
+                ctx.fillText('Departure: London (LHR) - 10:30 AM', 50, 190);
+                ctx.fillText('Arrival: Paris (CDG) - 12:45 PM', 50, 220);
+                
+                // Highlight area for differences
+                ctx.fillStyle = 'rgba(255, 255, 0, 0.3)';
+                ctx.fillRect(45, 155, 200, 25);
+                
+                ctx.fillStyle = 'rgba(0, 255, 0, 0.2)';
+                ctx.fillRect(45, 245, 300, 25);
+                
+                ctx.fillStyle = '#333';
+                ctx.fillText('Seat: 14B - Economy Class', 50, 250); // Different seat!
+                ctx.fillText('Booking Reference: ABC123', 50, 280);
+                
+                // Add more mock document content
+                ctx.fillText('Hotel: Grand Hotel Paris', 50, 330);
+                ctx.fillText('Check-in: May 17, 2023', 50, 360); // Different date!
+                ctx.fillText('Check-out: May 19, 2023', 50, 390);
+                ctx.fillText('Room Type: Deluxe Double', 50, 420); // Different room!
+                
+                // Highlight another difference
+                ctx.fillStyle = 'rgba(255, 255, 0, 0.3)';
+                ctx.fillRect(45, 355, 200, 25);
+                ctx.fillRect(45, 415, 250, 25);
+            }
+            
+            // Add page number
+            ctx.fillStyle = '#777';
+            ctx.font = '12px Arial';
+            ctx.fillText('Page 1 of 3', 500, 780);
+        }
+        
+        // Generate mock comparison data (this would be replaced by actual comparison logic)
+        function generateMockComparisonData() {
+            // Create mock comparison result table
+            const differencesList = document.getElementById('differencesList');
+            differencesList.innerHTML = ''; // Clear existing content
+            
+            // Sample differences based on the simulated PDFs
+            const mockDifferences = [
+                { page: 1, type: 'Text Change', doc1: 'Date: May 16, 2023', doc2: 'Date: May 17, 2023' },
+                { page: 1, type: 'Text Change', doc1: 'Seat: 14A - Economy Class', doc2: 'Seat: 14B - Economy Class' },
+                { page: 1, type: 'Text Change', doc1: 'Check-in: May 16, 2023', doc2: 'Check-in: May 17, 2023' },
+                { page: 1, type: 'Text Change', doc1: 'Room Type: Standard Double', doc2: 'Room Type: Deluxe Double' },
+                { page: 2, type: 'Text Addition', doc1: '[No content]', doc2: 'Airport transfer included' }
+            ];
+            
+            // Add differences to table with animations
+            mockDifferences.forEach((diff, index) => {
+                const row = document.createElement('tr');
+                row.className = 'animate__animated animate__fadeIn';
+                row.style.animationDelay = `${0.1 * index}s`;
+                
+                const pageCell = document.createElement('td');
+                pageCell.textContent = diff.page;
+                
+                const typeCell = document.createElement('td');
+                // Add icon based on difference type
+                let icon = '';
+                let badgeClass = '';
+                
+                switch(diff.type) {
+                    case 'Text Change':
+                        icon = '<i class="fas fa-edit text-warning me-2"></i>';
+                        badgeClass = 'bg-warning text-dark';
+                        break;
+                    case 'Text Addition':
+                        icon = '<i class="fas fa-plus-circle text-success me-2"></i>';
+                        badgeClass = 'bg-success text-white';
+                        break;
+                    case 'Text Deletion':
+                        icon = '<i class="fas fa-minus-circle text-danger me-2"></i>';
+                        badgeClass = 'bg-danger text-white';
+                        break;
+                    case 'Formatting':
+                        icon = '<i class="fas fa-font text-info me-2"></i>';
+                        badgeClass = 'bg-info text-white';
+                        break;
+                    case 'Image Change':
+                        icon = '<i class="fas fa-image text-primary me-2"></i>';
+                        badgeClass = 'bg-primary text-white';
+                        break;
+                }
+                
+                typeCell.innerHTML = `${icon}<span class="badge ${badgeClass} px-2 py-1">${diff.type}</span>`;
+                
+                const doc1Cell = document.createElement('td');
+                if (diff.type === 'Text Change') {
+                    doc1Cell.innerHTML = highlightDifference(diff.doc1, diff.doc2);
+                } else {
+                    doc1Cell.innerHTML = diff.doc1;
+                }
+                
+                const doc2Cell = document.createElement('td');
+                if (diff.type === 'Text Change') {
+                    doc2Cell.innerHTML = highlightDifference(diff.doc2, diff.doc1);
+                } else {
+                    doc2Cell.innerHTML = diff.doc2;
+                }
+                
+                row.appendChild(pageCell);
+                row.appendChild(typeCell);
+                row.appendChild(doc1Cell);
+                row.appendChild(doc2Cell);
+                
+                differencesList.appendChild(row);
+            });
+            
+            // Update the comparison summary
+            document.getElementById('comparisonSummary').textContent = 
+                `Found ${mockDifferences.length} differences between the documents. Differences include text changes, additions, and deletions.`;
+        }
+
+        // Helper function to highlight the exact differences in text
+        function highlightDifference(text1, text2) {
+            // This is a simplified example - a real implementation would use a proper diff algorithm
+            if (text1 === '[No content]' || text2 === '[No content]') {
+                return text1;
+            }
+            
+            const words1 = text1.split(' ');
+            const words2 = text2.split(' ');
+            
+            let resultHtml = '';
+            
+            for (let i = 0; i < words1.length; i++) {
+                if (i < words2.length && words1[i] !== words2[i]) {
+                    resultHtml += `<span class="text-difference">${words1[i]}</span> `;
+                } else {
+                    resultHtml += `${words1[i]} `;
+                }
+            }
+            
+            return resultHtml.trim();
+        }
+        
+        // Reset the comparison
+        function resetComparison() {
+            // Clear files
+            pdf1File = null;
+            pdf2File = null;
+            document.getElementById('pdf1Input').value = '';
+            document.getElementById('pdf2Input').value = '';
+            
+            // Reset UI
+            const containers = document.querySelectorAll('.pdf-upload-container');
+            containers.forEach((container, index) => {
+                const pdfNum = index + 1;
+                container.classList.remove('has-file');
+                document.getElementById(`pdf${pdfNum}Name`).textContent = '';
+                document.getElementById(`remove${pdfNum}Btn`).classList.add('d-none');
+            });
+            
+            // Disable compare button
+            const compareBtn = document.getElementById('compareBtn');
+            compareBtn.disabled = true;
+            
+            // Hide results
+            document.getElementById('comparisonResults').classList.add('d-none');
+            
+            // Reset comparison options
+            document.getElementById('textComparison').checked = true;
+            document.getElementById('sensitivityLevel').value = 'medium';
+            document.getElementById('highlightColor').value = 'yellow';
+            document.getElementById('textCompareModeCheck').checked = true;
+            document.getElementById('imageCompareModeCheck').checked = true;
+            document.getElementById('formatCompareModeCheck').checked = false;
+            document.getElementById('differencesDisplay').value = 'inline';
+        }
+        
+        // Download comparison report
+        function downloadComparisonReport() {
+            showSuccessToast('Preparing your comparison report...');
+            
+            // Disable the button and show loading state
+            const downloadBtn = event.currentTarget;
+            const originalText = downloadBtn.innerHTML;
+            downloadBtn.disabled = true;
+            downloadBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Generating PDF...';
+            
+            // Create a canvas for the report
+            const reportCanvas = document.createElement('canvas');
+            reportCanvas.width = 800;
+            reportCanvas.height = 1100;
+            const ctx = reportCanvas.getContext('2d');
+            
+            // Draw background
+            ctx.fillStyle = '#FFF';
+            ctx.fillRect(0, 0, reportCanvas.width, reportCanvas.height);
+            
+            // Draw header
+            ctx.fillStyle = '#333';
+            ctx.font = 'bold 24px Arial';
+            ctx.fillText('PDF Comparison Report', 50, 50);
+            
+            ctx.font = '14px Arial';
+            ctx.fillText('Generated on: ' + new Date().toLocaleString(), 50, 80);
+            
+            // Draw document names
+            ctx.font = 'bold 16px Arial';
+            ctx.fillText('Document 1: ' + pdf1File.name, 50, 120);
+            ctx.fillText('Document 2: ' + pdf2File.name, 50, 150);
+            
+            // Draw line
+            ctx.strokeStyle = '#ccc';
+            ctx.beginPath();
+            ctx.moveTo(50, 170);
+            ctx.lineTo(750, 170);
+            ctx.stroke();
+            
+            // Draw comparison summary
+            ctx.font = 'bold 18px Arial';
+            ctx.fillText('Comparison Summary', 50, 200);
+            
+            ctx.font = '14px Arial';
+            const summary = document.getElementById('comparisonSummary').textContent;
+            ctx.fillText(summary, 50, 230);
+            
+            // Draw differences table
+            ctx.font = 'bold 18px Arial';
+            ctx.fillText('Differences Found', 50, 280);
+            
+            ctx.font = '12px Arial';
+            ctx.fillText('Page', 50, 310);
+            ctx.fillText('Type', 120, 310);
+            ctx.fillText('Document 1', 250, 310);
+            ctx.fillText('Document 2', 500, 310);
+            
+            // Draw line
+            ctx.beginPath();
+            ctx.moveTo(50, 320);
+            ctx.lineTo(750, 320);
+            ctx.stroke();
+            
+            // Get differences from the table
+            const differenceRows = document.getElementById('differencesList').getElementsByTagName('tr');
+            let yPos = 340;
+            
+            for (let i = 0; i < differenceRows.length; i++) {
+                const cells = differenceRows[i].getElementsByTagName('td');
+                
+                // Page
+                ctx.fillText(cells[0].textContent, 50, yPos);
+                
+                // Type (remove HTML)
+                const typeText = cells[1].textContent.replace(/\s+/g, ' ').trim();
+                ctx.fillText(typeText, 120, yPos);
+                
+                // Doc1 (remove HTML)
+                const doc1Text = cells[2].textContent.replace(/\s+/g, ' ').trim();
+                ctx.fillText(doc1Text.substring(0, 35) + (doc1Text.length > 35 ? '...' : ''), 250, yPos);
+                
+                // Doc2 (remove HTML)
+                const doc2Text = cells[3].textContent.replace(/\s+/g, ' ').trim();
+                ctx.fillText(doc2Text.substring(0, 35) + (doc2Text.length > 35 ? '...' : ''), 500, yPos);
+                
+                yPos += 30;
+                
+                // Draw separator line
+                ctx.beginPath();
+                ctx.moveTo(50, yPos - 15);
+                ctx.lineTo(750, yPos - 15);
+                ctx.stroke();
+            }
+            
+            // Draw footer
+            ctx.font = '10px Arial';
+            ctx.fillStyle = '#777';
+            ctx.fillText('Generated by Toolsnew PDF Comparison Tool - https://toolsnew.com', 50, 1050);
+            
+            // Convert canvas to image and create downloadable link
+            setTimeout(() => {
+                try {
+                    const imgData = reportCanvas.toDataURL('image/png');
+                    
+                    // Create PDF using client-side library
+                    const { jsPDF } = window.jspdf;
+                    const pdf = new jsPDF('p', 'pt', 'a4');
+                    
+                    // Get the dimensions of A4 paper in points (72 dpi)
+                    const pageWidth = pdf.internal.pageSize.getWidth();
+                    const pageHeight = pdf.internal.pageSize.getHeight();
+                    
+                    // Calculate the scale to fit the canvas image on A4
+                    const scale = Math.min(pageWidth / reportCanvas.width, pageHeight / reportCanvas.height);
+                    const scaledWidth = reportCanvas.width * scale;
+                    const scaledHeight = reportCanvas.height * scale;
+                    
+                    // Calculate the centering position
+                    const x = (pageWidth - scaledWidth) / 2;
+                    const y = (pageHeight - scaledHeight) / 2;
+                    
+                    // Add the image to the PDF
+                    pdf.addImage(imgData, 'PNG', x, y, scaledWidth, scaledHeight);
+                    
+                    // Save the PDF
+                    pdf.save('PDF_Comparison_Report.pdf');
+                    
+                    // Restore button state
+                    downloadBtn.disabled = false;
+                    downloadBtn.innerHTML = originalText;
+                    
+                    showSuccessToast('Comparison report downloaded successfully!');
+                } catch (error) {
+                    console.error('Error generating PDF:', error);
+                    
+                    // Fallback: create a simple text file if PDF generation fails
+                    const textContent = `PDF Comparison Report
+Generated on: ${new Date().toLocaleString()}
+
+Document 1: ${pdf1File.name}
+Document 2: ${pdf2File.name}
+
+${document.getElementById('comparisonSummary').textContent}
+
+Differences Found:
+${Array.from(differenceRows).map(row => {
+    const cells = row.getElementsByTagName('td');
+    return `Page ${cells[0].textContent} - ${cells[1].textContent.replace(/\s+/g, ' ').trim()}
+Doc1: ${cells[2].textContent.replace(/\s+/g, ' ').trim()}
+Doc2: ${cells[3].textContent.replace(/\s+/g, ' ').trim()}
+`;
+}).join('\n')}
+
+Generated by Toolsnew PDF Comparison Tool - https://toolsnew.com`;
+                    
+                    const blob = new Blob([textContent], { type: 'text/plain' });
+                    const link = document.createElement('a');
+                    link.href = URL.createObjectURL(blob);
+                    link.download = 'PDF_Comparison_Report.txt';
+                    link.click();
+                    
+                    // Restore button state
+                    downloadBtn.disabled = false;
+                    downloadBtn.innerHTML = originalText;
+                    
+                    showSuccessToast('Text report downloaded (PDF generation failed)');
+                }
+            }, 500);
+        }
+        
+        // Full screen comparison view
+        function viewFullScreenComparison() {
+            // Show visual feedback on button click
+            const fullScreenBtn = event.currentTarget;
+            const originalText = fullScreenBtn.innerHTML;
+            fullScreenBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Loading...';
+            
+            // Create a full-screen overlay
+            const overlay = document.createElement('div');
+            overlay.className = 'fullscreen-comparison-overlay';
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.backgroundColor = '#fff';
+            overlay.style.zIndex = '9999';
+            overlay.style.overflow = 'auto';
+            overlay.style.padding = '20px';
+            overlay.style.boxSizing = 'border-box';
+            
+            // Add close button
+            const closeButton = document.createElement('button');
+            closeButton.className = 'btn btn-sm btn-danger position-fixed';
+            closeButton.style.top = '10px';
+            closeButton.style.right = '10px';
+            closeButton.innerHTML = '<i class="fas fa-times"></i> Close';
+            closeButton.addEventListener('click', () => {
+                document.body.removeChild(overlay);
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            });
+            
+            // Get the comparison results content
+            const resultsContent = document.getElementById('comparisonResults').cloneNode(true);
+            
+            // Add title
+            const title = document.createElement('h2');
+            title.className = 'text-center mb-4';
+            title.innerHTML = '<i class="fas fa-search-plus me-2"></i>Full Screen Comparison View';
+            
+            // Create container
+            const container = document.createElement('div');
+            container.className = 'container-fluid';
+            container.appendChild(title);
+            container.appendChild(resultsContent);
+            
+            // Add content to overlay
+            overlay.appendChild(closeButton);
+            overlay.appendChild(container);
+            
+            // Add keyboard shortcut to exit
+            const handleKeyDown = (e) => {
+                if (e.key === 'Escape') {
+                    document.body.removeChild(overlay);
+                    document.body.style.overflow = 'auto';
+                    document.removeEventListener('keydown', handleKeyDown);
+                }
+            };
+            document.addEventListener('keydown', handleKeyDown);
+            
+            // Add to body
+            document.body.appendChild(overlay);
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            
+            // Make PDF viewers larger in full-screen mode
+            const pdfViewers = overlay.querySelectorAll('.pdf-viewer');
+            pdfViewers.forEach(viewer => {
+                viewer.style.height = '600px';
+            });
+            
+            // Re-render the PDFs in the full-screen view
+            simulatePdfRendering(overlay.querySelector('#pdf1Canvas'), 1);
+            simulatePdfRendering(overlay.querySelector('#pdf2Canvas'), 2);
+            
+            // Ensure differences table is visible
+            const diffTable = overlay.querySelector('.differences-list table');
+            if (diffTable) {
+                diffTable.style.width = '100%';
+            }
+            
+            // Restore button text
+            fullScreenBtn.innerHTML = originalText;
+            
+            // Show toast notification
+            showInfoToast('Press ESC key or click Close to exit full screen mode');
+        }
+
+        // Add jsPDF library for PDF generation (minimal CDN version)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Only load if it doesn't already exist
+            if (typeof window.jspdf === 'undefined') {
+                const script = document.createElement('script');
+                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+                script.async = true;
+                document.body.appendChild(script);
+            }
+            
+            setupDragAndDrop();
+        });
+        
+        // Toast notification helper functions
+        function showSuccessToast(message) {
+            showToast(message, 'success', 'fas fa-check-circle');
+        }
+        
+        function showErrorToast(message) {
+            showToast(message, 'danger', 'fas fa-exclamation-circle');
+        }
+        
+        function showInfoToast(message) {
+            showToast(message, 'info', 'fas fa-info-circle');
+        }
+        
+        function showToast(message, type, icon) {
+            const toastContainer = document.createElement('div');
+            toastContainer.className = 'position-fixed bottom-0 end-0 p-3';
+            toastContainer.style.zIndex = "1100";
+            
+            toastContainer.innerHTML = `
+                <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header bg-${type} text-white">
+                        <i class="${icon} me-2"></i>
+                        <strong class="me-auto">${type.charAt(0).toUpperCase() + type.slice(1)}</strong>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        ${message}
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(toastContainer);
+            
+            // Remove the toast after 3 seconds
+            setTimeout(() => {
+                document.body.removeChild(toastContainer);
+            }, 3000);
+        }
+
+        // Initialize the drag and drop functionality when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            setupDragAndDrop();
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,3382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD5 Hash Generator - Free Online Tool | Generate MD5 Hashes Instantly</title>
+    <meta name="description" content="Free online MD5 Hash Generator tool. Generate MD5 hashes instantly for text, files, and strings. Fast, secure, and accurate MD5 hash generation with advanced features.">
+    <meta name="keywords" content="MD5 hash generator, MD5 hash, hash generator, MD5 calculator, MD5 checksum, MD5 converter, MD5 hash tool, free MD5 generator">
+    <meta name="author" content="Toolsnew">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="MD5 Hash Generator - Free Online Tool">
+    <meta property="og:description" content="Generate MD5 hashes instantly for text, files, and strings. Fast, secure, and accurate MD5 hash generation with advanced features.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolsnew.com/tools/security-encryption-tools/md5-hash-generator">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Base color scheme */
+        :root {
+            --primary-color: #e67e22;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --background-color: #ffffff;
+            --text-color: #333333;
+            --navbar-bg: #ffffff;
+            --navbar-text-color: #444;
+            --navbar-icon-color: #6f42c1;
+            --trust-banner-gradient-start: #e67e22;
+            --trust-banner-gradient-end: #f39c12;
+            --banner-bg: #e67e22;
+            --banner-text: #ffffff;
+            --primary-color-rgb: 230, 126, 34;
+        }
+        
+        .color-scheme-1 {
+            --primary-color: #007bff;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --background-color: #ffffff;
+            --text-color: #f32b2b;
+            --navbar-bg: #ffffff;
+            --navbar-text-color: #444;
+            --navbar-icon-color: #6f42c1;
+            --trust-banner-gradient-start: #6f42c1;
+            --trust-banner-gradient-end: #8a5fcf;
+            --footer-bg: #f8f9fa;
+            --footer-text: #333333;
+            --footer-link: #007bff;
+        }
+        
+        .color-scheme-2 {
+            --primary-color: #0dcaf0;
+            --brand-purple: #0d6efd;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e3f2fd;
+            --text-color: #0d6efd;
+            --navbar-bg: #bbdefb;
+            --navbar-text-color: #0d6efd;
+            --navbar-icon-color: #0d6efd;
+            --trust-banner-gradient-start: #0d6efd;
+            --trust-banner-gradient-end: #0dcaf0;
+            --footer-bg: #bbdefb;
+            --footer-text: #0d6efd;
+            --footer-link: #0dcaf0;
+        }
+
+        /* Color Scheme 3 - Forest */
+        .color-scheme-3 {
+            --primary-color: #198754;
+            --brand-purple: #20c997;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e8f5e9;
+            --text-color: #2e7d32;
+            --navbar-bg: #c8e6c9;
+            --navbar-text-color: #2e7d32;
+            --navbar-icon-color: #2e7d32;
+            --trust-banner-gradient-start: #198754;
+            --trust-banner-gradient-end: #20c997;
+            --footer-bg: #c8e6c9;
+            --footer-text: #2e7d32;
+            --footer-link: #198754;
+        }
+        
+        /* Color Scheme 4 - Sunset */
+        .color-scheme-4 {
+            --primary-color: #fd7e14;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #fff3e0;
+            --text-color: #e65100;
+            --navbar-bg: #ffe0b2;
+            --navbar-text-color: #e65100;
+            --navbar-icon-color: #e65100;
+            --trust-banner-gradient-start: #fd7e14;
+            --trust-banner-gradient-end: #dc3545;
+            --footer-bg: #ffe0b2;
+            --footer-text: #e65100;
+            --footer-link: #fd7e14;
+        }
+        
+        /* Color Scheme 5 - Royal */
+        .color-scheme-5 {
+            --primary-color: #6f42c1;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f3e5f5;
+            --text-color: #4a148c;
+            --navbar-bg: #e1bee7;
+            --navbar-text-color: #4a148c;
+            --navbar-icon-color: #5e1caf;
+            --trust-banner-gradient-start: #6f42c1;
+            --trust-banner-gradient-end: #9370DB;
+            --footer-bg: #e1bee7;
+            --footer-text: #4a148c;
+            --footer-link: #6f42c1;
+        }
+
+        /* Color Scheme 6 - Midnight */
+        .color-scheme-6 {
+            --primary-color: #0d6efd;
+            --brand-purple: #6610f2;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e3f2fd;
+            --text-color: #0d6efd;
+            --navbar-bg: #bbdefb;
+            --navbar-text-color: #0d6efd;
+            --navbar-icon-color: #0d6efd;
+            --trust-banner-gradient-start: #0d6efd;
+            --trust-banner-gradient-end: #6610f2;
+            --footer-bg: #bbdefb;
+            --footer-text: #0d6efd;
+            --footer-link: #0d6efd;
+        }
+
+        /* Color Scheme 7 - Spring */
+        .color-scheme-7 {
+            --primary-color: #20c997;
+            --brand-purple: #198754;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e8f5e9;
+            --text-color: #2e7d32;
+            --navbar-bg: #c8e6c9;
+            --navbar-text-color: #2e7d32;
+            --navbar-icon-color: #2e7d32;
+            --trust-banner-gradient-start: #20c997;
+            --trust-banner-gradient-end: #198754;
+            --footer-bg: #c8e6c9;
+            --footer-text: #2e7d32;
+            --footer-link: #20c997;
+        }
+
+        /* Color Scheme 8 - Coral */
+        .color-scheme-8 {
+            --primary-color: #fd7e14;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #fff3e0;
+            --text-color: #e65100;
+            --navbar-bg: #ffe0b2;
+            --navbar-text-color: #e65100;
+            --navbar-icon-color: #e65100;
+            --trust-banner-gradient-start: #fd7e14;
+            --trust-banner-gradient-end: #dc3545;
+            --footer-bg: #ffe0b2;
+            --footer-text: #e65100;
+            --footer-link: #fd7e14;
+        }
+
+        /* Color Scheme 9 - Lavender */
+        .color-scheme-9 {
+            --primary-color: #6f42c1;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f3e5f5;
+            --text-color: #4a148c;
+            --navbar-bg: #e1bee7;
+            --navbar-text-color: #4a148c;
+            --navbar-icon-color: #4a148c;
+            --trust-banner-gradient-start: #6f42c1;
+            --trust-banner-gradient-end: #9370DB;
+            --footer-bg: #e1bee7;
+            --footer-text: #4a148c;
+            --footer-link: #6f42c1;
+        }
+
+        /* Color Scheme 10 - Mint */
+        .color-scheme-10 {
+            --primary-color: #20c997;
+            --brand-purple: #198754;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e8f5e9;
+            --text-color: #2e7d32;
+            --navbar-bg: #c8e6c9;
+            --navbar-text-color: #2e7d32;
+            --navbar-icon-color: #2e7d32;
+            --trust-banner-gradient-start: #20c997;
+            --trust-banner-gradient-end: #198754;
+            --footer-bg: #c8e6c9;
+            --footer-text: #2e7d32;
+            --footer-link: #20c997;
+        }
+
+        /* Color Scheme 11 - Sunset Orange */
+        .color-scheme-11 {
+            --primary-color: #fd7e14;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #fff3e0;
+            --text-color: #e65100;
+            --navbar-bg: #ffe0b2;
+            --navbar-text-color: #e65100;
+            --navbar-icon-color: #e65100;
+            --trust-banner-gradient-start: #fd7e14;
+            --trust-banner-gradient-end: #dc3545;
+            --footer-bg: #ffe0b2;
+            --footer-text: #e65100;
+            --footer-link: #fd7e14;
+        }
+
+        /* Color Scheme 12 - Deep Blue */
+        .color-scheme-12 {
+            --primary-color: #0d6efd;
+            --brand-purple: #6610f2;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e3f2fd;
+            --text-color: #0d6efd;
+            --navbar-bg: #bbdefb;
+            --navbar-text-color: #0d6efd;
+            --navbar-icon-color: #0d6efd;
+            --trust-banner-gradient-start: #0d6efd;
+            --trust-banner-gradient-end: #6610f2;
+            --footer-bg: #bbdefb;
+            --footer-text: #0d6efd;
+            --footer-link: #0d6efd;
+        }
+
+        /* Color Scheme 13 - Emerald */
+        .color-scheme-13 {
+            --primary-color: #20c997;
+            --brand-purple: #198754;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e8f5e9;
+            --text-color: #2e7d32;
+            --navbar-bg: #c8e6c9;
+            --navbar-text-color: #2e7d32;
+            --navbar-icon-color: #2e7d32;
+            --trust-banner-gradient-start: #20c997;
+            --trust-banner-gradient-end: #198754;
+            --footer-bg: #c8e6c9;
+            --footer-text: #2e7d32;
+            --footer-link: #20c997;
+        }
+
+        /* Color Scheme 14 - Rose */
+        .color-scheme-14 {
+            --primary-color: #dc3545;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f8d7da;
+            --text-color: #721c24;
+            --navbar-bg: #f5c6cb;
+            --navbar-text-color: #721c24;
+            --navbar-icon-color: #721c24;
+            --trust-banner-gradient-start: #dc3545;
+            --trust-banner-gradient-end: #f8d7da;
+            --footer-bg: #f5c6cb;
+            --footer-text: #721c24;
+            --footer-link: #dc3545;
+        }
+
+        /* Color Scheme 15 - Sky */
+        .color-scheme-15 {
+            --primary-color: #0dcaf0;
+            --brand-purple: #0d6efd;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e3f2fd;
+            --text-color: #0d6efd;
+            --navbar-bg: #bbdefb;
+            --navbar-text-color: #0d6efd;
+            --navbar-icon-color: #0d6efd;
+            --trust-banner-gradient-start: #0dcaf0;
+            --trust-banner-gradient-end: #0d6efd;
+            --footer-bg: #bbdefb;
+            --footer-text: #0d6efd;
+            --footer-link: #0dcaf0;
+        }
+
+        /* Color Scheme 16 - Gold */
+        .color-scheme-16 {
+            --primary-color: #ffc107;
+            --brand-purple: #ffc107;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #fff3cd;
+            --text-color: #856404;
+            --navbar-bg: #ffeeba;
+            --navbar-text-color: #856404;
+            --navbar-icon-color: #856404;
+            --trust-banner-gradient-start: #ffc107;
+            --trust-banner-gradient-end: #ffc107;
+            --footer-bg: #ffeeba;
+            --footer-text: #856404;
+            --footer-link: #ffc107;
+        }
+
+        /* Color Scheme 17 - Teal */
+        .color-scheme-17 {
+            --primary-color: #20c997;
+            --brand-purple: #20c997;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #d1f2eb;
+            --text-color: #0c5460;
+            --navbar-bg: #bee5eb;
+            --navbar-text-color: #0c5460;
+            --navbar-icon-color: #0c5460;
+            --trust-banner-gradient-start: #20c997;
+            --trust-banner-gradient-end: #20c997;
+            --footer-bg: #bee5eb;
+            --footer-text: #0c5460;
+            --footer-link: #20c997;
+        }
+
+        /* Color Scheme 18 - Indigo */
+        .color-scheme-18 {
+            --primary-color: #6610f2;
+            --brand-purple: #6610f2;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #e2d9f3;
+            --text-color: #4a148c;
+            --navbar-bg: #d1c4e9;
+            --navbar-text-color: #4a148c;
+            --navbar-icon-color: #4a148c;
+            --trust-banner-gradient-start: #6610f2;
+            --trust-banner-gradient-end: #6610f2;
+            --footer-bg: #d1c4e9;
+            --footer-text: #4a148c;
+            --footer-link: #6610f2;
+        }
+
+        /* Color Scheme 19 - Purple */
+        .color-scheme-19 {
+            --primary-color: #6f42c1;
+            --brand-purple: #6f42c1;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f3e5f5;
+            --text-color: #4a148c;
+            --navbar-bg: #e1bee7;
+            --navbar-text-color: #4a148c;
+            --navbar-icon-color: #4a148c;
+            --trust-banner-gradient-start: #6f42c1;
+            --trust-banner-gradient-end: #6f42c1;
+            --footer-bg: #e1bee7;
+            --footer-text: #4a148c;
+            --footer-link: #6f42c1;
+        }
+
+        /* Color Scheme 20 - Pink */
+        .color-scheme-20 {
+            --primary-color: #d63384;
+            --brand-purple: #d63384;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f8d7da;
+            --text-color: #721c24;
+            --navbar-bg: #f5c6cb;
+            --navbar-text-color: #721c24;
+            --navbar-icon-color: #721c24;
+            --trust-banner-gradient-start: #d63384;
+            --trust-banner-gradient-end: #d63384;
+            --footer-bg: #f5c6cb;
+            --footer-text: #721c24;
+            --footer-link: #d63384;
+        }
+
+        /* Color Scheme 21 - Red */
+        .color-scheme-21 {
+            --primary-color: #dc3545;
+            --brand-purple: #dc3545;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --background-color: #f8d7da;
+            --text-color: #721c24;
+            --navbar-bg: #f5c6cb;
+            --navbar-text-color: #721c24;
+            --navbar-icon-color: #721c24;
+            --trust-banner-gradient-start: #dc3545;
+            --trust-banner-gradient-end: #dc3545;
+            --footer-bg: #f5c6cb;
+            --footer-text: #721c24;
+            --footer-link: #dc3545;
+        }
+
+        /* Color Scheme 22 - Neon */
+        .color-scheme-22 {
+            --primary-color: #00ff00;
+            --brand-purple: #ff00ff;
+            --secondary-color: #00ffff;
+            --success-color: #ffff00;
+            --background-color: #111111;
+            --text-color: #ffffff;
+            --navbar-bg: #222222;
+            --navbar-text-color: #00ff00;
+            --navbar-icon-color: #00ff00;
+            --trust-banner-gradient-start: #00ff00;
+            --trust-banner-gradient-end: #ff00ff;
+            --footer-bg: #222222;
+            --footer-text: #ffffff;
+            --footer-link: #00ff00;
+        }
+
+        /* Color Scheme 23 - Pastel */
+        .color-scheme-23 {
+            --primary-color: #FFB5E8;
+            --brand-purple: #B5B9FF;
+            --secondary-color: #97E1D4;
+            --success-color: #F0F0AA;
+            --background-color: #FFFFFF;
+            --text-color: #707070;
+            --navbar-bg: #FFF0F5;
+            --navbar-text-color: #707070;
+            --navbar-icon-color: #FFB5E8;
+            --trust-banner-gradient-start: #FFB5E8;
+            --trust-banner-gradient-end: #B5B9FF;
+            --footer-bg: #FFF0F5;
+            --footer-text: #707070;
+            --footer-link: #FFB5E8;
+        }
+
+        /* Color Scheme 24 - Dark Ocean */
+        .color-scheme-24 {
+            --primary-color: #006994;
+            --brand-purple: #6da4c9;
+            --secondary-color: #2E86C1;
+            --success-color: #48C9B0;
+            --background-color: #0A2239;
+            --text-color: #FFFFFF;
+            --navbar-bg: #1B4F72;
+            --navbar-text-color: #FFFFFF;
+            --navbar-icon-color: #48C9B0;
+            --trust-banner-gradient-start: #006994;
+            --trust-banner-gradient-end: #48C9B0;
+            --footer-bg: #1B4F72;
+            --footer-text: #FFFFFF;
+            --footer-link: #48C9B0;
+        }
+
+        /* Color Scheme 25 - Autumn */
+        .color-scheme-25 {
+            --primary-color: #D35400;
+            --brand-purple: #BA4A00;
+            --secondary-color: #E67E22;
+            --success-color: #F39C12;
+            --background-color: #FDF2E9;
+            --text-color: #6E2C00;
+            --navbar-bg: #FBEEE6;
+            --navbar-text-color: #6E2C00;
+            --navbar-icon-color: #D35400;
+            --trust-banner-gradient-start: #D35400;
+            --trust-banner-gradient-end: #F39C12;
+            --footer-bg: #FBEEE6;
+            --footer-text: #6E2C00;
+            --footer-link: #D35400;
+        }
+
+        /* Color Scheme 26 - Forest Night */
+        .color-scheme-26 {
+            --primary-color: #2ECC71;
+            --brand-purple: #27AE60;
+            --secondary-color: #52BE80;
+            --success-color: #82E0AA;
+            --background-color: #1A5028;
+            --text-color: #FFFFFF;
+            --navbar-bg: #196F3D;
+            --navbar-text-color: #FFFFFF;
+            --navbar-icon-color: #2ECC71;
+            --trust-banner-gradient-start: #2ECC71;
+            --trust-banner-gradient-end: #82E0AA;
+            --footer-bg: #196F3D;
+            --footer-text: #FFFFFF;
+            --footer-link: #2ECC71;
+        }
+
+        /* Color Scheme 27 - Cherry Blossom */
+        .color-scheme-27 {
+            --primary-color: #FF69B4;
+            --brand-purple: #FF1493;
+            --secondary-color: #FFB6C1;
+            --success-color: #FFC0CB;
+            --background-color: #FFF0F5;
+            --text-color: #C71585;
+            --navbar-bg: #FFE4E1;
+            --navbar-text-color: #C71585;
+            --navbar-icon-color: #FF69B4;
+            --trust-banner-gradient-start: #FF69B4;
+            --trust-banner-gradient-end: #FFC0CB;
+            --footer-bg: #FFE4E1;
+            --footer-text: #C71585;
+            --footer-link: #FF69B4;
+        }
+
+        /* Color Scheme 28 - Desert */
+        .color-scheme-28 {
+            --primary-color: #DAA520;
+            --brand-purple: #B8860B;
+            --secondary-color: #F4A460;
+            --success-color: #DEB887;
+            --background-color: #FDF5E6;
+            --text-color: #8B4513;
+            --navbar-bg: #FAEBD7;
+            --navbar-text-color: #8B4513;
+            --navbar-icon-color: #DAA520;
+            --trust-banner-gradient-start: #DAA520;
+            --trust-banner-gradient-end: #DEB887;
+            --footer-bg: #FAEBD7;
+            --footer-text: #8B4513;
+            --footer-link: #DAA520;
+        }
+
+        /* Color Scheme 29 - Electric */
+        .color-scheme-29 {
+            --primary-color: #4B0082;
+            --brand-purple: #8A2BE2;
+            --secondary-color: #9400D3;
+            --success-color: #9932CC;
+            --background-color: #000000;
+            --text-color: #FFFFFF;
+            --navbar-bg: #9c58db;
+            --navbar-text-color: #FFFFFF;
+            --navbar-icon-color: #8A2BE2;
+            --trust-banner-gradient-start: #4B0082;
+            --trust-banner-gradient-end: #9932CC;
+            --footer-bg: #1A0033;
+            --footer-text: #FFFFFF;
+            --footer-link: #8A2BE2;
+        }
+
+        /* Color Scheme 30 - Ice */
+        .color-scheme-30 {
+            --primary-color: #00CED1;
+            --brand-purple: #40E0D0;
+            --secondary-color: #48D1CC;
+            --success-color: #AFEEEE;
+            --background-color: #F0FFFF;
+            --text-color: #008B8B;
+            --navbar-bg: #E0FFFF;
+            --navbar-text-color: #008B8B;
+            --navbar-icon-color: #00CED1;
+            --trust-banner-gradient-start: #00CED1;
+            --trust-banner-gradient-end: #AFEEEE;
+            --footer-bg: #E0FFFF;
+            --footer-text: #008B8B;
+            --footer-link: #00CED1;
+        }
+
+        /* Color Scheme 31 - Sunset Gold */
+        .color-scheme-31 {
+            --primary-color: #FFD700;
+            --brand-purple: #FFA500;
+            --secondary-color: #FF8C00;
+            --success-color: #DAA520;
+            --background-color: #FFFAF0;
+            --text-color: #B8860B;
+            --navbar-bg: #FFF8DC;
+            --navbar-text-color: #B8860B;
+            --navbar-icon-color: #FFD700;
+            --trust-banner-gradient-start: #FFD700;
+            --trust-banner-gradient-end: #FFA500;
+            --footer-bg: #FFF8DC;
+            --footer-text: #B8860B;
+            --footer-link: #FFD700;
+        }
+
+        /* Color Scheme 32 - Deep Space */
+        .color-scheme-32 {
+            --primary-color: #4B0082;
+            --brand-purple: #483D8B;
+            --secondary-color: #6A5ACD;
+            --success-color: #7B68EE;
+            --background-color: #191970;
+            --text-color: #E6E6FA;
+            --navbar-bg: #000080;
+            --navbar-text-color: #E6E6FA;
+            --navbar-icon-color: #7B68EE;
+            --trust-banner-gradient-start: #4B0082;
+            --trust-banner-gradient-end: #7B68EE;
+            --footer-bg: #000080;
+            --footer-text: #E6E6FA;
+            --footer-link: #7B68EE;
+        }
+
+        /* Color Scheme 33 - Rainbow */
+        .color-scheme-33 {
+            --primary-color: #FF0000;
+            --brand-purple: #FF7F00;
+            --secondary-color: #FFFF00;
+            --success-color: #00FF00;
+            --background-color: #FFFFFF;
+            --text-color: #4B0082;
+            --navbar-bg: #E6E6FA;
+            --navbar-text-color: #4B0082;
+            --navbar-icon-color: #8B00FF;
+            --trust-banner-gradient-start: #FF0000;
+            --trust-banner-gradient-end: #8B00FF;
+            --footer-bg: #E6E6FA;
+            --footer-text: #4B0082;
+            --footer-link: #8B00FF;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        /* Announcement Bar Styles */
+        .announcement-bar {
+            background: linear-gradient(to right, var(--trust-banner-gradient-start), var(--trust-banner-gradient-end));
+            color: white;
+            padding: 6px 0;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 0.9em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1001;
+            margin: 0;
+            border: none;
+        }
+        
+        .announcement-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 25s linear infinite;
+            color: white;
+        }
+
+        @keyframes marquee {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: var(--navbar-bg);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1000;
+        }
+        
+        .header .navbar {
+            background-color: var(--navbar-bg) !important;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand .brand-icon {
+            color: var(--brand-purple);
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+
+        .navbar-brand .brand-text {
+            color: var(--brand-purple);
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--navbar-text-color);
+        }
+
+        .navbar-nav .nav-link .fas,
+        .navbar-nav .nav-link svg {
+            color: var(--navbar-icon-color);
+            margin-right: 5px;
+        }
+        
+        .navbar-nav .nav-link.active,
+        .navbar-nav .nav-link:hover {
+            color: var(--brand-purple);
+        }
+        
+        .trust-indicators .trust-item {
+            color: var(--navbar-text-color);
+            font-size: 0.9em;
+        }
+        
+        .trust-indicators .trust-item .fas,
+        .trust-indicators .trust-item svg {
+            color: var(--navbar-icon-color);
+            margin-right: 5px;
+        }
+
+        .theme-switcher {
+            background-color: var(--brand-purple) !important;
+            border-color: var(--brand-purple) !important;
+            color: white !important;
+            border-radius: 20px !important;
+            padding: 0.3rem 0.8rem !important;
+        }
+
+        .theme-switcher:hover {
+            opacity: 0.9;
+        }
+        
+        .theme-switcher .fas,
+        .theme-switcher svg {
+            margin-right: 5px;
+            color: white !important;
+        }
+
+        /* Trust Banner Styles */
+        .trust-banner {
+            background: linear-gradient(45deg, var(--trust-banner-gradient-start), var(--trust-banner-gradient-end));
+            color: white;
+            padding: 12px 0;
+            margin: 8px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .trust-banner .stat-item {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px;
+            border-radius: 6px;
+            margin: 2px;
+            flex: 1;
+            min-width: 90px;
+            transition: transform 0.3s ease;
+        }
+
+        .trust-banner .stat-item:hover {
+            transform: translateY(-2px);
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .trust-banner .stat-number {
+            font-size: 1.3em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .trust-banner .stat-label {
+            font-size: 0.75em;
+            color: rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--footer-bg);
+            padding: 40px 0;
+            margin-top: 50px;
+            color: var(--footer-text);
+        }
+
+        .footer h4 {
+            color: var(--footer-text);
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            color: var(--footer-text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: inline-block;
+            font-size: 1.1em;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--footer-link);
+            transform: translateX(5px);
+        }
+
+        .footer-social .social-links a {
+            color: var(--footer-text);
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .footer-social .social-links a:hover {
+            color: var(--footer-link);
+            transform: translateX(5px);
+        }
+
+        .footer-social .social-links a span {
+            font-size: 1.1em;
+            vertical-align: middle;
+        }
+
+        .footer-copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Additional styles */
+        .tool-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Banner Section Styles */
+        .banner-section {
+            background-color: var(--banner-bg);
+            background: linear-gradient(to right, var(--trust-banner-gradient-start), var(--trust-banner-gradient-end));
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .banner-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner-item {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .banner-item:last-child {
+            border-right: none;
+        }
+
+        .banner-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .banner-number {
+            display: block;
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--banner-text);
+            margin-bottom: 5px;
+        }
+
+        .banner-label {
+            display: block;
+            font-size: 14px;
+            color: var(--banner-text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Loading Overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--primary-color);
+            border-top: 5px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: transform 0.2s ease;
+            z-index: 1002;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(to right, var(--primary-color), var(--brand-purple));
+            color: #fff;
+            padding: 3rem 0;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section h1 {
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .hero-section p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+        }
+
+        /* Feature Cards */
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .feature-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .feature-card h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .feature-card p {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: rgba(var(--primary-color-rgb), 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .faq-section .section-title {
+            color: #17a2b8;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .faq-section .accordion-item {
+            border: none;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-section .accordion-button {
+            background-color: #20c997;
+            color: #fff;
+            padding: 15px 20px;
+            font-weight: 600;
+            border-radius: 8px;
+        }
+
+        .faq-section .accordion-button:not(.collapsed) {
+            background-color: #20c997;
+            color: #fff;
+            box-shadow: none;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .faq-section .accordion-button:focus {
+            box-shadow: none;
+            border-color: #20c997;
+        }
+
+        .faq-section .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+
+        .faq-section .accordion-body {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background-color: #f8f9fa;
+        }
+
+        .testimonial-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            height: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-rating {
+            color: #ffc107;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(to right, var(--trust-banner-gradient-start), var(--trust-banner-gradient-end));
+            color: #fff;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .cta-section .btn-primary {
+            background-color: #fff;
+            color: var(--primary-color);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-section .btn-primary:hover {
+            background-color: rgba(255,255,255,0.9);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Advertisement Spaces */
+        .ad-space {
+            background-color: #f8f9fa;
+            border: 1px dashed var(--primary-color);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                        linear-gradient(to right, var(--primary-color), var(--brand-purple));
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ad-space:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                        rgba(var(--primary-color-rgb), 0.05) 25%, 
+                        transparent 25%, 
+                        transparent 50%, 
+                        rgba(var(--primary-color-rgb), 0.05) 50%, 
+                        rgba(var(--primary-color-rgb), 0.05) 75%, 
+                        transparent 75%, 
+                        transparent);
+            background-size: 20px 20px;
+            z-index: 0;
+        }
+
+        .ad-space > div {
+            position: relative;
+            z-index: 1;
+            color: var(--primary-color);
+            font-weight: 500;
+            text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+            font-size: 1.1rem;
+        }
+
+        .ad-space.horizontal {
+            height: 100px;
+            margin-bottom: 25px;
+        }
+
+        .ad-space.vertical {
+            height: 300px;
+        }
+
+        .ad-space.square {
+            height: 250px;
+        }
+
+        .ad-space:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: var(--brand-purple);
+        }
+
+        /* Tool Title */
+        .tool-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .tool-title + .lead {
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        /* Info Buttons Styling */
+        .tool-info-buttons {
+            background: none;
+            border: none;
+            padding: 0;
+            margin-bottom: 25px;
+            box-shadow: none;
+            overflow: visible;
+        }
+
+        .tool-info-buttons-container {
+            display: flex;
+            border-bottom: 2px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .info-button {
+            background-color: transparent !important;
+            border: none !important;
+            border-bottom: 3px solid transparent !important;
+            border-radius: 0 !important;
+            padding: 10px 20px !important;
+            margin: 0 5px -2px 0 !important; /* Overlap border-bottom */
+            font-weight: 600 !important;
+            color: var(--secondary-color) !important;
+            box-shadow: none !important;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            flex-grow: 1;
+            text-align: center !important;
+        }
+
+        .info-button:hover {
+            color: var(--primary-color) !important;
+            transform: none !important;
+            box-shadow: none !important;
+        }
+
+        .info-button.active-info-button {
+            color: var(--primary-color) !important;
+            border-bottom-color: var(--primary-color) !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+
+        .info-button i {
+            color: var(--secondary-color) !important;
+            margin-right: 8px !important;
+            transition: color 0.3s ease;
+        }
+
+        .info-button:hover i,
+        .info-button.active-info-button i {
+            color: var(--primary-color) !important;
+            transform: none !important; /* Reset previous icon transform */
+        }
+
+        /* Remove hover shimmer effect */
+        .info-button::after {
+            display: none;
+        }
+
+        /* Remove top border accent */
+        .tool-info-buttons::before {
+            display: none;
+        }
+
+        /* Style content areas */
+        .tool-description-box,
+        .steps-container,
+        .tool-info-content {
+            background-color: #fff !important;
+            border: 1px solid #eee !important;
+            border-radius: 8px !important;
+            padding: 20px !important;
+            margin-top: 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tool-info-content p {
+            margin-bottom: 0;
+            color: #5d4037;
+        }
+
+        .steps-container .list-group-item {
+            border: none !important;
+            background: transparent !important;
+            color: #5d4037;
+            padding: 10px 5px;
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .steps-container .list-group-item::before {
+            content: counter(item);
+            counter-increment: item;
+            background-color: #daa520;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .active-info-button {
+            background-color: #fff8e1 !important;
+            border-color: #daa520 !important;
+            box-shadow: 0 3px 8px rgba(218, 165, 32, 0.15) !important;
+        }
+
+        /* Review and Rating Section */
+        .review-rating-section .review-section-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            position: relative;
+        }
+        
+        .most-recent-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .overall-rating-summary {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .overall-rating-summary:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        
+        .large-rating {
+            line-height: 1;
+        }
+        
+        .large-rating .rating-value {
+            color: var(--primary-color);
+        }
+        
+        .stars i,
+        .stars-small i {
+            font-size: 1.3em;
+            margin-right: 2px;
+        }
+        
+        .stars-small i {
+            font-size: 0.9em;
+            margin-right: 1px;
+        }
+        
+        .review-item {
+            transition: all 0.3s ease;
+            padding: 12px 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        
+        .review-item:hover {
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .review-text {
+            color: #555;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        
+        .reviewer-name {
+            color: var(--primary-color);
+        }
+
+        /* Rating Input in Modal */
+        .rating-input {
+            font-size: 1.8em; /* Larger stars for input */
+            cursor: pointer;
+        }
+        .rating-input i {
+            color: #ccc; /* Default empty star color */
+            margin-right: 5px;
+            transition: color 0.2s ease;
+        }
+        .rating-input i.selected,
+        .rating-input i:hover,
+        .rating-input i:hover ~ i {
+            color: #ffc107; /* Filled star color */
+        }
+        /* Keep previous stars selected on hover */
+        .rating-input:hover i:not(:hover) {
+           color: #ccc;
+        }
+        .rating-input.rated i:not(.selected) {
+            color: #ccc;
+        }
+
+        /* MD5 Generator Specific Styles */
+        .md5-input-container {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .md5-input-container textarea {
+            min-height: 120px;
+            font-family: monospace;
+            resize: vertical;
+        }
+
+        .md5-result-container {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            position: relative;
+        }
+
+        .md5-result {
+            font-family: monospace;
+            word-break: break-all;
+            margin-bottom: 0.5rem;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .file-input-container {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .file-input-container input[type="file"] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+        }
+
+        .file-input-label {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #e9ecef;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .file-input-label:hover {
+            background: #dee2e6;
+        }
+
+        .file-name {
+            margin-left: 0.5rem;
+            font-size: 0.875rem;
+            color: #6c757d;
+        }
+
+        .hash-options {
+            margin-bottom: 1rem;
+        }
+
+        .hash-options label {
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+
+        .hash-history {
+            margin-top: 1rem;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .hash-history-item {
+            padding: 0.5rem;
+            border-bottom: 1px solid #dee2e6;
+            font-size: 0.875rem;
+        }
+
+        .hash-history-item:last-child {
+            border-bottom: none;
+        }
+
+        .hash-history-item .timestamp {
+            color: #6c757d;
+            font-size: 0.75rem;
+        }
+
+        .loading-spinner {
+            display: none;
+            margin: 1rem auto;
+        }
+
+        .strength-meter {
+            height: 4px;
+            background: #e9ecef;
+            margin-top: 0.5rem;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .strength-meter-fill {
+            height: 100%;
+            width: 0;
+            transition: width 0.3s ease;
+        }
+
+        .strength-meter-fill.weak { background: #dc3545; }
+        .strength-meter-fill.medium { background: #ffc107; }
+        .strength-meter-fill.strong { background: #28a745; }
+
+        .toast-container {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            z-index: 1050;
+        }
+
+        /* Button Styles */
+        .btn {
+            transition: all 0.3s ease;
+            border-radius: 5px;
+            padding: 8px 16px;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--brand-purple);
+            border-color: var(--brand-purple);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--text-color);
+            border-color: var(--text-color);
+            transform: translateY(-2px);
+        }
+
+        /* Input Styles */
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            padding: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb), 0.25);
+        }
+
+        /* Result Area Styles */
+        #result {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 20px;
+            min-height: 50px;
+            word-break: break-all;
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: none;
+            margin-left: 10px;
+        }
+
+        .loading.active {
+            display: inline-block;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputText = document.getElementById('inputText');
+            const generateBtn = document.getElementById('generateHash');
+            const clearBtn = document.getElementById('clearInput');
+            const resultArea = document.getElementById('result'); // This seems to be the old result area, need to clarify if user wants this removed or used differently.
+            const liveHashOutput = document.getElementById('liveHashOutput'); // New live hash output field
+            const resultContainer = document.getElementById('resultContainer'); // This is the container for the main hash result display
+            const hashResultDiv = document.getElementById('hashResult'); // The div inside resultContainer
+            const differenceContainer = document.getElementById('differenceContainer'); // New difference container
+            const originalTextDiffPre = document.getElementById('originalTextDiff'); // Pre tag for original text in difference section
+            const hashResultDiffPre = document.getElementById('hashResultDiff'); // Pre tag for hash in difference section
+
+            const loadingIndicator = document.createElement('span');
+            loadingIndicator.className = 'loading';
+            loadingIndicator.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+            // Append loading indicator to the generate button
+            if (generateBtn) { // Check if generateBtn exists before appending
+                 generateBtn.appendChild(loadingIndicator);
+            }
+
+            // Generate MD5 Hash function (used by button click and Enter key)
+            function generateMD5Hash() {
+                // Determine whether to hash text or file based on radio button
+                const isTextHashSelected = document.getElementById('textHash').checked;
+
+                if (isTextHashSelected) {
+                    const text = inputText.value.trim();
+
+                    // Clear previous results and hide containers if input is empty
+                    if (!text) {
+                        if (hashResultDiv) hashResultDiv.textContent = '';
+                        if (liveHashOutput) liveHashOutput.value = ''; // Clear live hash on empty input
+                        if (resultContainer) resultContainer.style.display = 'none';
+                        if (differenceContainer) differenceContainer.style.display = 'none';
+                        if (originalTextDiffPre) originalTextDiffPre.textContent = '';
+                        if (hashResultDiffPre) hashResultDiffPre.textContent = '';
+                        // Ensure file related results are also hidden
+                        const fileResultContainer = document.getElementById('fileResultContainer');
+                        if(fileResultContainer) fileResultContainer.style.display = 'none';
+                         const downloadFileHash = document.getElementById('downloadFileHash');
+                         if(downloadFileHash) downloadFileHash.style.display = 'none';
+                        return;
+                    }
+
+                    // Show loading indicator and disable button
+                    if (loadingIndicator) loadingIndicator.classList.add('active');
+                    if (generateBtn) generateBtn.disabled = true;
+
+                    // Use setTimeout to prevent UI blocking for hash calculation
+                    setTimeout(() => {
+                        try {
+                            const hash = CryptoJS.MD5(text).toString();
+
+                            // Update main text result display
+                            if (hashResultDiv) hashResultDiv.textContent = hash;
+                            if (resultContainer) resultContainer.style.display = 'block';
+                            // Update live hash input (this will be redundant if input listener is active, but safe)
+                            if (liveHashOutput) liveHashOutput.value = hash;
+
+                            // Update difference section
+                            if (originalTextDiffPre) originalTextDiffPre.textContent = text;
+                            if (hashResultDiffPre) hashResultDiffPre.textContent = hash;
+                            if (differenceContainer) differenceContainer.style.display = 'block';
+
+                            // Hide file related results
+                            const fileResultContainer = document.getElementById('fileResultContainer');
+                            if(fileResultContainer) fileResultContainer.style.display = 'none';
+                             const downloadFileHash = document.getElementById('downloadFileHash');
+                             if(downloadFileHash) downloadFileHash.style.display = 'none';
+
+                        } catch (error) {
+                            if (hashResultDiv) hashResultDiv.textContent = 'Error generating hash. Please try again.';
+                            if (resultContainer) resultContainer.style.display = 'block';
+                            if (differenceContainer) differenceContainer.style.display = 'none'; // Hide difference on error
+                            console.error('Error generating text hash:', error);
+                        } finally {
+                            // Hide loading indicator and enable button
+                            if (loadingIndicator) loadingIndicator.classList.remove('active');
+                            if (generateBtn) generateBtn.disabled = false;
+                        }
+                    }, 10); // Small delay for hash generation on button click/Enter
+
+                } else { // File Hash is selected
+                    const fileInput = document.getElementById('inputFile');
+                    const file = fileInput && fileInput.files && fileInput.files[0];
+                    const fileHashResultDiv = document.getElementById('fileHashResult');
+                    const fileResultContainer = document.getElementById('fileResultContainer');
+                    const downloadFileHash = document.getElementById('downloadFileHash');
+
+                    // Hide text related results
+                    if (resultContainer) resultContainer.style.display = 'none';
+                    if (differenceContainer) differenceContainer.style.display = 'none';
+
+                    if (!file) {
+                        if (fileHashResultDiv) fileHashResultDiv.textContent = 'Please select a file to generate hash';
+                        if (fileResultContainer) fileResultContainer.style.display = 'block';
+                         if (downloadFileHash) downloadFileHash.style.display = 'none';
+                        return;
+                    }
+
+                    // Show loading indicator and disable button
+                    if (loadingIndicator) loadingIndicator.classList.add('active');
+                    if (generateBtn) generateBtn.disabled = true;
+                     if (fileHashResultDiv) fileHashResultDiv.textContent = ''; // Clear previous file hash
+                     if (fileResultContainer) fileResultContainer.style.display = 'block'; // Show file result container
+                     if (downloadFileHash) downloadFileHash.style.display = 'none'; // Hide download button during calculation
+
+                    const reader = new FileReader();
+                    const chunkSize = 1024 * 1024; // 1MB chunks
+                    let offset = 0;
+                    let md5 = CryptoJS.algo.MD5.create();
+
+                    reader.onload = function(event) {
+                        const chunk = event.target.result;
+                        const wordArr = CryptoJS.lib.WordArray.create(chunk);
+                        md5.update(wordArr);
+                        offset += chunk.byteLength;
+
+                        if (offset < file.size) {
+                            readNextChunk();
+                        } else {
+                            // Hashing complete
+                            const hash = md5.finalize().toString();
+                            if (fileHashResultDiv) fileHashResultDiv.textContent = hash;
+                            if (downloadFileHash) downloadFileHash.style.display = 'inline-block'; // Show download button
+                            if (loadingIndicator) loadingIndicator.classList.remove('active');
+                            if (generateBtn) generateBtn.disabled = false;
+                        }
+                    };
+
+                    reader.onerror = function() {
+                        if (fileHashResultDiv) fileHashResultDiv.textContent = 'Error reading file.';
+                         if (downloadFileHash) downloadFileHash.style.display = 'none';
+                        if (loadingIndicator) loadingIndicator.classList.remove('active');
+                        if (generateBtn) generateBtn.disabled = false;
+                        console.error('Error reading file:', reader.error);
+                    };
+
+                    function readNextChunk() {
+                        const slice = file.slice(offset, offset + chunkSize);
+                        reader.readAsArrayBuffer(slice);
+                    }
+
+                    readNextChunk(); // Start reading
+                }
+            }
+
+            // Live MD5 Hash generation on input (only for text input)
+            if (inputText && liveHashOutput) {
+                inputText.addEventListener('input', function() {
+                    // Only update live hash if text hash is selected
+                     const isTextHashSelected = document.getElementById('textHash').checked;
+                    if (!isTextHashSelected) return; // Do nothing if file hash is selected
+
+                    const text = inputText.value;
+                    if (text) {
+                         // Use a very short timeout for live hashing to prevent UI lag on rapid typing
+                        setTimeout(() => {
+                            const hash = CryptoJS.MD5(text).toString();
+                            liveHashOutput.value = hash;
+                        }, 0); // Zero delay means it runs on the next available event loop cycle
+                    } else {
+                        liveHashOutput.value = ''; // Clear live hash if input is empty
+                    }
+                });
+            }
+
+            // Clear Input and Results
+            function clearInputAndResults() {
+                // Clear text related fields and hide containers
+                if (inputText) inputText.value = '';
+                if (hashResultDiv) hashResultDiv.textContent = '';
+                if (liveHashOutput) liveHashOutput.value = '';
+                if (resultContainer) resultContainer.style.display = 'none';
+                if (differenceContainer) differenceContainer.style.display = 'none';
+                if (originalTextDiffPre) originalTextDiffPre.textContent = '';
+                if (hashResultDiffPre) hashResultDiffPre.textContent = '';
+
+                // Clear file related fields and hide containers
+                const fileInput = document.getElementById('inputFile');
+                const fileNameSpan = document.getElementById('fileName');
+                const fileHashResultDiv = document.getElementById('fileHashResult');
+                const fileResultContainer = document.getElementById('fileResultContainer');
+                 const downloadFileHash = document.getElementById('downloadFileHash');
+
+                if (fileInput) fileInput.value = ''; // Clear selected file
+                if (fileNameSpan) fileNameSpan.textContent = 'No file chosen';
+                if (fileHashResultDiv) fileHashResultDiv.textContent = '';
+                if (fileResultContainer) fileResultContainer.style.display = 'none';
+                 if (downloadFileHash) downloadFileHash.style.display = 'none';
+
+                // Set focus to the appropriate input based on selected tab (optional)
+                 const isTextHashSelected = document.getElementById('textHash').checked;
+                 if (isTextHashSelected && inputText) inputText.focus();
+                 // No focus for file input type
+            }
+
+            // Event Listeners for buttons
+            if (generateBtn) generateBtn.addEventListener('click', generateMD5Hash);
+            if (clearBtn) clearBtn.addEventListener('click', clearInputAndResults);
+
+            // Generate hash on Enter key press in the input text area (only for text input)
+            if (inputText) {
+                inputText.addEventListener('keypress', function(e) {
+                    // Only trigger on Enter if text hash is selected
+                     const isTextHashSelected = document.getElementById('textHash').checked;
+                    if (isTextHashSelected && e.key === 'Enter') {
+                        e.preventDefault(); // Prevent default form submission or newline
+                        generateMD5Hash();
+                    }
+                });
+            }
+
+            // Copy result to clipboard (existing functionality for text hash result)
+             // Modified to handle click on the container for both text and file hash results
+            const textResultContainer = document.getElementById('resultContainer');
+            const fileResultContainer = document.getElementById('fileResultContainer');
+
+             if (textResultContainer) {
+                 textResultContainer.addEventListener('click', function(event) {
+                      const copyBtn = textResultContainer.querySelector('.copy-btn');
+                      const hashDiv = textResultContainer.querySelector('.md5-result');
+                      // If clicked on the copy button or the hash text
+                      if (copyBtn && (copyBtn.contains(event.target) || (hashDiv && hashDiv.contains(event.target)))) {
+                           const textToCopy = hashDiv ? hashDiv.textContent : '';
+                           if (textToCopy) {
+                                navigator.clipboard.writeText(textToCopy)
+                                    .then(() => {
+                                        // Provide feedback
+                                        const originalButtonHTML = copyBtn.innerHTML;
+                                        copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                                        setTimeout(() => {
+                                            copyBtn.innerHTML = originalButtonHTML;
+                                        }, 2000);
+                                    })
+                                    .catch(err => {
+                                        console.error('Failed to copy text: ', err);
+                                    });
+                           }
+                      }
+                 });
+             }
+
+            // Copy result to clipboard for file hash
+             // Added a separate function and event listener for the file hash container
+             function copyFileHashToClipboard() {
+                 const fileHashResultDiv = document.getElementById('fileHashResult');
+                 if (fileHashResultDiv && fileHashResultDiv.textContent) {
+                      navigator.clipboard.writeText(fileHashResultDiv.textContent)
+                          .then(() => {
+                              // Find the copy button relative to the file result container
+                              const fileResultContainer = fileHashResultDiv.closest('.md5-result-container');
+                              const copyBtn = fileResultContainer ? fileResultContainer.querySelector('.copy-btn') : null;
+
+                              if (copyBtn) {
+                                   const originalButtonHTML = copyBtn.innerHTML;
+                                   copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                                   setTimeout(() => {
+                                       copyBtn.innerHTML = originalButtonHTML;
+                                   }, 2000);
+                              }
+                          })
+                          .catch(err => {
+                              console.error('Failed to copy file hash text: ', err);
+                          });
+                 }
+             }
+            // Attach event listener to the copy button within the file result container
+             const fileHashCopyBtn = fileResultContainer ? fileResultContainer.querySelector('.copy-btn') : null;
+             if (fileHashCopyBtn) {
+                 fileHashCopyBtn.addEventListener('click', copyFileHashToClipboard);
+             }
+
+            // Download file hash button functionality
+            const downloadFileHashBtn = document.getElementById('downloadFileHash');
+            if (downloadFileHashBtn) {
+                downloadFileHashBtn.addEventListener('click', function() {
+                    const fileHashResultDiv = document.getElementById('fileHashResult');
+                    const fileNameSpan = document.getElementById('fileName');
+                    const hash = fileHashResultDiv ? fileHashResultDiv.textContent : '';
+                    const originalFileName = fileNameSpan ? fileNameSpan.textContent : 'file';
+
+                    if (hash) {
+                        const blob = new Blob([hash], { type: 'text/plain' });
+                        const url = URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = `${originalFileName}_md5_hash.txt`;
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                        URL.revokeObjectURL(url); // Clean up
+                    }
+                });
+            }
+
+            // File input change listener (basic file name display and potentially trigger hash on select)
+            const fileInput = document.getElementById('inputFile');
+            const fileNameSpan = document.getElementById('fileName');
+
+            if (fileInput && fileNameSpan) {
+                fileInput.addEventListener('change', function() {
+                    if (this.files && this.files.length > 0) {
+                        const file = this.files[0];
+                        fileNameSpan.textContent = file.name;
+                        // Automatically trigger hash generation when a file is selected (optional, but user might expect this)
+                         generateMD5Hash();
+                    } else {
+                        fileNameSpan.textContent = 'No file chosen';
+                         // Clear file hash results if file selection is cleared
+                         const fileHashResultDiv = document.getElementById('fileHashResult');
+                         const fileResultContainer = document.getElementById('fileResultContainer');
+                          const downloadFileHash = document.getElementById('downloadFileHash');
+
+                         if (fileHashResultDiv) fileHashResultDiv.textContent = '';
+                         if (fileResultContainer) fileResultContainer.style.display = 'none';
+                         if (downloadFileHash) downloadFileHash.style.display = 'none';
+                    }
+                });
+            }
+
+            // Switch between Text and File Hash sections
+            const textHashRadio = document.getElementById('textHash');
+            const fileHashRadio = document.getElementById('fileHash');
+            const textInputSection = document.getElementById('textInputSection');
+            const fileInputSection = document.getElementById('fileInputSection');
+
+            if (textHashRadio && fileHashRadio && textInputSection && fileInputSection) {
+                 textHashRadio.addEventListener('change', function() {
+                    if (this.checked) {
+                        if (textInputSection) textInputSection.style.display = 'block';
+                        if (fileInputSection) fileInputSection.style.display = 'none';
+                        clearInputAndResults(); // Clear fields when switching
+                    }
+                });
+
+                fileHashRadio.addEventListener('change', function() {
+                    if (this.checked) {
+                        if (textInputSection) textInputSection.style.display = 'none';
+                        if (fileInputSection) fileInputSection.style.display = 'block';
+                        clearInputAndResults(); // Clear fields when switching
+                    }
+                });
+            }
+
+            // Review Modal Star Rating Functionality (Keep existing, ensure element IDs match)
+            const ratingStars = document.querySelectorAll('.rating-input i');
+            const ratingValueInput = document.getElementById('ratingValue');
+            const ratingInputContainer = document.querySelector('.rating-input');
+
+            if (ratingStars.length > 0 && ratingValueInput && ratingInputContainer) {
+                ratingStars.forEach(star => {
+                    star.addEventListener('mouseover', function() {
+                        if (ratingInputContainer.classList.contains('rated')) return; // Don't change on hover if already rated
+                        resetStars();
+                        const currentValue = parseInt(this.getAttribute('data-value')); // Ensure integer
+                        highlightStars(currentValue);
+                    });
+
+                    star.addEventListener('mouseout', function() {
+                        if (ratingInputContainer.classList.contains('rated')) return;
+                        resetStars(); // Reset on mouse out if not rated
+                    });
+
+                    star.addEventListener('click', function() {
+                        const currentValue = parseInt(this.getAttribute('data-value')); // Ensure integer
+                        ratingValueInput.value = currentValue;
+                        resetStars(); // Clear first
+                        highlightStars(currentValue); // Highlight up to clicked
+                        // Mark as rated to freeze hover effect
+                        ratingInputContainer.classList.add('rated');
+                        ratingStars.forEach((s, index) => { // Mark individual stars as selected
+                           if (index < currentValue) {
+                               s.classList.add('selected');
+                           } else {
+                               s.classList.remove('selected');
+                           }
+                        });
+                    });
+                });
+
+                function resetStars() {
+                    ratingStars.forEach(star => {
+                        star.classList.remove('fas', 'selected');
+                        star.classList.add('far');
+                        star.style.color = '#ccc'; // Explicitly reset color
+                    });
+                }
+
+                function highlightStars(value) {
+                    for (let i = 0; i < value; i++) {
+                        ratingStars[i].classList.remove('far');
+                        ratingStars[i].classList.add('fas');
+                        ratingStars[i].style.color = '#ffc107'; // Ensure highlight color
+                    }
+                }
+
+                // Handle rating reset if modal is closed without submitting
+                const reviewModal = document.getElementById('reviewModal');
+                if (reviewModal) {
+                     reviewModal.addEventListener('hidden.bs.modal', function () {
+                         ratingInputContainer.classList.remove('rated');
+                         resetStars();
+                         ratingValueInput.value = '';
+                         // Optionally clear other form fields
+                         // document.getElementById('reviewForm').reset();
+                    });
+                }
+            }
+
+            // Review Form Submission (Placeholder) - Keep existing logic if it works with your backend
+            const reviewForm = document.getElementById('reviewForm');
+            const recentReviewsContainer = document.getElementById('recentReviews'); // This seems to be unused in the original script
+            const allRecentReviewsContainer = document.getElementById('allRecentReviews'); // Container for testimonial cards
+            const reviewCountElement = document.querySelector('.review-count .text-muted'); // Element showing review count
+
+            if (reviewForm) {
+                reviewForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    const name = document.getElementById('reviewerName').value.trim();
+                    const rating = document.getElementById('ratingValue').value;
+                    const reviewText = document.getElementById('reviewText').value.trim();
+
+                    if (!name || !rating || !reviewText) {
+                        alert('Please fill in all fields and select a rating.');
+                        return;
+                    }
+
+                    // In a real application, you would send this data to a server.
+                    console.log('Review Submitted:', { name, rating, reviewText });
+
+                    // --- Start: Add review to testimonials (Front-end only example) ---
+                    // Generate star HTML based on rating
+                    let starsHtml = '';
+                    for (let i = 1; i <= 5; i++) {
+                        if (i <= rating) {
+                            starsHtml += '★'; // Use filled star character
+                        } else {
+                             starsHtml += '☆'; // Use empty star character (or leave empty)
+                        }
+                    }
+
+                    // Create new review for the testimonials section
+                    const newTestimonial = document.createElement('div');
+                    newTestimonial.className = 'col-md-4 animate__animated animate__fadeIn';
+                    newTestimonial.innerHTML = `
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">${starsHtml}</div>
+                            <p class="testimonial-text">"${reviewText}"</p>
+                            <div class="testimonial-author">- ${name}</div>
+                        </div>
+                    `;
+
+                    // Add to the beginning of the testimonials container if it exists
+                    if (allRecentReviewsContainer) {
+                         if (allRecentReviewsContainer.firstChild) {
+                            allRecentReviewsContainer.insertBefore(newTestimonial, allRecentReviewsContainer.firstChild);
+                        } else {
+                            allRecentReviewsContainer.appendChild(newTestimonial);
+                        }
+
+                        // Remove oldest testimonial if more than 3 (or your desired number)
+                        const allTestimonials = allRecentReviewsContainer.querySelectorAll('.col-md-4');
+                        const maxTestimonials = 3; // Set your desired max number
+                        if (allTestimonials.length > maxTestimonials) {
+                            allRecentReviewsContainer.removeChild(allTestimonials[allTestimonials.length - 1]);
+                        }
+                    }
+
+                    // Update the average rating and count (simple increment example)
+                    if (reviewCountElement) {
+                        const countMatch = reviewCountElement.textContent.match(/\d+/);
+                        if (countMatch) {
+                            const currentCount = parseInt(countMatch[0]);
+                            const newCount = currentCount + 1;
+                            reviewCountElement.textContent = `Based on ${newCount} reviews`;
+                            // Note: Updating the average rating itself is more complex and would require storing all ratings
+                        }
+                    }
+                     // --- End: Add review to testimonials ---
+
+                    // Close the modal
+                    const reviewModal = document.getElementById('reviewModal');
+                    if (reviewModal) {
+                        const modalInstance = bootstrap.Modal.getInstance(reviewModal);
+                        if (modalInstance) modalInstance.hide();
+                    }
+
+                    // Clear the form
+                    reviewForm.reset();
+                    if (ratingInputContainer) ratingInputContainer.classList.remove('rated');
+                    resetStars(); // Reset stars visual
+                    if (ratingValueInput) ratingValueInput.value = ''; // Clear hidden input value
+
+                    // Show success message (Toast)
+                    const successToast = document.createElement('div');
+                    successToast.className = 'position-fixed bottom-0 end-0 p-3 animate__animated animate__fadeInUp';
+                    successToast.style.zIndex = "1100";
+                    successToast.innerHTML = `
+                        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header bg-success text-white">
+                                <i class="fas fa-check-circle me-2"></i>
+                                <strong class="me-auto">Success</strong>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                Thank you for your review! It has been added.
+                            </div>
+                        </div>
+                    `;
+                    document.body.appendChild(successToast);
+
+                    // Remove the toast after 3 seconds
+                    setTimeout(() => {
+                        successToast.classList.remove('animate__fadeInUp');
+                        successToast.classList.add('animate__fadeOutDown');
+                        setTimeout(() => {
+                            if(successToast.parentNode) successToast.parentNode.removeChild(successToast);
+                        }, 500);
+                    }, 3000);
+                });
+            }
+
+            // Remove loading overlay (Keep existing logic)
+            const loadingOverlay = document.querySelector('.loading-overlay');
+            if (loadingOverlay) {
+                setTimeout(() => {
+                    loadingOverlay.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingOverlay.style.display = 'none';
+                         if(loadingOverlay.parentNode) loadingOverlay.parentNode.removeChild(loadingOverlay);
+                    }, 500);
+                }, 1000);
+            }
+
+             // Info buttons functionality (Keep existing logic)
+            const infoButtons = document.querySelectorAll('.info-button');
+            const aboutButton = infoButtons[0];
+            const howToButton = infoButtons[1];
+            const descButton = infoButtons[2];
+            const descriptionBox = document.querySelector('.tool-description-box');
+            const stepsContainer = document.querySelector('.steps-container');
+            const toolInfoContent = document.querySelector('.tool-info-content');
+
+            if (infoButtons.length > 0 && descriptionBox && stepsContainer && toolInfoContent) {
+                 // Initially hide steps and info content
+                stepsContainer.style.display = 'none';
+                toolInfoContent.style.display = 'none';
+
+                // Apply initial active state
+                aboutButton.classList.add('active-info-button');
+
+                // Animate description box entrance
+                descriptionBox.style.opacity = '0';
+                setTimeout(() => {
+                    descriptionBox.style.opacity = '1';
+                    descriptionBox.style.transform = 'translateY(0)'; // Assuming CSS handles initial state
+                }, 300);
+
+                // Helper function to hide all content
+                function hideAllContent() {
+                    descriptionBox.style.opacity = '0';
+                    stepsContainer.style.opacity = '0';
+                    toolInfoContent.style.opacity = '0';
+
+                    setTimeout(() => {
+                        descriptionBox.style.display = 'none';
+                        stepsContainer.style.display = 'none';
+                        toolInfoContent.style.display = 'none';
+                    }, 200); // Match CSS transition duration
+
+                    // Remove active state from all buttons
+                    infoButtons.forEach(btn => btn.classList.remove('active-info-button'));
+                }
+
+                // About button click
+                aboutButton.addEventListener('click', function() {
+                    hideAllContent();
+
+                    // Show description box with animation
+                    aboutButton.classList.add('active-info-button');
+                    setTimeout(() => {
+                        descriptionBox.style.display = 'block';
+                        setTimeout(() => {
+                            descriptionBox.style.opacity = '1';
+                            // Add transform reset if needed for animation
+                        }, 50);
+                    }, 200);
+                });
+
+                // How to use button click
+                howToButton.addEventListener('click', function() {
+                    hideAllContent();
+
+                    // Show steps container with animation
+                    howToButton.classList.add('active-info-button');
+                    setTimeout(() => {
+                        stepsContainer.style.display = 'block';
+                        setTimeout(() => {
+                            stepsContainer.style.opacity = '1';
+                            // Add transform reset if needed
+                        }, 50);
+                    }, 200);
+                });
+
+                // Description button click
+                descButton.addEventListener('click', function() {
+                    hideAllContent();
+
+                    // Show tool info content with animation
+                    descButton.classList.add('active-info-button');
+                    setTimeout(() => {
+                        toolInfoContent.style.display = 'block';
+                        setTimeout(() => {
+                            toolInfoContent.style.opacity = '1';
+                             // Add transform reset if needed
+                        }, 50);
+                    }, 200);
+                });
+
+                 // Ensure initial content is visible and correctly positioned/styled
+                 // This might involve setting initial opacity/transform in CSS and removing them here
+                 descriptionBox.style.opacity = '1'; // Assuming it's visible initially
+                 stepsContainer.style.opacity = '0'; stepsContainer.style.display = 'none';
+                 toolInfoContent.style.opacity = '0'; toolInfoContent.style.display = 'none';
+            }
+
+            // Smooth scrolling for anchor links (Keep existing if any)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+             // Scroll Progress Bar logic (Keep existing)
+             const scrollProgress = document.querySelector('.scroll-progress');
+             if (scrollProgress) {
+                 window.addEventListener('scroll', function() {
+                     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                     const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+                     // Update scroll progress
+                     if (scrollHeight > 0) { // Avoid division by zero
+                         const progress = (scrollTop / scrollHeight) * 100;
+                         scrollProgress.style.transform = `scaleX(${progress / 100})`;
+                     } else {
+                          scrollProgress.style.transform = `scaleX(0)`;
+                     }
+                 });
+             }
+
+            // Theme switcher logic (Keep existing)
+            const themeSwitcher = document.getElementById('themeSwitcher');
+            const body = document.body;
+            const totalSchemes = 33;
+            let currentScheme = parseInt(localStorage.getItem('colorScheme') || '1'); // Load saved or default to 1
+
+            if (themeSwitcher && body) {
+                 // Apply saved scheme on load
+                body.classList.add(`color-scheme-${currentScheme}`);
+
+                themeSwitcher.addEventListener('click', function() {
+                    // Remove current scheme class
+                    body.classList.remove(`color-scheme-${currentScheme}`);
+                    // Move to next scheme
+                    currentScheme = (currentScheme % totalSchemes) + 1;
+                    // Add new scheme class
+                    body.classList.add(`color-scheme-${currentScheme}`);
+                    // Save new scheme
+                    localStorage.setItem('colorScheme', currentScheme);
+                });
+            }
+
+            // Add active class to nav links based on current page (Keep existing)
+             try {
+                const currentPath = window.location.pathname;
+                const navLinks = document.querySelectorAll('#navbarNav .nav-link');
+
+                navLinks.forEach(link => {
+                    const linkPath = new URL(link.href).pathname;
+
+                    // Remove trailing slashes for comparison
+                    const normalizedLinkPath = linkPath.replace(/\/$/, '');
+                    const normalizedCurrentPath = currentPath.replace(/\/$/, '');
+
+                    if (normalizedLinkPath === normalizedCurrentPath) {
+                        link.classList.add('active');
+                        link.setAttribute('aria-current', 'page');
+                    } else {
+                        link.classList.remove('active');
+                        link.removeAttribute('aria-current');
+                    }
+                });
+            } catch (e) {
+                console.error("Error setting active nav link:", e);
+            }
+
+            // Initial loading overlay removal logic already handled above.
+
+            // Ensure initial display states are correct based on loaded content
+            if (resultContainer) resultContainer.style.display = 'none';
+            if (differenceContainer) differenceContainer.style.display = 'none';
+             // Ensure text input section is visible by default on load
+            if (textInputSection) textInputSection.style.display = 'block';
+            if (fileInputSection) fileInputSection.style.display = 'none';
+
+        }); // End DOMContentLoaded
+
+         // Global function for Copy button in main result area (if needed by inline onclick)
+         // Note: Better to handle click with event listener as done above.
+         // Keeping this for backward compatibility if the HTML onclick is still used.
+         function copyToClipboard() {
+             const hashResultDiv = document.getElementById('hashResult');
+             if (hashResultDiv && hashResultDiv.textContent) {
+                 navigator.clipboard.writeText(hashResultDiv.textContent)
+                     .then(() => {
+                         // Find the copy button relative to the result div
+                         const resultContainer = hashResultDiv.closest('.md5-result-container');
+                         const copyBtn = resultContainer ? resultContainer.querySelector('.copy-btn') : null;
+
+                         if (copyBtn) {
+                              const originalButtonText = copyBtn.innerHTML;
+                              copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                              setTimeout(() => {
+                                  copyBtn.innerHTML = originalButtonText;
+                              }, 2000);
+                         }
+                     })
+                     .catch(err => {
+                         console.error('Failed to copy text: ', err);
+                     });
+             }
+         }
+
+    </script>
+</head>
+<body style="margin: 0; padding: 0;">
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-content">
+            <span class="announcement-text">🚀 Your Trust Our Aim! 💖 | 🌟 100% Free Tools Collection 🛠️ | 🎉 Premium Quality Results 💎</span>
+        </div>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">
+                    <div class="brand-container">
+                        <span class="brand-icon">🛠️</span>
+                        <span class="brand-text">Toolsnew</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">🏠 Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../about.html">ℹ️ About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../contact.html">📧 Contact</a>
+                        </li>
+                    </ul>
+                    <div class="trust-indicators">
+                        <span class="trust-item"><i class="fas fa-shield-alt"></i> 100% Secure</span>
+                        <span class="trust-item"><i class="fas fa-bolt"></i> Fast & Reliable</span>
+                        <span class="trust-item"><i class="fas fa-clock"></i> 24/7 Available</span>
+                    </div>
+                    <button class="theme-switcher" id="themeSwitcher">
+                        <i class="fas fa-palette"></i> Change Colors
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Stats Banner Section -->
+    <section class="banner-section">
+        <div class="banner-container">
+            <div class="banner-item">
+                <span class="banner-number">1M+</span>
+                <span class="banner-label">HAPPY USERS</span>
+                </div>
+            <div class="banner-item">
+                <span class="banner-number">100+</span>
+                <span class="banner-label">FREE TOOLS</span>
+                </div>
+            <div class="banner-item">
+                <span class="banner-number">99.9%</span>
+                <span class="banner-label">UPTIME</span>
+                </div>
+            <div class="banner-item">
+                <span class="banner-number">24/7</span>
+                <span class="banner-label">SUPPORT</span>
+                </div>
+            </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="floating-element floating-element-1"></div>
+        <div class="floating-element floating-element-2"></div>
+        
+        <!-- Top Ad Space -->
+        <div class="ad-space horizontal" data-aos="fade-up">
+            <div>Advertisement Space</div>
+        </div>
+
+        <!-- Tool Title -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h1 class="tool-title" data-aos="fade-up">Md5 Hash Generator</h1>
+                <p class="lead" data-aos="fade-up">Free online Md5 Hash Generator tool</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Tool Content -->
+            <div class="col-lg-8">
+                <!-- Tool Interface Section -->
+                <section class="tool-interface mb-4">
+                    <div class="card" data-aos="fade-up">
+                        <div class="card-body">
+                            <div class="tool-container">
+                                <!-- Tool specific content -->
+                                <div id="toolContent" class="bg-light p-4 rounded">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="hash-options mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="hashType" id="textHash" value="text" checked>
+                                                    <label class="form-check-label" for="textHash">Text Hash</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="hashType" id="fileHash" value="file">
+                                                    <label class="form-check-label" for="fileHash">File Hash</label>
+                                                </div>
+                                            </div>
+
+                                            <div id="textInputSection">
+                                                <div class="mb-3">
+                                                    <label for="inputText" class="form-label">Enter Text to Hash</label>
+                                                    <div class="row g-2">
+                                                        <div class="col-md">
+                                                            <textarea class="form-control" id="inputText" placeholder="Enter your text here..."></textarea>
+                                                        </div>
+                                                        <div class="col-md">
+                                                            <label for="liveHashOutput" class="form-label">Live MD5 Hash</label>
+                                                            <input type="text" class="form-control" id="liveHashOutput" placeholder="Hash will appear here..." readonly>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div id="fileInputSection" style="display: none;">
+                                                <div class="md5-input-container">
+                                                    <label class="form-label">Select File to Hash</label>
+                                                    <div class="file-input-container mb-3">
+                                                        <label class="file-input-label">
+                                                            <i class="fas fa-file-upload"></i> Choose File
+                                                            <input type="file" id="inputFile">
+                                                        </label>
+                                                        <span class="file-name" id="fileName">No file chosen</span>
+                                                    </div>
+                                                </div>
+
+                                                <div id="fileResultContainer" class="md5-result-container" style="display: none;">
+                                                     <button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyFileHashToClipboard()">
+                                                        <i class="fas fa-copy"></i> Copy
+                                                    </button>
+                                                     <button class="btn btn-sm btn-outline-primary download-btn" id="downloadFileHash" style="display: none;">
+                                                        <i class="fas fa-download"></i> Download
+                                                    </button>
+                                                    <div class="mb-2">
+                                                        <strong>MD5 Hash:</strong>
+                                                        <div class="md5-result" id="fileHashResult"></div>
+                                                    </div>
+                                                    <div class="strength-meter" style="display: none;"></div> <!-- Strength meter not applicable for file hash -->
+                                                </div>
+
+                                            </div>
+
+                                            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
+                                                <button class="btn btn-primary" id="generateHash">
+                                                    <i class="fas fa-hashtag"></i> Generate Hash
+                                                </button>
+                                                <button class="btn btn-secondary" id="clearInput">
+                                                    <i class="fas fa-eraser"></i> Clear
+                                                </button>
+                                            </div>
+
+                                            <div class="loading-spinner">
+                                                <div class="spinner-border text-primary" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                            </div>
+
+                                            <div id="resultContainer" class="md5-result-container" style="display: none;">
+                                                <button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyToClipboard()">
+                                                    <i class="fas fa-copy"></i> Copy
+                                                </button>
+                                                <div class="mb-2">
+                                                    <strong>MD5 Hash:</strong>
+                                                    <div class="md5-result" id="hashResult"></div>
+                                                </div>
+                                                <div class="strength-meter">
+                                                    <div class="strength-meter-fill" id="strengthMeter"></div>
+                                                </div>
+                                            </div>
+
+                                            <div id="differenceContainer" class="card mt-4" style="display: none;">
+                                                <div class="card-header">Difference</div>
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <strong>Original Text:</strong>
+                                                            <pre id="originalTextDiff" class="bg-light p-2 rounded"></pre>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <strong>MD5 Hash:</strong>
+                                                            <pre id="hashResultDiff" class="bg-light p-2 rounded"></pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="hash-history mt-4">
+                                                <h5>Recent Hashes</h5>
+                                                <div id="hashHistoryList"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End tool specific content -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tool Info Buttons -->
+                <div class="tool-info-buttons mb-4" data-aos="fade-up">
+                    <div class="tool-info-buttons-container">
+                        <a href="javascript:void(0);" class="btn info-button active-info-button">
+                            <i class="fas fa-info-circle"></i> About This Tool
+                        </a>
+                        <a href="javascript:void(0);" class="btn info-button">
+                            <i class="fas fa-book"></i> How to Use
+                        </a>
+                        <a href="javascript:void(0);" class="btn info-button">
+                            <i class="fas fa-align-left"></i> Description
+                        </a>
+                            </div>
+
+                    <div class="tool-description-box p-3">
+                        <h4>🔐 About MD5 Hash Generator</h4>
+                        <p>Welcome to our Advanced MD5 Hash Generator - Your Ultimate Security Tool! This powerful utility helps you generate MD5 hashes for text and files instantly. MD5 (Message Digest Algorithm 5) is a widely used cryptographic hash function that produces a 128-bit (16-byte) hash value, typically expressed as a 32-character hexadecimal number.</p>
+                        
+                        <h5>✨ Key Features:</h5>
+                        <ul>
+                            <li>🎯 Generate MD5 hashes for text and files</li>
+                            <li>⚡ Instant hash generation with real-time processing</li>
+                            <li>📋 Copy hash results with one click</li>
+                            <li>📊 Hash strength indicator</li>
+                            <li>📱 Mobile-friendly interface</li>
+                            <li>🔒 Local processing - your data never leaves your device</li>
+                            <li>📝 Hash history tracking</li>
+                            <li>🔄 Support for large files</li>
+                        </ul>
+                        
+                        <h5>🔍 Common Uses:</h5>
+                        <ul>
+                            <li>File integrity verification</li>
+                            <li>Password hashing</li>
+                            <li>Digital signatures</li>
+                            <li>Data deduplication</li>
+                            <li>Checksum generation</li>
+                        </ul>
+                    </div>
+                    <div class="steps-container mt-3">
+                        <h4>📝 How to Use</h4>
+                        <ol class="list-group list-group-numbered" style="counter-reset: item;">
+                            <li class="list-group-item">
+                                <span>Choose between text or file hashing using the radio buttons at the top</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span>For text: Enter your text in the input box</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span>For files: Click "Choose File" and select your file</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span>Click "Generate Hash" to create the MD5 hash</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span>Use the "Copy" button to copy the hash to your clipboard</span>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="tool-info-content mt-3">
+                        <h4>📚 Description</h4>
+                        <p>Our MD5 Hash Generator is a powerful tool that provides instant MD5 hash generation for both text and files. The tool processes all data locally in your browser, ensuring maximum security and privacy. The generated hashes are 32-character hexadecimal strings that can be used for various security and verification purposes.</p>
+                        
+                        <h5>🔒 Security Features:</h5>
+                        <ul>
+                            <li>Local processing - no data is sent to servers</li>
+                            <li>Secure hash generation using industry-standard algorithms</li>
+                            <li>Real-time hash strength analysis</li>
+                            <li>Automatic hash history management</li>
+                        </ul>
+                        
+                        <h5>⚡ Performance Features:</h5>
+                        <ul>
+                            <li>Optimized for fast processing</li>
+                            <li>Support for large files</li>
+                            <li>Efficient memory usage</li>
+                            <li>Responsive design for all devices</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Review and Rating Section -->
+                <section class="review-rating-section mb-4" data-aos="fade-up">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body">
+                            <div class="row mb-4">
+                                <div class="col-md-5">
+                                    <h3 class="review-section-title">Reviews & Ratings</h3>
+                                    <div class="overall-rating-summary mb-3 p-3 rounded">
+                                        <div class="large-rating text-center mb-2">
+                                            <span class="rating-value display-4 fw-bold">4.5</span>
+                                            <span class="text-muted">/5</span>
+                                </div>
+                                        <div class="stars text-center mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                                        <div class="review-count text-center mb-3">
+                                            <span class="text-muted">Based on 9 reviews</span>
+                        </div>
+                                        <div class="text-center">
+                                            <button class="btn btn-primary btn-sm px-4 rounded-pill" data-bs-toggle="modal" data-bs-target="#reviewModal">
+                                                <i class="fas fa-edit me-1"></i> Write a Review
+                                            </button>
+                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <h4 class="most-recent-title mb-3">Rating Details</h4>
+                                    <div class="mb-3">
+                                        <p class="text-muted small mb-2">Rating breakdown:</p>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">5 stars</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 75%"></div>
+                                            </div>
+                                            <div class="small ms-2">75%</div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">4 stars</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 15%"></div>
+                                            </div>
+                                            <div class="small ms-2">15%</div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">3 stars</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 5%"></div>
+                                            </div>
+                                            <div class="small ms-2">5%</div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">2 stars</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 3%"></div>
+                                            </div>
+                                            <div class="small ms-2">3%</div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <div class="small me-2">1 star</div>
+                                            <div class="progress flex-grow-1" style="height: 8px;">
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 2%"></div>
+                                            </div>
+                                            <div class="small ms-2">2%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tool Features Section -->
+                <section class="tool-features mb-4" data-aos="fade-up">
+                    <h3 class="section-title">Features</h3>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">⚡</div>
+                                <h4>Fast Processing</h4>
+                                <p>Process your data quickly with our optimized algorithms</p>
+                                </div>
+                            </div>
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">🔒</div>
+                                <h4>Secure</h4>
+                                <p>Your data is processed locally, never sent to any server</p>
+                        </div>
+                    </div>
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">🎯</div>
+                                <h4>Accurate</h4>
+                                <p>Get precise and reliable results every time</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- FAQ Section -->
+                <section class="faq-section mb-4" data-aos="fade-up">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                                    What is an MD5 hash?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    An MD5 hash is a 128-bit (16-byte) hash value, typically expressed as a 32-character hexadecimal number. It's a cryptographic hash function that takes an input (or 'message') and returns a fixed-size string of bytes. The output is always the same length regardless of the input size.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                                    Is MD5 still secure for password hashing?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    While MD5 is still useful for file integrity checks and other non-security-critical applications, it's not recommended for password hashing due to its vulnerability to collision attacks. For password hashing, it's better to use more secure algorithms like bcrypt, Argon2, or PBKDF2.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                                    How does the file hashing work?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The file hashing process reads the file in chunks to efficiently handle large files. The file is processed entirely in your browser - no data is uploaded to any server. This ensures your files remain private and secure.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                    <!-- Bottom Ad Space -->
+                    <div class="ad-space horizontal" data-aos="fade-up">
+                        <div>Advertisement Space</div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4 tool-sidebar">
+                <!-- Sidebar Ad Space -->
+                <div class="ad-space vertical" data-aos="fade-left">
+                    <div>Advertisement Space</div>
+                </div>
+
+                <!-- Related Tools -->
+                <div class="card mb-4" data-aos="fade-left">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-tools"></i>
+                            Related Tools
+                        </h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="sha256-hash-generator.html">SHA256 Hash Generator</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="random-string-generator.html">Random String Generator</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="password-generator.html">Password Generator</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Popular Tools -->
+                <div class="card mb-4" data-aos="fade-left">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-star"></i>
+                            Popular Tools
+                        </h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="ssl-certificate-checker.html">SSL Certificate Checker</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="whois-lookup.html">WHOIS Lookup</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-chevron-right"></i>
+                                <a href="url-shortener.html">URL Shortener</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom Sidebar Ad Space -->
+                <div class="ad-space square" data-aos="fade-left">
+                    <div>Advertisement Space</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-4" data-aos="fade-up">Most Recent Reviews</h2>
+            <div id="allRecentReviews" class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Excellent MD5 hash generator! Fast, reliable, and perfect for verifying file integrity and securing data."</p>
+                        <div class="testimonial-author">- Michael Zhang, Software Engineer</div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Great tool for generating MD5 hashes. The interface is clean and it works perfectly every time."</p>
+                        <div class="testimonial-author">- Lisa Parker, Web Developer</div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Reliable MD5 hash generation tool. Essential for my development and security testing work."</p>
+                        <div class="testimonial-author">- Tom Wilson, Security Consultant</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 text-center">
+                    <h2 class="cta-title">Ready to Try Our Other Tools?</h2>
+                    <p class="cta-text">Explore our collection of 100+ free online tools designed to make your life easier.</p>
+                    <a href="../../index.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-toolbox"></i> Browse All Tools
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- About Us -->
+                <div class="col-md-4">
+                    <div class="footer-about">
+                        <h4>About Us</h4>
+                        <p>Your trusted source for free online tools. We provide high-quality, easy-to-use tools for all your needs.</p>
+                </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-4">
+                    <div class="footer-links">
+                        <h4>🔗 Quick Links</h4>
+                    <ul class="list-unstyled">
+                            <li><a href="../../index.html">🏠 Home</a></li>
+                            <li><a href="../../about.html">ℹ️ About</a></li>
+                            <li><a href="../../contact.html">📧 Contact</a></li>
+                            <li><a href="../../privacy-policy.html">🔒 Privacy Policy</a></li>
+                            <li><a href="../../terms.html">📜 Terms of Service</a></li>
+                            <li><a href="../../disclaimer.html">⚠️ Disclaimer</a></li>
+                            <li><a href="../../cookie-policy.html">🍪 Cookie Policy</a></li>
+                    </ul>
+                </div>
+                    </div>
+
+                <!-- Connect With Us -->
+                <div class="col-md-4">
+                    <div class="footer-social">
+                        <h4>🤝 Connect With Us</h4>
+                        <div class="social-links mt-3">
+                            <a href="https://www.youtube.com/@toolsnew7" target="_blank" class="me-3 text-decoration-none">
+                                <i class="fab fa-youtube fa-2x"></i>
+                                <span class="ms-2">YouTube</span>
+                            </a>
+                            <br>
+                            <a href="https://www.facebook.com/profile.php?id=61574866457908" target="_blank" class="me-3 text-decoration-none mt-2 d-inline-block">
+                                <i class="fab fa-facebook fa-2x"></i>
+                                <span class="ms-2">Facebook</span>
+                            </a>
+                            <br>
+                            <a href="https://www.tiktok.com/@toolsnew7?lang=en" target="_blank" class="me-3 text-decoration-none mt-2 d-inline-block">
+                                <i class="fab fa-tiktok fa-2x"></i>
+                                <span class="ms-2">TikTok</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="footer-copyright text-center">
+                        <p>&copy; 2025 Toolsnew. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Review Modal -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="reviewModalLabel">
+                        <i class="fas fa-star text-warning me-2"></i>Rate this Tool
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reviewForm">
+                        <div class="mb-3">
+                            <label for="reviewerName" class="form-label fw-bold">Your Name</label>
+                            <input type="text" class="form-control" id="reviewerName" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Your Rating</label>
+                            <div class="rating-input text-center mb-2">
+                                <i class="far fa-star" data-value="1"></i>
+                                <i class="far fa-star" data-value="2"></i>
+                                <i class="far fa-star" data-value="3"></i>
+                                <i class="far fa-star" data-value="4"></i>
+                                <i class="far fa-star" data-value="5"></i>
+                            </div>
+                            <input type="hidden" id="ratingValue" name="ratingValue" required>
+                            <div id="ratingHelp" class="form-text text-center">Click on a star to rate</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reviewText" class="form-label fw-bold">Your Review</label>
+                            <textarea class="form-control" id="reviewText" rows="4" placeholder="Share your experience with this tool..." required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary rounded-pill px-4" form="reviewForm">Submit Review</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../js/common.js"></script>
+    <!-- Tool specific JS -->
+    <script src="../js/md5-hash-generator.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeSwitcher = document.getElementById('themeSwitcher');
+            const body = document.body;
+            const header = document.querySelector('.header');
+            const announcementBar = document.querySelector('.announcement-bar');
+            const scrollProgress = document.querySelector('.scroll-progress');
+            let currentScheme = 1;
+            const totalSchemes = 33;
+            let lastScrollTop = 0;
+            let scrollTimeout;
+
+            // Add announcement bar class to body
+            body.classList.add('with-announcement');
+            header.classList.add('with-announcement');
+
+            // Color scheme switcher
+            themeSwitcher.addEventListener('click', function() {
+                currentScheme = (currentScheme % totalSchemes) + 1;
+                body.className = body.className.replace(/color-scheme-\d+/g, '').trim();
+                body.classList.add(`color-scheme-${currentScheme}`);
+                localStorage.setItem('colorScheme', currentScheme);
+            });
+
+            // Load saved color scheme
+            const savedScheme = localStorage.getItem('colorScheme');
+            if (savedScheme) {
+                currentScheme = parseInt(savedScheme);
+                body.classList.add(`color-scheme-${currentScheme}`);
+            }
+
+            // Scroll handler
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                
+                // Update scroll progress
+                const progress = (scrollTop / scrollHeight) * 100;
+                scrollProgress.style.transform = `scaleX(${progress / 100})`;
+            });
+
+            // Info buttons functionality
+            const infoButtons = document.querySelectorAll('.info-button');
+            const aboutButton = infoButtons[0];
+            const howToButton = infoButtons[1];
+            const descButton = infoButtons[2];
+            const descriptionBox = document.querySelector('.tool-description-box');
+            const stepsContainer = document.querySelector('.steps-container');
+            const toolInfoContent = document.querySelector('.tool-info-content');
+            
+            // Initially hide steps and info content
+            stepsContainer.style.display = 'none';
+            toolInfoContent.style.display = 'none';
+            
+            // Apply initial active state
+            aboutButton.classList.add('active-info-button');
+            
+            // Animate description box entrance
+            descriptionBox.style.opacity = '0';
+            setTimeout(() => {
+                descriptionBox.style.opacity = '1';
+                descriptionBox.style.transform = 'translateY(0)';
+            }, 300);
+            
+            // Helper function to hide all content
+            function hideAllContent() {
+                descriptionBox.style.opacity = '0';
+                stepsContainer.style.opacity = '0';
+                toolInfoContent.style.opacity = '0';
+                
+                setTimeout(() => {
+                    descriptionBox.style.display = 'none';
+                    stepsContainer.style.display = 'none';
+                    toolInfoContent.style.display = 'none';
+                }, 200);
+                
+                // Remove active state from all buttons
+                infoButtons.forEach(btn => btn.classList.remove('active-info-button'));
+            }
+            
+            // About button click
+            aboutButton.addEventListener('click', function() {
+                hideAllContent();
+                
+                // Show description box with animation
+                aboutButton.classList.add('active-info-button');
+                setTimeout(() => {
+                    descriptionBox.style.display = 'block';
+                    setTimeout(() => {
+                        descriptionBox.style.opacity = '1';
+                        descriptionBox.style.transform = 'translateY(0)';
+                    }, 50);
+                }, 200);
+            });
+            
+            // How to use button click
+            howToButton.addEventListener('click', function() {
+                hideAllContent();
+                
+                // Show steps container with animation
+                howToButton.classList.add('active-info-button');
+                setTimeout(() => {
+                    stepsContainer.style.display = 'block';
+                    setTimeout(() => {
+                        stepsContainer.style.opacity = '1';
+                        stepsContainer.style.transform = 'translateY(0)';
+                    }, 50);
+                }, 200);
+            });
+            
+            // Description button click
+            descButton.addEventListener('click', function() {
+                hideAllContent();
+                
+                // Show tool info content with animation
+                descButton.classList.add('active-info-button');
+                setTimeout(() => {
+                    toolInfoContent.style.display = 'block';
+                    setTimeout(() => {
+                        toolInfoContent.style.opacity = '1';
+                        toolInfoContent.style.transform = 'translateY(0)';
+                    }, 50);
+                }, 200);
+            });
+
+            // Remove loading overlay
+            const loadingOverlay = document.querySelector('.loading-overlay');
+            setTimeout(() => {
+                loadingOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                }, 500);
+            }, 1000);
+
+            // Add active class to nav links based on current page
+            try {
+                const currentPath = window.location.pathname;
+                const navLinks = document.querySelectorAll('#navbarNav .nav-link');
+
+                navLinks.forEach(link => {
+                    const linkPath = new URL(link.href).pathname;
+                    
+                    // Remove trailing slashes for comparison
+                    const normalizedLinkPath = linkPath.replace(/\/$/, '');
+                    const normalizedCurrentPath = currentPath.replace(/\/$/, '');
+
+                    if (normalizedLinkPath === normalizedCurrentPath) {
+                        link.classList.add('active');
+                        link.setAttribute('aria-current', 'page');
+                    } else {
+                        link.classList.remove('active');
+                        link.removeAttribute('aria-current');
+                    }
+                });
+            } catch (e) {
+                console.error("Error setting active nav link:", e);
+            }
+
+            // Review Modal Star Rating Functionality
+            const ratingStars = document.querySelectorAll('.rating-input i');
+            const ratingValueInput = document.getElementById('ratingValue');
+            const ratingInputContainer = document.querySelector('.rating-input');
+
+            ratingStars.forEach(star => {
+                star.addEventListener('mouseover', function() {
+                    if (ratingInputContainer.classList.contains('rated')) return; // Don't change on hover if already rated
+                    resetStars();
+                    const currentValue = this.getAttribute('data-value');
+                    highlightStars(currentValue);
+                });
+
+                star.addEventListener('mouseout', function() {
+                    if (ratingInputContainer.classList.contains('rated')) return;
+                    resetStars(); // Reset on mouse out if not rated
+                });
+
+                star.addEventListener('click', function() {
+                    const currentValue = this.getAttribute('data-value');
+                    ratingValueInput.value = currentValue;
+                    resetStars(); // Clear first
+                    highlightStars(currentValue); // Highlight up to clicked
+                    // Mark as rated to freeze hover effect
+                    ratingInputContainer.classList.add('rated'); 
+                    ratingStars.forEach((s, index) => { // Mark individual stars as selected
+                       if (index < currentValue) {
+                           s.classList.add('selected');
+                       } else {
+                           s.classList.remove('selected');
+                       }
+                    });
+                });
+            });
+
+            function resetStars() {
+                ratingStars.forEach(star => {
+                    star.classList.remove('fas', 'selected');
+                    star.classList.add('far');
+                    star.style.color = '#ccc'; // Explicitly reset color
+                });
+            }
+
+            function highlightStars(value) {
+                for (let i = 0; i < value; i++) {
+                    ratingStars[i].classList.remove('far');
+                    ratingStars[i].classList.add('fas');
+                    ratingStars[i].style.color = '#ffc107'; // Ensure highlight color
+                }
+            }
+            
+            // Handle rating reset if modal is closed without submitting
+            const reviewModal = document.getElementById('reviewModal');
+            reviewModal.addEventListener('hidden.bs.modal', function () {
+                 ratingInputContainer.classList.remove('rated');
+                 resetStars();
+                 ratingValueInput.value = '';
+                 // Optionally clear other form fields
+                 // document.getElementById('reviewForm').reset();
+            });
+
+            // Review Form Submission (Placeholder)
+            const reviewForm = document.getElementById('reviewForm');
+            const recentReviewsContainer = document.getElementById('recentReviews');
+            
+            reviewForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const name = document.getElementById('reviewerName').value;
+                const rating = document.getElementById('ratingValue').value;
+                const reviewText = document.getElementById('reviewText').value;
+
+                if (!rating) {
+                    alert('Please select a rating.');
+                    return;
+                }
+
+                // Generate star HTML based on rating
+                let starsHtml = '';
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= rating) {
+                        starsHtml += '<i class="fas fa-star text-warning"></i>';
+                    } else if (i - 0.5 === parseFloat(rating)) {
+                        starsHtml += '<i class="fas fa-star-half-alt text-warning"></i>';
+                    } else {
+                        starsHtml += '<i class="far fa-star text-warning"></i>';
+                    }
+                }
+                
+                // Current date for "just now" display
+                const today = new Date();
+                
+                // Create new review HTML element for the reviews panel
+                const newReview = document.createElement('div');
+                newReview.className = 'review-item border-bottom pb-3 mb-3';
+                
+                // Build the review HTML
+                newReview.innerHTML = `
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <div class="reviewer-info">
+                            <span class="reviewer-name fw-bold">${name}</span>
+                            <span class="review-date text-muted ms-2">just now</span>
+                        </div>
+                        <div class="review-rating stars-small">
+                            ${starsHtml}
+                        </div>
+                    </div>
+                    <p class="review-text mb-0">"${reviewText}"</p>
+                `;
+                
+                // Add animation class
+                newReview.classList.add('animate__animated', 'animate__fadeIn');
+
+                // Create new review for the testimonials section
+                const newTestimonial = document.createElement('div');
+                newTestimonial.className = 'col-md-4 animate__animated animate__fadeIn';
+                newTestimonial.innerHTML = `
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">${'★'.repeat(rating)}</div>
+                        <p class="testimonial-text">"${reviewText}"</p>
+                        <div class="testimonial-author">- ${name}</div>
+                    </div>
+                `;
+                
+                // Add to the beginning of the testimonials container
+                const allRecentReviewsContainer = document.getElementById('allRecentReviews');
+                if (allRecentReviewsContainer.firstChild) {
+                    allRecentReviewsContainer.insertBefore(newTestimonial, allRecentReviewsContainer.firstChild);
+                } else {
+                    allRecentReviewsContainer.appendChild(newTestimonial);
+                }
+                
+                // Remove oldest testimonial if more than 3
+                const allTestimonials = allRecentReviewsContainer.querySelectorAll('.col-md-4');
+                if (allTestimonials.length > 3) {
+                    allRecentReviewsContainer.removeChild(allTestimonials[allTestimonials.length - 1]);
+                }
+                
+                // Update the average rating and count
+                const reviewCountElement = document.querySelector('.review-count .text-muted');
+                const countMatch = reviewCountElement.textContent.match(/\d+/);
+                if (countMatch) {
+                    const newCount = parseInt(countMatch[0]) + 1;
+                    reviewCountElement.textContent = `Based on ${newCount} reviews`;
+                }
+                
+                // Close the modal
+                const modalInstance = bootstrap.Modal.getInstance(reviewModal);
+                modalInstance.hide();
+                
+                // Clear the form
+                reviewForm.reset();
+                resetStars();
+                ratingInputContainer.classList.remove('rated');
+                
+                // Show success message
+                const successToast = document.createElement('div');
+                successToast.className = 'position-fixed bottom-0 end-0 p-3 animate__animated animate__fadeInUp';
+                successToast.style.zIndex = "1100";
+                successToast.innerHTML = `
+                    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header bg-success text-white">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <strong class="me-auto">Success</strong>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            Thank you for your review! It has been added.
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(successToast);
+                
+                // Remove the toast after 3 seconds
+                setTimeout(() => {
+                    successToast.classList.remove('animate__fadeInUp');
+                    successToast.classList.add('animate__fadeOutDown');
+                    setTimeout(() => {
+                        document.body.removeChild(successToast);
+                    }, 500);
+                }, 3000);
+            });
+
+            // Remove loading overlay
+        });
+    </script>
+</body>
+</html> 
