@@ -917,7 +917,10 @@
                         
                         <div class="mb-4">
                             <h5><i class="fas fa-envelope text-primary"></i> Email</h5>
-                            <p>support@toolsnew.com</p>
+                            <p>
+                               
+                                <a href="mailto:7toolsnew@gmail.com" class="text-decoration-none">7toolsnew@gmail.com</a>
+                            </p>
                         </div>
 
                         <div class="mb-4">
@@ -925,25 +928,11 @@
                             <p>Within 24-48 hours</p>
                         </div>
 
-                        <div class="mb-4">
-                            <h5><i class="fas fa-map-marker-alt text-primary"></i> Location</h5>
-                            <p>Global Online Service</p>
-                        </div>
-
                         <div class="social-links mt-4">
                             <h5 class="mb-3">Follow Us</h5>
-                            <a href="#" class="social-icon bg-primary text-white">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="social-icon bg-info text-white">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-icon bg-danger text-white">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="#" class="social-icon bg-primary text-white">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
+                            <a href="https://www.youtube.com/@toolsnew7" target="_blank" class="btn btn-danger mb-2 w-100 d-flex align-items-center justify-content-center" style="font-weight:bold;font-size:1.1em;"><i class="fab fa-youtube me-2"></i> YouTube</a>
+                            <a href="https://www.facebook.com/profile.php?id=61574866457908" target="_blank" class="btn btn-primary mb-2 w-100 d-flex align-items-center justify-content-center" style="font-weight:bold;font-size:1.1em;"><i class="fab fa-facebook me-2"></i> Facebook</a>
+                            <a href="https://www.tiktok.com/@toolsnew7?lang=en" target="_blank" class="btn btn-dark mb-2 w-100 d-flex align-items-center justify-content-center" style="font-weight:bold;font-size:1.1em;"><i class="fab fa-tiktok me-2"></i> TikTok</a>
                         </div>
                     </div>
                 </div>
@@ -1006,6 +995,26 @@
                         </form>
                     </div>
                 </div>
+            </div>
+
+            <!-- Message Sent Modal -->
+            <div class="modal fade" id="messageSentModal" tabindex="-1" aria-labelledby="messageSentModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title w-100 text-center" id="messageSentModalLabel"><i class="fas fa-check-circle me-2"></i>Message Sent!</h5>
+                  </div>
+                  <div class="modal-body text-center">
+                    <p class="fs-5">Thank you for contacting us.<br>Your message has been received.<br>We will get back to you soon! 🎉</p>
+                    <div class="d-flex justify-content-center mt-3">
+                      <i class="fas fa-envelope-open-text fa-3x text-success"></i>
+                    </div>
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- FAQ Section -->
@@ -1142,9 +1151,23 @@
                         if (!form.checkValidity()) {
                             event.preventDefault()
                             event.stopPropagation()
+                        } else {
+                            event.preventDefault();
+                            // Show the message sent modal
+                            var modal = new bootstrap.Modal(document.getElementById('messageSentModal'));
+                            modal.show();
                         }
                         form.classList.add('was-validated')
                     }, false)
+
+                    // Always reset form and validation when modal is closed
+                    var messageModal = document.getElementById('messageSentModal');
+                    if (messageModal) {
+                        messageModal.addEventListener('hidden.bs.modal', function () {
+                            form.reset();
+                            form.classList.remove('was-validated');
+                        });
+                    }
                 })
         })()
 

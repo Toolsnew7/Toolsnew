@@ -59,4 +59,30 @@
             </div>
         </div>
     </div>
-</footer> 
+</footer>
+
+<!-- Cookie Consent Banner -->
+<div id="cookieConsentBanner" style="display:none; position:fixed; bottom:0; left:0; width:100%; background:#222; color:#fff; z-index:9999; padding:18px 10px 18px 10px; text-align:center; font-size:1em; box-shadow:0 -2px 8px rgba(0,0,0,0.15);">
+    <span>
+        This website uses cookies, including those from Google AdSense, to deliver its services, personalize ads, and analyze traffic. By using this site, you agree to our <a href="privacy-policy.html" style="color:#ffd700; text-decoration:underline;">Privacy Policy</a> and <a href="cookie-policy.html" style="color:#ffd700; text-decoration:underline;">Cookie Policy</a>.
+    </span>
+    <button id="acceptCookiesBtn" style="margin-left:18px; background:#ffd700; color:#222; border:none; border-radius:4px; padding:7px 18px; font-weight:bold; cursor:pointer;">Accept</button>
+</div>
+<script>
+(function() {
+    function showCookieBanner() {
+        if (!localStorage.getItem('cookieConsentAccepted')) {
+            document.getElementById('cookieConsentBanner').style.display = 'block';
+        }
+    }
+    function acceptCookies() {
+        localStorage.setItem('cookieConsentAccepted', 'yes');
+        document.getElementById('cookieConsentBanner').style.display = 'none';
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('acceptCookiesBtn');
+        if (btn) btn.addEventListener('click', acceptCookies);
+        showCookieBanner();
+    });
+})();
+</script> 
